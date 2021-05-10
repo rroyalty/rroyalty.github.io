@@ -9,7 +9,7 @@ import MailIcon from '@material-ui/icons/Mail';
 
 import { AppBar, Toolbar } from "@material-ui/core"
 
-import useStyles from './styles'
+import navbarStyles from './navbarStyles'
 
 
 const navLinks: { title: string, path: string }[] = [
@@ -20,7 +20,7 @@ const navLinks: { title: string, path: string }[] = [
 
 
 const Navbar: React.FC = (): JSX.Element => {
-    const classes = useStyles();
+    const classes = navbarStyles();
     return (
         <AppBar position="static" className={classes.navbar}>
             <Toolbar className="nav-style">
