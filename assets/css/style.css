@@ -1,0 +1,201 @@
+
+/* Color Wheel - Pallete generated using the repository background image on canva.com */
+.mirage-bg {
+    background: #181D27 !important;
+}
+
+.indian-khaki-bg {
+    background: #C4AC91 !important;
+}
+
+.pelorous-bg {
+    background: #2DAAB6 !important;
+}
+
+.matisse-bg {
+    background: #146CA1 !important;
+}
+
+.mirage-font {
+    color: #181D27  !important;
+}
+
+.indian-khaki-font {
+    color: #C4AC91  !important;
+}
+
+.pelorous-font {
+    color: #2DAAB6  !important;
+}
+
+.matisse-font {
+    color: #146CA1  !important;
+}
+
+.white-font {
+    color: white  !important;
+}
+
+.mirage-border {
+    border-color: #181D27  !important;
+}
+
+.matisse-border {
+    border-color: #146CA1  !important;
+}
+
+.indian-khaki-border {
+    border-color: #C4AC91  !important;
+}
+
+/* End Color Wheel */
+
+.cursor-default {
+    cursor: default;
+}
+
+
+
+.projects-border {
+    border: solid;
+    border-radius: 3;
+    border-color:#C4AC91;
+    border-width: 2px;
+}
+
+.projectItem-border {
+    border: solid;
+    border-color:#C4AC91;
+    border-width: 0px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+}
+
+.lastItem-border {
+    border: solid;
+    border-color:#C4AC91;
+    border-width: 2px;
+    border-top-width: 0px;
+    border-radius: 3;
+}
+
+.nav-border {
+    border: solid;
+    border-radius: 0;
+    border-color:#C4AC91;
+    border-width: 0px;
+    border-bottom-width: 2px;
+}
+
+.menu-border {
+    border: solid;
+    border-radius: 3;
+    border-color:#C4AC91;
+    border-width: 2px;
+    border-top-width: 0px;
+}
+
+.navbar-link{
+    background-color:#181D27 !important;
+    color:#C4AC91  !important;
+}
+
+.navbar-link::after {
+    border-color: #C4AC91 !important;
+}
+
+.navbar-link:hover::after {
+    border-color:#2DAAB6 !important;
+}
+
+.navbar-hover:hover{
+    background-color:#181D27 !important;
+    color:#2DAAB6  !important;
+}
+
+.panel-block:hover {
+    background-color: #181D27 !important;
+    color: #2DAAB6 !important;
+}
+
+.navbar-link:hover{
+    background-color:#181D27 !important;
+    color:#2DAAB6  !important;
+}
+
+.navbar-hover:active {
+    color:#181D27  !important;
+    background-color:#2DAAB6 !important;
+}
+
+.navbar-hover{
+    background-color:#181D27 !important;
+    color:#C4AC91  !important;
+}
+
+.menu-width {
+    max-width: 90px;
+}
+
+.burger-div {
+    height: 52px;
+    width: 52px;
+}
+
+.burger-icon {
+    color: #C4AC91;
+    font-size: 24px;
+    text-align: center;
+    padding: 14px;
+}
+
+.card-formatting {
+    padding: 10px;
+    border: solid;
+    border-color:#C4AC91;
+    border-width: 2px;
+    background-color:#181D27;
+    color: #C4AC91;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.pad-20 {
+    padding: 20px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+/* Custom Fonts */
+.font-raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* Background code taken from css-tricks.com*/
+img.bg {
+    z-index: 0;
+    min-height: 100%;
+    min-width: 1400px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+@media screen and (max-width: 1400px) {
+    img.bg {
+        left: 50%;
+        margin-left: -700px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .menu-border {
+        border:transparent;
+    };
+}
+/* End background code taken from css-tricks.com*/

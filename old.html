@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top" lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/031d17d316.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="image" property="og:image" content="https://rroyalty.github.io/assets/images/Frankie.jpg">
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+    <title>Ryan Royalty</title>
+</head>
+
+<body>
+    <!--Calvin and Hobbes Background Image-->
+    <img class="bg" src="./assets/images/code-Background.jpg" alt="Calvin and Hobbes Background" />
+
+    <!--Navbar-->
+    <nav class="navbar mirage-bg nav-border is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+
+          <h3 class="navbar-item cursor-default indian-khaki-font">Ryan Royalty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fas fa-phone"></i>&nbsp;(978) 302-9465</span><span class="is-hidden-touch">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-envelope"></i>&nbsp;rroyalty@gmail.com</span></h3>
+
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarID">
+            <div class="burger-div">
+              <i class="fas fa-hamburger burger-icon"></i>
+            </div>
+          </a>
+        </div>
+      
+        <div id="navbarID" class="navbar-menu mirage-bg">
+          <div class="navbar-end">
+            <a id="bioButton" class="navbar-item indian-khaki-font navbar-hover">
+              Bio
+            </a>
+      
+            <a id="portfolioButton" class="navbar-item indian-khaki-font navbar-hover">
+              Portfolio
+            </a>
+      
+            <div class="navbar-item has-dropdown is-hoverable mirage-bg">
+              <a class="navbar-link indian-khaki-font">
+                More
+              </a>
+      
+              <div id="menuHamburg" class="navbar-dropdown indian-khaki-font mirage-bg menu-width menu-border">
+                <a class="navbar-item navbar-hover" href="./assets/images/resume.pdf" download>
+                  Résumé
+                </a>
+                <a class="navbar-item navbar-hover" href="mailto: rroyalty@gmail.com">
+                  E-Mail
+                </a>
+              </div>
+            </div>
+      
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="is-button" href="https://github.com/rroyalty" target="_blank">
+                  <img class="iconSizing" src="./assets/images/GitHub-Mark-Light-64px.png">
+                </a>
+                <div class="cursor-default">&nbsp&nbsp&nbsp</div>
+                <a href="https://www.linkedin.com/in/rroyalty/" target="_blank">
+                  <img class ="iconSizing" src="./assets/images/LinkedIn.png">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <div id="bio" class="container" hidden="true">
+      <div class="columns">
+        <div class="column is-one-quarter">
+          <div class="card card-formatting">
+            <div class="card-image">
+              <figure class="image polaroid">
+                <img src="./assets/images/Frankie.jpg" alt="Placeholder image">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="column is-three-quarters">
+          <div class="card card-formatting">
+            <div class="card-content">
+              <div class="content">
+                <p>Through my work at Foresight and/or with the FileMaker platform, I have developed proficiences in PowerQuery, VBA, SQL, and JSON. Through the Coding Bootcamp course I am currently taking, I've developed proficiences in HTML, CSS, and JavaScipt. I look forward to taking my coding and career to the next level.</p>
+                <p>I attended UMass Amherst from 2003 to 2008, where I earned a B.S. in Mathematics and studied to be a high school teacher. After two years of teaching, I decided that the profession was not a good fit for me and I moved onto other things; I worked as a server and bartender at Chili's in Hadley, MA for a few years, after which I moved to Boston and took a job as a dog walker and petsitter. In addition, I spent my Summers working as a wilderness trip leader and outdoor education director at Birch Rock Summer Camp in Waterford, ME. While in Boston, I was fortunate to meet my wife, Samantha; who loves dogs as much as I do.</p>
+                <p>I took two significant breaks throughout all this, once in 2013 when I successfully thru-hiked the Appalachian Trail, and again in 2016, when I attempted to hike the Pacific Crest Trail but was forced to abandon the trip after 500 miles due to a medical emergency on the East coast. Hopefully I'll have a chance to give it another go someday.</p>
+                <p>Now, I reside in Nottingham, NH with Sam and our two dogs, Franconia and Tuckerman. I am in the process of taking UNH's Coding Bootcamp course, where I am learning new professional skills in the hopes of advancing my professional career as a FUll Stack Developer.</p>
+                <p>In my free time I enjoy backpacking, hiking, canoeing, video games, board games, spending time with my dogs, practicing Uechi Ryu Karate (in which I have a 2nd degree blackbelt,) and visiting new breweries. Also, I love Calvin and Hobbes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="portfolio" class="container" hidden="true">
+      <div class="columns">
+        <div class="column is-one-quarter">
+          <nav id="projectList" class="panel card-formatting mirage-bg indian-khaki-font menu-border">
+            <p class="panel-heading indian-khaki-font mirage-bg projects-border">
+              Projects
+            </p>
+
+          </nav>
+        </div>
+        
+        <div class="column is-three-quarters">
+          <div id="projectDetails" class="card card-formatting mirage-bg indian-khaki-font">
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/js/projects.js"></script>
+    <script src="./assets/js/bulma.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+</html>
+
