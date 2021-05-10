@@ -4,9 +4,7 @@ import { withRouter } from 'react-router';
 const Home: React.FC = (): JSX.Element => {
 
     return (
-
-        <div style={{color: `white`}}>HOME!</div>
-
+        <div />
     )
 }
 

@@ -15,7 +15,7 @@ import useStyles from './styles'
 const navLinks: { title: string, path: string }[] = [
     { title: `Bio`, path: `/bio` },
     { title: `Portfolio`, path: `/portfolio` },
-    { title: `More`, path: `` },
+    { title: `More`, path: `${window.location.pathname}` },
 ]
 
 
