@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { makeStyles } from '@material-ui/core/styles';
 
 // import { IconButton, Container, Grid, Paper } from "@material-ui/core"
 import { List, ListItem, ListItemText } from "@material-ui/core"
@@ -9,45 +8,13 @@ import MailIcon from '@material-ui/icons/Mail';
 
 import { AppBar, Toolbar } from "@material-ui/core"
 
-const useStyles = makeStyles({
-    navDisplayFlex: {
-        display: `inline-flex`,
-        justifyContent: `space-between`
-    },
-    linkText: {
-        textDecoration: `none`,
-        textTransform: `uppercase`,
-        color: `#C4AC91`,
-        justifyContent: `center`
-    },
-    navbar: {
-        backgroundColor: `#181D27`,
-        borderBottomWidth: `2px`,
-        borderColor: `#C4AC91`,
-        borderStyle: `solid`,
-        color: `#C4AC91`,
-    },
-    iconLinks: {
-        display: `inline-flex`,
-        height: `48px`,
-        width: `48px`,
+import useStyles from './styles'
 
-    },
-    rightAppBar: {
-        marginLeft: `auto`,
-        marginRight: -12,
-    },
-    justifyContent: {
-        display: `flex`,
-        // flexDirection: `column`,
-        justifyContent: `center`
-    }
-});
 
 const navLinks: { title: string, path: string }[] = [
     { title: `Bio`, path: `/bio` },
     { title: `Portfolio`, path: `/portfolio` },
-    { title: `More`, path: `/more` },
+    { title: `More`, path: `` },
 ]
 
 const Navbar: React.FC = (): JSX.Element => {

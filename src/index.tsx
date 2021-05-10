@@ -4,13 +4,15 @@ import './reset.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Navbar from './components/Navbar/Navbar'
+import theme from './theme/theme';
+import { ThemeProvider } from '@material-ui/core/styles';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar />
-    <App />
+    <ThemeProvider theme={theme}>
+        <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

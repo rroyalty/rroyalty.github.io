@@ -1,21 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import background from './images/code-Background.jpg'
+import background from './images/code-Background.jpg';
+import { Container } from "@material-ui/core";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navbar from './components/Navbar/Navbar';
+import Home from './views/Home';
+import Bio from './views/Bio';
+import Portfolio from './views/Portfolio';
 
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App bg" style={{ 
-        backgroundImage: `url(${background})`, 
-        backgroundSize: "cover",  
+    <>
+      <Navbar />
+
+
+      <Container maxWidth='xl' className="App bg" style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        height: "93.7vh",
-        width: "100vw",
+        height: "100vh",
+        width: "100vw"
       }}>
+        <Router>
+          <Switch>
+            <Route path="/index" exact render={() => <Home />} />
+            <Route path="/bio" exact render={() => <Bio />} />
+            <Route path="/portfolio" exact render={() => <Portfolio />} />
+            <Route path="/" exact render={() => <Home />} />
+          </Switch>
+        </Router>
+      </Container>
 
-    </div>
+    </>
   );
 }
 
