@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { withRouter } from 'react-router';
 
 // import { IconButton, Container, Grid, Paper } from "@material-ui/core"
@@ -11,16 +11,23 @@ import { AppBar, Toolbar } from "@material-ui/core"
 
 import navbarStyles from './navbarStyles'
 
+type navEvent = (buttonClick: any) => void;
+
+interface INavLink {
+    title: string;
+    path: string;
+    navEvent?: navEvent;
+}
 
 const navLinks: { title: string, path: string }[] = [
     { title: `Bio`, path: `/bio` },
     { title: `Portfolio`, path: `/portfolio` },
-    { title: `More`, path: `${window.location.pathname}` },
+    { title: `More`, path: `` },
 ]
-
 
 const Navbar: React.FC = (): JSX.Element => {
     const classes = navbarStyles();
+    console.log(window.location)
     return (
         <AppBar position="static" className={classes.navbar}>
             <Toolbar className="nav-style">
@@ -35,12 +42,12 @@ const Navbar: React.FC = (): JSX.Element => {
                             </Link>
                         ))}
                         <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                        <a className={classes.iconLinks} href="https://github.com/rroyalty" target="_blank">
-                            <img className={classes.iconLinks} src="./images/GitHub-Mark-Light-64px.png" />
+                        <a className={classes.iconLinks} href="https://github.com/rroyalty" target="_blank" rel="noreferrer">
+                            <img alt="github" className={classes.iconLinks} src="./images/GitHub-Mark-Light-64px.png" />
                         </a>
                         <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                        <a className={classes.iconLinks} href="https://www.linkedin.com/in/rroyalty/" target="_blank">
-                            <img className={classes.iconLinks} src="./images/LinkedIn.png" />
+                        <a className={classes.iconLinks} href="https://www.linkedin.com/in/rroyalty/" target="_blank" rel="noreferrer">
+                            <img alt="Linked In" className={classes.iconLinks} src="./images/LinkedIn.png" />
                         </a>
                     </List>
 
