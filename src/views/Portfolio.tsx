@@ -5,9 +5,7 @@ import { withRouter } from 'react-router';
 const Portfolio: React.FC = (): JSX.Element => {
 
     return (
-
-        <div style={{color: `white`}}>Portfolio!</div>
-
+        <div style={{color: `white`}}>PORTFOLIO!</div>
     )
 }
 
