@@ -13,8 +13,6 @@ const App = () => {
   return (
     <>
       <Navbar />
-
-
       <Container maxWidth='xl' className="App bg" style={{
         backgroundImage: `url(${background})`,
         backgroundSize: "cover",

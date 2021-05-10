@@ -17,6 +17,7 @@ const navLinks: { title: string, path: string }[] = [
     { title: `More`, path: `` },
 ]
 
+
 const Navbar: React.FC = (): JSX.Element => {
     const classes = useStyles();
     return (
