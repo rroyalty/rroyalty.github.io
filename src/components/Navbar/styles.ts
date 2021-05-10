@@ -14,7 +14,11 @@ const useStyles = makeStyles({
     navbar: {
         backgroundColor: `#181D27`,
         borderBottomWidth: `2px`,
+        borderLeftWidth: `2px`,
+        borderRightWidth: `2px`,
         borderColor: `#C4AC91`,
+        borderBottomLeftRadius: 16,
+        borderBottomRightRadius: 16,
         borderStyle: `solid`,
         color: `#C4AC91`,
     },

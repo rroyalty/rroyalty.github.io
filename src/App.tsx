@@ -13,16 +13,16 @@ const App = () => {
   return (
     <Router>
       <>
-        <Navbar />
+
         <Container maxWidth='xl' className="App bg" style={{
           backgroundImage: `url(${background})`,
           backgroundSize: "cover",
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           height: "100vh",
-          width: "100vw"
-        }}>
 
+        }}>
+        <Navbar />
           <Switch>
             <Route exact path="/index" component={Home} />
             <Route exact path="/bio" component={Bio} />
