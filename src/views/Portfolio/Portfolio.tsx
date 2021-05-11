@@ -12,9 +12,15 @@ import projectList from './projects'
 //     icon: string
 // }
 
+console.log(projectList)
+
 const Portfolio: React.FC = (): JSX.Element => {
     return (
-        <div />
+        <ul>
+            {projectList.map(item => (
+                <ProjectCard key={item.name} props={item} />
+            ))}
+        </ul>
     )
 }
 

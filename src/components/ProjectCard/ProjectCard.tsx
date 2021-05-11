@@ -9,14 +9,17 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 interface IProps {
-
+  props: {
     name: string,
     description: string,
     domain: string,
     github: string,
     imgSrc: string,
     icon: string
+  }
 }
+
+// interface IPropsArray extends Array<IProps>{}
 
 const useStyles = makeStyles({
   root: {
@@ -36,25 +39,24 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="Contemplative Reptile"
+          image={props.props.imgSrc}
+          title={props.props.name}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            {props.props.name}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            {props.props.description}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          Share
+          GitHub
         </Button>
         <Button size="small" color="primary">
-          Learn More
+          Deployment
         </Button>
       </CardActions>
     </Card>
