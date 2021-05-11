@@ -8,6 +8,16 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+interface IProps {
+
+    name: string,
+    description: string,
+    domain: string,
+    github: string,
+    imgSrc: string,
+    icon: string
+}
+
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -17,8 +27,9 @@ const useStyles = makeStyles({
   },
 });
 
-const MediaCard: React.FC = (props: any): JSX.Element => {
+const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
   const classes = useStyles();
+  console.log(props)
 
   return (
     <Card className={classes.root}>
@@ -50,4 +61,4 @@ const MediaCard: React.FC = (props: any): JSX.Element => {
   );
 }
 
-export default MediaCard
+export default ProjectCard

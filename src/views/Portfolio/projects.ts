@@ -1,4 +1,5 @@
 const projectList: {name: string, description: string, domain: string, github: string, imgSrc: string, icon: string }[] = 
+
     [
         {   
             name: "Easy Recipeazy",             

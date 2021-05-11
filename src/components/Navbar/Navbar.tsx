@@ -27,7 +27,6 @@ const navLinks: { title: string, path: string }[] = [
 
 const Navbar: React.FC = (): JSX.Element => {
     const classes = navbarStyles();
-    console.log(window.location)
     return (
         <AppBar position="static" className={classes.navbar}>
             <Toolbar className="nav-style">
