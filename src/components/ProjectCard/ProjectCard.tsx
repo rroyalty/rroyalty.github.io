@@ -12,18 +12,19 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 345,
   },
+  media: {
+    height: 140,
+  },
 });
 
-export default function ImgMediaCard() {
+const MediaCard: React.FC = (props: any): JSX.Element => {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"
+          className={classes.media}
           image="/static/images/cards/contemplative-reptile.jpg"
           title="Contemplative Reptile"
         />
@@ -48,3 +49,5 @@ export default function ImgMediaCard() {
     </Card>
   );
 }
+
+export default MediaCard
