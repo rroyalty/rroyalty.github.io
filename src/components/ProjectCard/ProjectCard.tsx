@@ -14,8 +14,7 @@ interface IProps {
     description: string,
     domain: string,
     github: string,
-    imgSrc: string,
-    icon: string
+    imgSrc: string
   }
 }
 
