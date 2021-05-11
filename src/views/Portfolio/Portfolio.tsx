@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import ProjectCard from '../../components/ProjectCard/ProjectCard'
 import projectList from './projects'
+import { Grid } from "@material-ui/core"
 
 // interface IProps {
 //     name: string,
@@ -16,11 +17,18 @@ console.log(projectList)
 
 const Portfolio: React.FC = (): JSX.Element => {
     return (
-        <ul>
+        <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+        >
             {projectList.map(item => (
-                <ProjectCard key={item.name} props={item} />
+                <Grid item xs={4}>
+                    <ProjectCard key={item.name} props={item} />
+                </Grid>
             ))}
-        </ul>
+        </Grid>
     )
 }
 

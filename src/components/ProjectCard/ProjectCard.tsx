@@ -52,12 +52,16 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          GitHub
+        <a href={props.props.github} target="_blank" rel="noreferrer">
+          <Button size="small" color="primary">
+            GitHub
         </Button>
-        <Button size="small" color="primary">
-          Deployment
+        </a>
+        <a href={props.props.domain} target="_blank" rel="noreferrer">
+          <Button size="small" color="primary">
+            Deployment
         </Button>
+        </a>
       </CardActions>
     </Card>
   );
