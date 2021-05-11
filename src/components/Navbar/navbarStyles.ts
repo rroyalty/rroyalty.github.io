@@ -36,6 +36,9 @@ const navbarStyles = makeStyles({
         display: `flex`,
         // flexDirection: `column`,
         justifyContent: `center`
+    },
+    anchorColor: {
+        color: `white`
     }
 });
 
