@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import projectList from '../../../public/projects'
+import projectList from './projects'
 
 
 const Portfolio: React.FC = (): JSX.Element => {
