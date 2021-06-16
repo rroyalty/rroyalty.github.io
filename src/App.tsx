@@ -1,5 +1,5 @@
 import React from 'react';
-import background from '/images/code-Background.jpg';
+// import background from '/images/code-Background.jpg';
 import { Container } from "@material-ui/core";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
@@ -15,7 +15,7 @@ const App = () => {
       <>
 
         <Container maxWidth='xl' className="App bg" style={{
-          backgroundImage: `url(${background})`,
+          backgroundImage: `url(/images/code-Background.jpg)`,
           backgroundSize: "cover",
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
