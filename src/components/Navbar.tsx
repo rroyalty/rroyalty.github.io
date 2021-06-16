@@ -14,12 +14,6 @@ import { AppBar, Toolbar, Drawer, List, ListItem, ListItemText, MenuItem } from 
 
 type navEvent = (buttonClick: any) => void;
 
-interface INavLink {
-    title: string;
-    path: string;
-    navEvent?: navEvent;
-}
-
 const navLinks: { title: string, path: string }[] = [
     { title: `Bio`, path: `/bio` },
     { title: `Portfolio`, path: `/portfolio` },
@@ -147,16 +141,10 @@ const Navbar: React.FC = (): JSX.Element => {
                     }}>
                     <List component="nav" aria-labelledby="main navigation" className={` ${classes.menu}`}>
                         <MenuItem className={classes.mobileNav}>
-                            <ScrollLink className={classes.links} to="landing">Home</ScrollLink>
+                            <ScrollLink className={classes.links} to="bio">Bio</ScrollLink>
                         </MenuItem>
                         <MenuItem className={classes.mobileNav}>
-                            <ScrollLink className={classes.links} to="about">about</ScrollLink>
-                        </MenuItem>
-                        <MenuItem className={classes.mobileNav}>
-                            <ScrollLink className={classes.links} to="theteam">The Team</ScrollLink>
-                        </MenuItem>
-                        <MenuItem className={classes.mobileNav}>
-                            <ScrollLink className={classes.links} to="support">Support</ScrollLink>
+                            <ScrollLink className={classes.links} to="portfolio">Portfolio</ScrollLink>
                         </MenuItem>
                     </List>
                 </Drawer>
@@ -173,11 +161,11 @@ const Navbar: React.FC = (): JSX.Element => {
                     <section className={classes.rightAppBar}>
                         <List component="nav" aria-labelledby="main navigation" className={classes.navDisplayFlex}>
                             {navLinks.map(({ title, path }) => (
-                                <Link to={path} key={title} className={classes.linkText}>
+                                <ScrollLink smooth={true} duration={500} to={path} key={title} className={classes.linkText}>
                                     <ListItem button>
                                         <ListItemText primary={title} />
                                     </ListItem>
-                                </Link>
+                                </ScrollLink>
                             ))}
                             <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                             <a className={classes.iconLinks} href="https://github.com/rroyalty" target="_blank" rel="noreferrer">
