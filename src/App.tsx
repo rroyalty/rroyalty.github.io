@@ -1,11 +1,11 @@
 import React from 'react';
-import background from './images/code-Background.jpg';
+import background from '/images/code-Background.jpg';
 import { Container } from "@material-ui/core";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar';
 import Home from './views/Home';
-import Bio from './views/Bio/Bio';
-import Portfolio from './views/Portfolio/Portfolio';
+import Bio from './views/Bio';
+import Portfolio from './views/Portfolio';
 
 import './App.css';
 
