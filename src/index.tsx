@@ -4,14 +4,25 @@ import './reset.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import theme from './theme/theme';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from "@material-ui/core";
+import { createMuiTheme, responsiveFontSizes, Theme } from "@material-ui/core/styles";
 
+let theme: Theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: `#181D27`,
+    },
+    secondary: {
+      main: `#146CA1`,
+    },
+  },
+});
 
+theme = responsiveFontSizes(theme);
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-        <App />
+      <App />
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
