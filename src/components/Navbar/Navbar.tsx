@@ -6,7 +6,7 @@ import { List, ListItem, ListItemText } from "@material-ui/core"
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
 import DescriptionIcon from '@material-ui/icons/Description';
-
+import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import { AppBar, Toolbar } from "@material-ui/core"
 
 import navbarStyles from './navbarStyles'
@@ -24,8 +24,50 @@ const navLinks: { title: string, path: string }[] = [
     { title: `Portfolio`, path: `/portfolio` },
 ]
 
+const useStyles = makeStyles((theme: Theme) => createStyles({
+    navDisplayFlex: {
+        display: `inline-flex`,
+        justifyContent: `space-between`
+    },
+    linkText: {
+        textDecoration: `none`,
+        textTransform: `uppercase`,
+        color: `#C4AC91`,
+        justifyContent: `center`
+    },
+    navbar: {
+        backgroundColor: `#181D27`,
+        borderBottomWidth: `2px`,
+        borderLeftWidth: `2px`,
+        borderRightWidth: `2px`,
+        borderColor: `#C4AC91`,
+        borderBottomLeftRadius: 16,
+        borderBottomRightRadius: 16,
+        borderStyle: `solid`,
+        color: `#C4AC91`,
+    },
+    iconLinks: {
+        display: `inline-flex`,
+        height: `48px`,
+        width: `48px`,
+
+    },
+    rightAppBar: {
+        marginLeft: `auto`,
+        marginRight: -12,
+    },
+    justifyContent: {
+        display: `flex`,
+        // flexDirection: `column`,
+        justifyContent: `center`
+    },
+    anchorColor: {
+        color: `white`
+    }
+}))
+
 const Navbar: React.FC = (): JSX.Element => {
-    const classes = navbarStyles();
+    const classes = useStyles();
     return (
         <AppBar position="static" className={classes.navbar}>
             <Toolbar className="nav-style">
