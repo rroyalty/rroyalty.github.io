@@ -4,14 +4,6 @@ import ProjectCard from '../components/ProjectCard'
 import projectList from '../static/projects.json'
 import { createStyles, makeStyles, Theme, GridList, Container, Grid } from '@material-ui/core';
 
-// interface IProps {
-//     name: string,
-//     description: string,
-//     domain: string,
-//     github: string,
-//     imgSrc: string,
-//     icon: string
-// }
 
 const useStyles = makeStyles(() =>
     createStyles({

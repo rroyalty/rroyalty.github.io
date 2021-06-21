@@ -1,6 +1,6 @@
 import React from 'react';
 // import background from '/images/code-Background.jpg';
-import { Container } from "@material-ui/core";
+import { Container, Fade } from "@material-ui/core";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Bio from './Bio';
 import Portfolio from './Portfolio';
@@ -13,14 +13,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     backgroundSize: "cover",
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    width: "100vw",
+    height: "100vh",
     justifyContent: `center`,
 
   },
-  footer: {
-    backgroundColor: theme.palette.primary.main,
-    display: `flex`,
-  }
 }));
 
 
@@ -29,14 +25,18 @@ const App = () => {
 
   return (
     <Router>
-        <>
-          <Container id="bio" className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/code-Background.jpg)` }} >
+      <>
+        <Container id="bio" className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/code-Background.jpg)` }} >
+          <Fade in={true}>
             <Bio />
-          </Container>
-          <Container id="portfolio" className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/code-Background.jpg)` }} >
+          </Fade>
+        </Container>
+        <Container id="portfolio" className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/mario-Background.jpg)` }} >
+          <Fade in={true}>
             <Portfolio />
-          </Container>
-        </>
+          </Fade>
+        </Container>
+      </>
     </Router>
   );
 }

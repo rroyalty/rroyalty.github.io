@@ -1,5 +1,13 @@
 [
     {   
+        "name": "Bandwidth",             
+        "description": "A social media site for local motions to connect and jam.", 
+        "domain": "https://bandwi-d-th.herokuapp.com/",
+        "github": "https://github.com/rroyalty/bandwidth",
+        "imgSrc": "https://raw.githubusercontent.com/rroyalty/bandwidth/main/client/public/favicon.ico",
+        "icon": "fas fa-utensils"
+    },
+    {   
         "name": "Easy Recipeazy",             
         "description": "A website that takes ingredients you have in your house and offers you recipes to make with them!", 
         "domain": "https://tonipow3ll.github.io/drinks-and-dinner/",

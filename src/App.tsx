@@ -8,10 +8,10 @@ const App: React.FC = (): JSX.Element => {
 
   return (
     <Router>
-        <>
-          <Navbar />
-          <Landing /> 
-        </>
+      <>
+        <Navbar />
+        <Landing />
+      </>
     </Router>
 
   );

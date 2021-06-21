@@ -15,8 +15,8 @@ import { AppBar, Toolbar, Drawer, List, ListItem, ListItemText, MenuItem } from 
 type navEvent = (buttonClick: any) => void;
 
 const navLinks: { title: string, path: string }[] = [
-    { title: `Bio`, path: `/bio` },
-    { title: `Portfolio`, path: `/portfolio` },
+    { title: `Bio`, path: `bio` },
+    { title: `Portfolio`, path: `portfolio` },
 ]
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
@@ -91,6 +91,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     }
 }))
 
+
 const Navbar: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
@@ -118,7 +119,7 @@ const Navbar: React.FC = (): JSX.Element => {
             setState((prevState) => ({ ...prevState, drawerOpen: false }));
 
         return (
-            <AppBar position="static" className={classes.navbar}>
+            <AppBar position="fixed" className={classes.navbar}>
 
                 <IconButton
                     {...{
@@ -155,7 +156,7 @@ const Navbar: React.FC = (): JSX.Element => {
 
     const displayDesktop = () => {
         return (
-            <AppBar position="static" className={classes.navbar}>
+            <AppBar position="fixed" className={classes.navbar}>
                 <Toolbar className="nav-style">
                     <h3 className={classes.justifyContent}>{`RYAN ROYALTY`}</h3>
                     <section className={classes.rightAppBar}>
