@@ -32,7 +32,7 @@ const App = () => {
             <Bio />
           </Fade>
         </Container>
-        <Container id="technical" className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/mario-Background.jpg)` }} >
+        <Container id="technical" className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/mario-Background.png)` }} >
           <Fade in={true}>
             <Technical />
           </Fade>
