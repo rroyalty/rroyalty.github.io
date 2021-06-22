@@ -202,4 +202,4 @@ const Navbar: React.FC = (): JSX.Element => {
     )
 }
 
-export default withRouter(Navbar)
+export default Navbar

@@ -1,12 +1,12 @@
 [
     {
         "index": "1",
-        "p": "I attended UMass Amherst from 2003 to 2008, where I earned a B.S. in Mathematics and studied to be a high school teacher. After two years of teaching, I decided that the profession was not a good fit for me and I moved onto other things.",
+        "p": "I attended UMass Amherst from 2003 to 2008, where I earned a B.S. in Mathematics and studied to be a high school teacher. After two years of teaching, I decided that the profession was not a good fit for me and I moved onto other things; I worked as bartender at Chili's in Hadley, MA for a few years, after which I moved to Boston and took a job as a dog walker. In addition, I spent my Summers working as the outdoor education director at Birch Rock Summer Camp in Waterford, ME. While in Boston, I was fortunate to meet my wife, Samantha; who loves dogs as much as I do.",
         "src": "/images/weddingPic.jpg"
     },
     {
         "index": "2",
-        "p": "I worked as bartender at Chili's in Hadley, MA for a few years, after which I moved to Boston and took a job as a dog walker. In addition, I spent my Summers working as the outdoor education director at Birch Rock Summer Camp in Waterford, ME. While in Boston, I was fortunate to meet my wife, Samantha; who loves dogs as much as I do.",
+        "p": "My current job is with Foresight Regulatory Strategies, where I analyze data, generate reports, and manage the inventory database (which I built from scratch) using FileMaker. Foresight is a medical device consulting company that runs clinical trials on contact lenses, and other eye related medical devices/solutions. I recently graduated from UNH's Full Stack Coding Bootcamp course, where I developed new professional skills in the hopes of advancing my professional career.",
         "src": "/images/Frankie.jpg"
     },
     {
@@ -16,7 +16,7 @@
     },
     {
         "index": "4",
-        "p": "I recently graduated from UNH's Full Stack Coding Bootcamp course, where I developed new professional skills in the hopes of advancing my professional career. In my free time I enjoy backpacking, hiking, canoeing, video games, board games, spending time with my dogs, practicing Uechi Ryu Karate (in which I have a 2nd degree blackbelt,) and visiting new breweries. Also, I love Calvin and Hobbes.",
+        "p": "In my free time I enjoy backpacking, hiking, canoeing, video games, board games, spending time with my dogs, practicing Uechi Ryu Karate (in which I have a 2nd degree blackbelt,) and visiting new breweries. Also, I love Calvin and Hobbes.",
         "src": "/images/backpacking.jpg"
     }
 ]
