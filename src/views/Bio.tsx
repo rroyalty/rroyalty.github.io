@@ -1,60 +1,80 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router';
-import { Container, Grid, Typography } from "@material-ui/core"
+import { Grid, GridList, Container } from "@material-ui/core"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import bio from '../static/bio.json'
+import BioCardRight from '../components/bioCardRight'
+import BioCardLeft from '../components/bioCardLeft'
 
-const useStyles = makeStyles((theme: Theme) => createStyles({
-    imageDim: {
-        width: '100%',
-        height: 'auto',
-        borderWidth: `2px`,
-        borderColor: `#C4AC91`,
+const useStyles = makeStyles(() => createStyles({
+    root: {
+        overflow: `hidden`,
+        justifyContent: 'center',
+        alignItems: 'center',
+        maxWidth: `95vw`,
+        border: `2px`,
         borderStyle: `solid`,
-        borderRadius: 16,
-        margin: `15px`
-    },
-    bioText: {
-        fontSize: `16
-        px`,
-        textAlign: `left`,
-        padding: "20px",
-        borderWidth: `2px`,
-        borderColor: `#C4AC91`,
-        borderStyle: `solid`,
-        borderRadius: 16,
-        backgroundColor: `#181D27`,
-        color: `#C4AC91`,
-        maxHeight: `100vh`,
-        margin: `15px`
+        borderColor: `white`,
+        padding: `0px`,
+        maxHeight: `100vh`
     },
     grid: {
         margin: `10px`,
-        maxheight: `100vh`
+        maxheight: `100vh`,
+        marginTop: `70px`
+    },
+    gridList: {
+        paddingTop: `20px`,
+        display: `flex`,
+        justifyContent: 'center',
+        alignItems: 'top',
+        overflowX: 'hidden',
+        maxHeight: `100vh`,
+        overflow: `auto`,
+        width: `100%`
     }
-}))
+}));
+
+
+
 
 const Bio: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
-    return (
-        <Container maxWidth='lg'>
-            <div style={{ height: `70px` }} />
-            <Grid className={classes.grid} container spacing={3}>
-                <Grid item lg={4}>
-                    <img alt="Wedding" className={classes.imageDim} src='/images/weddingPic.jpg' />
-                </Grid>
-                <Grid item lg={8}>
-                    {bio.map(item => (
-                        <Typography key={item.index} className={classes.bioText} style={{ whiteSpace: 'pre-line' }} component='p'>
-                            {item.p}
-                        </Typography>
-                    ))}
+    const [state, setState] = useState({
+        mobileView: false
+    })
 
-                </Grid>
+    const { mobileView } = state;
+
+    useEffect(() => {
+        const setResponsiveness = () => {
+            return window.innerWidth < 900
+                ? setState((prevState) => ({ ...prevState, mobileView: true }))
+                : setState((prevState) => ({ ...prevState, mobileView: false }))
+        };
+        setResponsiveness();
+        window.addEventListener('resize', () => setResponsiveness())
+    }, [])
+
+        return (
+            <Grid
+                container
+                direction="row"
+                justify="center"
+                alignItems="center"
+                className={classes.grid}
+            >
+                {
+                    bio.map(item => (
+                        bio.indexOf(item) % 2 === 0 ? < BioCardRight key={item.index} src={item.src} p={item.p} /> : < BioCardLeft key={item.index} src={item.src} p={item.p} />
+                    ))
+                }
             </Grid>
-        </Container>
-    )
+        )
+    
+
+
 }
 
 export default withRouter(Bio)

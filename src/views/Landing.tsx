@@ -16,8 +16,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     backgroundPosition: 'center',
     height: "100vh",
     justifyContent: `center`,
-
   },
+
 }));
 
 
@@ -37,7 +37,7 @@ const App = () => {
             <Technical />
           </Fade>
         </Container>
-        <Container id="portfolio" className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/gandalf-vs-the-balrog.jpg)` }} >
+        <Container id="portfolio" className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/gandalf-vs-the-balrog.png)` }} >
           <Fade in={true}>
             <Portfolio />
           </Fade>

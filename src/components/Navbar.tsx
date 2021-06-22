@@ -197,7 +197,7 @@ const Navbar: React.FC = (): JSX.Element => {
 
     return (
         <div>
-            {mobileView ? displayMobile() : displayDesktop()}
+            { mobileView ? displayMobile() : displayDesktop() }
         </div>
     )
 }
