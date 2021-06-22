@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     backgroundPosition: 'center',
     height: "100vh",
     justifyContent: `center`,
+    alignItems: `center`
   },
 
 }));

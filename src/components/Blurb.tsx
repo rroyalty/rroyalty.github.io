@@ -11,7 +11,7 @@ interface IProps {
 const useStyles = makeStyles((theme: Theme) => createStyles({
 
     paper: {
-        height: "14vh",
+        height: "20vh",
         backgroundColor: theme.palette.primary.main,
         border: `3px`,
         borderStyle: `solid`,
@@ -24,9 +24,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         [theme.breakpoints.down('md')]: {
             fontSize: `.8rem`
         },
-        [theme.breakpoints.down('sm')]: {
-            fontSize: `.7rem`
-        }
     },
     gridBits: {
         justifyContent: `center`,

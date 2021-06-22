@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         backgroundColor: theme.palette.primary.main,
         border: `3px`,
         borderStyle: `solid`,
-        borderColor: `white`,
+        borderColor: `#C4AC91`,
         width: `70%`,
         display: `flex`,
         flexDirection: `column`,
@@ -30,19 +30,16 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         marginRight: `15px`,
         marginTop: `10px`,
         marginBottom: `5px`,
-        color: `white`,
-        [theme.breakpoints.down('xs')]: {
-            fontSize: `.75rem`
-        }
+        color: `#C4AC91`,
     },
     avatar: {
-        height: "14vh",
-        width: "14vh",
+        height: "30vh",
+        width: "30vh",
         border: `3px`,
         borderStyle: `solid`,
         marginTop: `15px`,
         marginBottm: `5px`,
-        borderColor: `white`
+        borderColor: `#C4AC91`
     },
 }));
 

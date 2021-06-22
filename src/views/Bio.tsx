@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { withRouter } from 'react-router';
-import { Grid, Box } from "@material-ui/core"
+import { Grid, Box, Container } from "@material-ui/core"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import bio from '../static/bio.json';
 import BioCardRight from '../components/bioCardRight';
@@ -18,6 +17,8 @@ const useStyles = makeStyles(() => createStyles({
         margin: `10px`,
         maxheight: `100vh`,
         marginTop: `70px`,
+        justifyContent: `center`,
+        alignItems: `center`,
 
     },
 }));
@@ -58,10 +59,11 @@ const Bio: React.FC = (): JSX.Element => {
                 justify="center"
                 alignItems="center"
                 className={classes.grid}
+                spacing={1}
             >
                 {
                     bio.map(item => (
-                        bio.indexOf(item) % 2 === 0 ? < BioCardRight key={item.index} src={item.src} p={item.p} /> : < BioCardLeft key={item.index} src={item.src} p={item.p} />
+                        bio.indexOf(item) % 2 === 1 ? < BioCardRight key={item.index} src={item.src} p={item.p} /> : < BioCardLeft key={item.index} src={item.src} p={item.p} />
                     ))
                 }
             </Grid>
@@ -70,12 +72,12 @@ const Bio: React.FC = (): JSX.Element => {
 
     const bioMobile = () => {
         return (
-            <Carousel animation={"slide"} interval={10000}>
-                {bio.map((item) =>
-                    <Box className={classes.root} key={item.index}>
-                        <CarouselItem src={item.src} p={item.p} />
-                    </Box>)}
-            </Carousel>
+                <Carousel  animation={"slide"} interval={10000}>
+                    {bio.map((item) =>
+                        <Box className={classes.root} key={item.index}>
+                            <CarouselItem src={item.src} p={item.p} />
+                        </Box>)}
+                </Carousel>
         )
     }
 
