@@ -4,6 +4,7 @@ import { Container, Fade } from "@material-ui/core";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Bio from './Bio';
 import Portfolio from './Portfolio';
+import Technical from './Technical';
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
 
@@ -31,7 +32,12 @@ const App = () => {
             <Bio />
           </Fade>
         </Container>
-        <Container id="portfolio" className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/mario-Background.jpg)` }} >
+        <Container id="technical" className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/mario-Background.jpg)` }} >
+          <Fade in={true}>
+            <Technical />
+          </Fade>
+        </Container>
+        <Container id="portfolio" className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/gandalf-vs-the-balrog.jpg)` }} >
           <Fade in={true}>
             <Portfolio />
           </Fade>

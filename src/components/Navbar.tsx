@@ -16,6 +16,7 @@ type navEvent = (buttonClick: any) => void;
 
 const navLinks: { title: string, path: string }[] = [
     { title: `Bio`, path: `bio` },
+    { title: `Technical Skills`, path: `technical` },
     { title: `Portfolio`, path: `portfolio` },
 ]
 
@@ -40,6 +41,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         borderBottomRightRadius: 16,
         borderStyle: `solid`,
         color: `#C4AC91`,
+        height: `66px`
     },
     iconLinks: {
         display: `inline-flex`,
@@ -65,6 +67,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         textDecoration: `none`,
         textTransform: `uppercase`,
         justifyContent: `flex-end`,
+        
     },
     links: {
         margin: `5px`,
@@ -104,7 +107,7 @@ const Navbar: React.FC = (): JSX.Element => {
 
     useEffect(() => {
         const setResponsiveness = () => {
-            return window.innerWidth < 600
+            return window.innerWidth < 900
                 ? setState((prevState) => ({ ...prevState, mobileView: true }))
                 : setState((prevState) => ({ ...prevState, mobileView: false }))
         };
@@ -132,7 +135,7 @@ const Navbar: React.FC = (): JSX.Element => {
                     }}
                     className={classes.mobileNav}
                 >
-                    <MenuIcon />
+                    <MenuIcon className={classes.iconLinks}/>
                 </IconButton>
                 <Drawer
                     {...{
