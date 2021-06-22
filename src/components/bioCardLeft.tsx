@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 blurbSlide: {
   marginLeft: `-150px`,
   [theme.breakpoints.down('lg')]: {
-    marginTop: `0px`,
+    marginLeft: `0px`,
 },
 }
 }));
