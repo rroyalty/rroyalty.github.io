@@ -1,38 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router';
-import { Grid, GridList, Container } from "@material-ui/core"
+import { Grid, Box } from "@material-ui/core"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import bio from '../static/bio.json'
-import BioCardRight from '../components/bioCardRight'
-import BioCardLeft from '../components/bioCardLeft'
+import bio from '../static/bio.json';
+import BioCardRight from '../components/bioCardRight';
+import BioCardLeft from '../components/bioCardLeft';
+import Carousel from 'react-material-ui-carousel';
+import CarouselItem from '../components/CarouselItem';
 
 const useStyles = makeStyles(() => createStyles({
     root: {
-        overflow: `hidden`,
-        justifyContent: 'center',
-        alignItems: 'center',
-        maxWidth: `95vw`,
-        border: `2px`,
-        borderStyle: `solid`,
-        borderColor: `white`,
-        padding: `0px`,
-        maxHeight: `100vh`
+        display: `flex`,
+        justifyContent: `center`,
+        alignItems: `center`,
     },
     grid: {
         margin: `10px`,
         maxheight: `100vh`,
-        marginTop: `70px`
+        marginTop: `70px`,
+
     },
-    gridList: {
-        paddingTop: `20px`,
-        display: `flex`,
-        justifyContent: 'center',
-        alignItems: 'top',
-        overflowX: 'hidden',
-        maxHeight: `100vh`,
-        overflow: `auto`,
-        width: `100%`
-    }
 }));
 
 
@@ -48,6 +35,12 @@ const Bio: React.FC = (): JSX.Element => {
     const { mobileView } = state;
 
     useEffect(() => {
+        return () => {
+            console.log(`component unmounted`)
+        };
+    }, []);
+
+    useEffect(() => {
         const setResponsiveness = () => {
             return window.innerWidth < 900
                 ? setState((prevState) => ({ ...prevState, mobileView: true }))
@@ -57,6 +50,7 @@ const Bio: React.FC = (): JSX.Element => {
         window.addEventListener('resize', () => setResponsiveness())
     }, [])
 
+    const bioDesktop = () => {
         return (
             <Grid
                 container
@@ -72,9 +66,28 @@ const Bio: React.FC = (): JSX.Element => {
                 }
             </Grid>
         )
-    
+    }
+
+    const bioMobile = () => {
+        return (
+            <Carousel animation={"slide"} interval={10000}>
+                {bio.map((item) =>
+                    <Box className={classes.root} key={item.index}>
+                        <CarouselItem src={item.src} p={item.p} />
+                    </Box>)}
+            </Carousel>
+        )
+    }
+
+
+
+    return (
+        <div>
+            {mobileView ? bioMobile() : bioDesktop()}
+        </div>
+    )
 
 
 }
 
-export default withRouter(Bio)
+export default Bio

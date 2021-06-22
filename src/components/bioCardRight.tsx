@@ -16,8 +16,13 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     justifyContent: `center`,
     alignItems: `center`,
     height: `16vh`,
-    margin: `10px`,
-    display: `flex`
+    display: `flex`,
+    [theme.breakpoints.down('xl')]: {
+      margin: `10px`,
+    },
+    [theme.breakpoints.down('sm')]: {
+      margin: `0px`,
+    }
   }
 }));
 
@@ -26,7 +31,7 @@ const BioCardRight: React.FC<IProps> = (props): JSX.Element => {
 
   return (
     <Grid className={classes.grid} container item xs={12} spacing={3}>
-      <Blurb  p={props.p} src={props.src} />
+      <Blurb p={props.p} src={props.src} />
       <Avatar p={props.p} src={props.src} />
     </Grid>
   )

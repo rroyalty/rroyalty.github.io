@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         color: `#C4AC91`,
         [theme.breakpoints.down('md')]: {
             fontSize: `.8rem`
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: `.7rem`
         }
     },
     gridBits: {

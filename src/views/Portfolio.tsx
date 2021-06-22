@@ -7,26 +7,6 @@ import { createStyles, makeStyles, Theme, GridList, Container, Grid } from '@mat
 
 const useStyles = makeStyles(() =>
     createStyles({
-        root: {
-            overflow: `hidden`,
-            justifyContent: 'center',
-            alignItems: 'center',
-            maxWidth: `95vw`,
-            border: `2px`,
-            borderStyle: `solid`,
-            borderColor: `white`,
-            padding: `0px`,
-            maxHeight: `100vh`
-        },
-        img: {
-            display: `flex`,
-            backgroundSize: "cover",
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            height: 'auto',
-            minHeight: '100vh',
-            justifyContent: `center`,
-        },
         gridList: {
             paddingTop: `20px`,
             display: `flex`,
@@ -35,9 +15,6 @@ const useStyles = makeStyles(() =>
             overflowX: 'hidden',
             maxHeight: `100vh`,
             overflow: `auto`,
-            width: `100%`
-        },
-        gridItem: {
             width: `100%`
         },
     }),

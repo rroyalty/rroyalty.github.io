@@ -43,7 +43,7 @@ const Bio: React.FC = (): JSX.Element => {
                 <Grid item lg={12}>
                     {bio.map(item => (
                         <Typography key={item.index} className={classes.bioText} style={{ whiteSpace: 'pre-line' }} component='p'>
-                            {item.p}
+
                         </Typography>
                     ))}
 

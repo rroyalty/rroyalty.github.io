@@ -2,26 +2,26 @@
     {
         "index": "1",
         "p": "I attended UMass Amherst from 2003 to 2008, where I earned a B.S. in Mathematics and studied to be a high school teacher. After two years of teaching, I decided that the profession was not a good fit for me and I moved onto other things.",
-        "src": "/images/Frankie.jpg"
+        "src": "https://via.placeholder.com/150"
     },
     {
         "index": "2",
-        "p": "I worked as a server and bartender at Chili's in Hadley, MA for a few years, after which I moved to Boston and took a job as a dog walker and petsitter. In addition, I spent my Summers working as a wilderness trip leader and outdoor education director at Birch Rock Summer Camp in Waterford, ME. While in Boston, I was fortunate to meet my wife, Samantha; who loves dogs as much as I do.",
+        "p": "I worked as bartender at Chili's in Hadley, MA for a few years, after which I moved to Boston and took a job as a dog walker. In addition, I spent my Summers working as the outdoor education director at Birch Rock Summer Camp in Waterford, ME. While in Boston, I was fortunate to meet my wife, Samantha; who loves dogs as much as I do.",
         "src": "/images/weddingPic.jpg"
     },
     {
         "index": "3",
-        "p": "I took two significant breaks throughout all this, once in 2013 when I successfully thru-hiked the Appalachian Trail, and again in 2016, when I attempted to hike the Pacific Crest Trail but was forced to abandon the trip after 500 miles due to a medical emergency on the East coast. Hopefully I'll have a chance to give it another go someday.",
+        "p": "I took two significant breaks throughout all this, once in 2013 when I successfully thru-hiked the Appalachian Trail, and again in 2016, when I attempted to hike the Pacific Crest Trail but was forced to abandon the trip after 500 miles due to a medical emergency on the East coast.",
         "src": "/images/at.jpg"
     },
     {
         "index": "4",
-        "p": "Now, I reside in Nottingham, NH with Sam and our two dogs, Franconia and Tuckerman. I recently graduated from UNH's Full Stack Coding Bootcamp course, where I am learned new professional skills in the hopes of advancing my professional career as a Full Stack Developer.",
+        "p": "Now, I reside in Nottingham, NH with Sam and our two dogs, Franconia and Tuckerman. I recently graduated from UNH's Full Stack Coding Bootcamp course, where I developed new professional skills in the hopes of advancing my professional career.",
         "src": "/images/Frankie.jpg"
     },
     {
         "index": "5",
         "p": "In my free time I enjoy backpacking, hiking, canoeing, video games, board games, spending time with my dogs, practicing Uechi Ryu Karate (in which I have a 2nd degree blackbelt,) and visiting new breweries. Also, I love Calvin and Hobbes.",
-        "src": "/images/Frankie.jpg"
+        "src": "/images/backpacking.jpg"
     }
 ]

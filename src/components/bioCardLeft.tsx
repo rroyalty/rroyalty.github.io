@@ -16,8 +16,13 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     justifyContent: `center`,
     alignItems: `center`,
     height: `16vh`,
-    margin: `10px`,
-    display: `flex`
+    display: `flex`,
+    [theme.breakpoints.down('xl')]: {
+      margin: `10px`,
+    },
+    [theme.breakpoints.down('sm')]: {
+      margin: `0px`,
+    }
   }
 }));
 
