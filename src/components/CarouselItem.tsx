@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         marginTop: `10px`,
         marginBottom: `5px`,
         color: theme.palette.bio?.main,
+        [theme.breakpoints.down('sm')]: {
+            fontSize: `.8rem`
+        },
     },
     avatar: {
         height: "30vh",

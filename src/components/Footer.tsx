@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         alignItems: `center`,
         justifyContent: `center`,
         flexDirection: `row`,
+        fontSize: `.7rem`
     },
     iconLinks: {
         display: `flex`,
@@ -55,7 +56,7 @@ const Footer: React.FC = (): JSX.Element => {
 
     return (
         <Container className={classes.root} maxWidth='xl'>
-            <BottomNavigation className={classes.nav} style={{ padding: "25px" }}>
+            <BottomNavigation className={classes.nav} style={{ paddingTop: "25px", paddingBottom: "25px" }}>
                 <Grid
                     container
                     direction="row"
@@ -64,7 +65,7 @@ const Footer: React.FC = (): JSX.Element => {
                     spacing={1}
                 >
                     <Grid item xs={12} sm={4}>
-                        <Typography className={classes.typography} style={{ fontSize: ".8rem" }}>
+                        <Typography className={classes.typography}>
                             This portfolio was created using React, TypeScript and Material UI.
                         </Typography>
                     </Grid>

@@ -13,6 +13,9 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         typography: {
             color: theme.palette.skills?.main,
+            [theme.breakpoints.down('sm')]: {
+                display: `none`
+            }
         },
         listItem: {
             justifyContent: `top`,

@@ -45,6 +45,9 @@ const useStyles = makeStyles((theme: Theme) =>
         typography: {
             marginTop: `20px`,
             color: theme.palette.skills?.main,
+            [theme.breakpoints.down('sm')]: {
+                fontSize: `.9rem`
+            },
         },
     }));
 

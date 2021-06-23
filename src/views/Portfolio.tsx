@@ -12,7 +12,7 @@ const useStyles = makeStyles(() =>
             justifyContent: 'center',
             alignItems: 'top',
             overflowX: 'hidden',
-            maxHeight: `100vh`,
+            maxHeight: `90vh`,
             overflow: `auto`,
             width: `100%`
         },
