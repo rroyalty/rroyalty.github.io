@@ -4,15 +4,10 @@
 
 The portfolio page for Ryan Royalty.
   
-## Installation  
+## Links 
   
-The project is a website; no installation necessary.  
-  
-## Usage  
-  
-[!Repository]https://github.com/rroyalty/rroyalty.github.io  
-[!URL]https://rroyalty.github.io/ 
-
+[Repository](https://github.com/rroyalty/rroyalty.github.io)  
+[URL](https://rroyalty.github.io/)  
 
 ## License
 
