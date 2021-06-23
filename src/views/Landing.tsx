@@ -26,7 +26,6 @@ const App = () => {
   const classes = useStyles();
 
   return (
-    <Router>
       <>
         <Container id="bio" className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/code-Background.jpg)` }} >
           <Fade in={true}>
@@ -44,7 +43,6 @@ const App = () => {
           </Fade>
         </Container>
       </>
-    </Router>
   );
 }
 

@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from "react-scroll";
-import { Link } from "react-router-dom";
-import { withRouter } from 'react-router';
-// import { IconButton, Container, Grid, Paper } from "@material-ui/core"
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton'
-import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
 import DescriptionIcon from '@material-ui/icons/Description';
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";

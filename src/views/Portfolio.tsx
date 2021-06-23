@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router';
 import ProjectCard from '../components/ProjectCard'
 import projectList from '../static/projects.json'
 import { createStyles, makeStyles, Theme, GridList, Container, Grid } from '@material-ui/core';
@@ -23,6 +22,7 @@ const useStyles = makeStyles(() =>
 
 const Portfolio: React.FC = (): JSX.Element => {
     const classes = useStyles();
+    const length: number = projectList.length
 
     return (
         <Grid
@@ -31,8 +31,8 @@ const Portfolio: React.FC = (): JSX.Element => {
             justify="center"
             alignItems="center"
         >    <GridList className={classes.gridList} cellHeight={160} >
-                {projectList.map(item => (
-                    <ProjectCard key={item.name} props={item} />
+                {projectList.map((item, index: number) => (
+                    <ProjectCard key={item.name} props={item} index={index} length={length} />
                 ))}
             </GridList>
         </Grid>
@@ -40,4 +40,4 @@ const Portfolio: React.FC = (): JSX.Element => {
 }
 
 
-export default withRouter(Portfolio)
+export default Portfolio
