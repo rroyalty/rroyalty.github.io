@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         textDecoration: `none`,
         textTransform: `uppercase`,
         justifyContent: `flex-end`,
-        
+
     },
     links: {
         margin: `5px`,
@@ -75,6 +75,12 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         alignContent: `center`
     },
     menu: {
+        backgroundColor: `#181D27`,
+        border: `0px`,
+        borderLeftWidth: `2px`,
+        borderColor: `#C4AC91`,
+        borderStyle: `solid`,
+        color: `#C4AC91`,
         display: `flex`,
         flexDirection: `column`,
         alignItems: `center`,
@@ -82,11 +88,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         backgroundRepeat: 'no-repeat',
         height: "100vh",
         backgroundImage: `url(/menuImage.jpg)`,
-        border: `0px`,
-        borderLeft: `2px`,
-        borderStyle: `solid`,
-        borderColor: `white`,
-        width: `50vw`,
+        width: `40vw`,
     }
 }))
 
@@ -131,7 +133,7 @@ const Navbar: React.FC = (): JSX.Element => {
                     }}
                     className={classes.mobileNav}
                 >
-                    <MenuIcon className={classes.iconLinks}/>
+                    <MenuIcon className={classes.iconLinks} />
                 </IconButton>
                 <Drawer
                     {...{
@@ -140,12 +142,29 @@ const Navbar: React.FC = (): JSX.Element => {
                         onClose: handleDrawerClose,
                     }}>
                     <List component="nav" aria-labelledby="main navigation" className={` ${classes.menu}`}>
-                        <MenuItem className={classes.mobileNav}>
-                            <ScrollLink className={classes.links} to="bio">Bio</ScrollLink>
-                        </MenuItem>
-                        <MenuItem className={classes.mobileNav}>
-                            <ScrollLink className={classes.links} to="portfolio">Portfolio</ScrollLink>
-                        </MenuItem>
+                    {navLinks.map(({ title, path }) => (
+                                <ScrollLink smooth={true} duration={500} to={path} key={title} className={classes.linkText}>
+                                    <ListItem button>
+                                        <ListItemText primary={title} />
+                                    </ListItem>
+                                </ScrollLink>
+                            ))}
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <a className={classes.iconLinks} href="https://github.com/rroyalty" target="_blank" rel="noreferrer">
+                            <img alt="github" className={classes.iconLinks} src="/images/GitHub-Mark-Light-64px.png" />
+                        </a>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <a className={classes.iconLinks} href="https://www.linkedin.com/in/rroyalty/" target="_blank" rel="noreferrer">
+                            <img alt="Linked In" className={classes.iconLinks} src="/images/LinkedIn.png" />
+                        </a>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <a className={classes.anchorColor} href="mailto: rroyalty@gmail.com">
+                            <MailIcon className={classes.iconLinks} />
+                        </a>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <a className={classes.anchorColor} href="/images/resume.pdf" download>
+                            <DescriptionIcon className={classes.iconLinks} />
+                        </a>
                     </List>
                 </Drawer>
             </AppBar>
@@ -193,7 +212,7 @@ const Navbar: React.FC = (): JSX.Element => {
 
     return (
         <div>
-            { mobileView ? displayMobile() : displayDesktop() }
+            {mobileView ? displayMobile() : displayDesktop()}
         </div>
     )
 }
