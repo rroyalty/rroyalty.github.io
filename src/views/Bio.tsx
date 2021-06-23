@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Grid, Box, Container } from "@material-ui/core"
-import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import { Grid, Box } from "@material-ui/core"
+import { makeStyles, createStyles } from "@material-ui/core/styles";
 import bio from '../static/bio.json';
 import BioCardRight from '../components/bioCardRight';
 import BioCardLeft from '../components/bioCardLeft';

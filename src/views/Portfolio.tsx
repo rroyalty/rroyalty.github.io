@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard'
 import projectList from '../static/projects.json'
-import { createStyles, makeStyles, Theme, GridList, Container, Grid } from '@material-ui/core';
+import { createStyles, makeStyles, GridList, Grid } from '@material-ui/core';
 
 
 const useStyles = makeStyles(() =>

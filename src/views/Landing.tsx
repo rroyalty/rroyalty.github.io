@@ -1,7 +1,4 @@
-import React from 'react';
-// import background from '/images/code-Background.jpg';
 import { Container, Fade } from "@material-ui/core";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Bio from './Bio';
 import Portfolio from './Portfolio';
 import Technical from './Technical';

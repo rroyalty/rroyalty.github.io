@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     typography: {
         padding: `15px`,
+        fontWeight: `bolder`,
         color: theme.palette.bio?.main,
         [theme.breakpoints.down('md')]: {
             fontSize: `.8rem`

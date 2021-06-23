@@ -6,7 +6,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "@material-ui/core";
 import { createMuiTheme, responsiveFontSizes, Theme } from "@material-ui/core/styles";
-import { purple, green, deepOrange, indigo, blue } from '@material-ui/core/colors/';
+import {  green, deepOrange, blue } from '@material-ui/core/colors/';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 
 declare module "@material-ui/core/styles/createPalette" {

@@ -5,10 +5,8 @@ import IconButton from '@material-ui/core/IconButton'
 import MailIcon from '@material-ui/icons/Mail';
 import DescriptionIcon from '@material-ui/icons/Description';
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import { AppBar, Toolbar, Drawer, List, ListItem, ListItemText, MenuItem } from "@material-ui/core"
+import { AppBar, Toolbar, Drawer, List, ListItem, ListItemText } from "@material-ui/core"
 
-
-type navEvent = (buttonClick: any) => void;
 
 const navLinks: { title: string, path: string }[] = [
     { title: `Bio`, path: `bio` },
@@ -73,12 +71,12 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         alignContent: `center`
     },
     menu: {
-        backgroundColor: `#181D27`,
+        backgroundColor: theme.palette.bg?.main,
         border: `0px`,
         borderLeftWidth: `2px`,
-        borderColor: `#66cccc`,
+        borderColor: theme.palette.bio?.main,
         borderStyle: `solid`,
-        color: `#C4AC91`,
+        color: theme.palette.bio?.main,
         display: `flex`,
         flexDirection: `column`,
         alignItems: `center`,
