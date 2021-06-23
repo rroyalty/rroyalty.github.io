@@ -5,13 +5,6 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import { AppBar, Toolbar, Drawer } from "@material-ui/core"
 import NavbarList from './NavbarList'
 
-
-const navLinks: { title: string, path: string }[] = [
-    { title: `Bio`, path: `bio` },
-    { title: `Technical Skills`, path: `technical` },
-    { title: `Portfolio`, path: `portfolio` },
-]
-
 const useStyles = makeStyles((theme: Theme) => createStyles({
     navDisplayFlex: {
         display: `inline-flex`,
