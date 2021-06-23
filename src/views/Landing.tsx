@@ -24,7 +24,7 @@ const App = () => {
 
   return (
       <>
-        <Container id="bio" className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/code-Background.jpg)` }} >
+        <Container id="bio" className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/code-Background2.png)` }} >
           <Fade in={true}>
             <Bio />
           </Fade>

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container, Grid, Typography } from "@material-ui/core"
+import { Container, Grid } from "@material-ui/core"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import bio from '../static/bio.json'
+import skillLists from '../static/skills.json'
+import SkillList from '../components/SkillList'
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
     imageDim: {
@@ -39,15 +40,12 @@ const Technical: React.FC = (): JSX.Element => {
     return (
         <Container maxWidth='lg'>
             <div style={{ height: `70px` }} />
-                <Grid item lg={12}>
-                    {bio.map(item => (
-                        <Typography key={item.index} className={classes.bioText} style={{ whiteSpace: 'pre-line' }} component='p'>
-
-                        </Typography>
-                    ))}
-
-                </Grid>
-        </Container>
+            <Grid container spacing={1} >
+                {skillLists.map((item) => (
+                    <SkillList key={item.index} props={item.list} title={item.title} />
+                ))}
+            </Grid>
+        </Container >
     )
 }
 

@@ -81,33 +81,35 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
   return (
     <GridListTile className={props.index !== props.length - 1 ? (props.index === 0 ? classes.firstTile : classes.allTiles) : classes.lastTile} cols={4}>
       <Card className={classes.root}>
+
+        <CardMedia
+          className={classes.media}
+          image={props.props.imgSrc}
+          title={props.props.name}
+        />
+        <CardContent>
+          <Typography className={classes.typography} gutterBottom variant="h5" component="h2">
+            {props.props.name}
+          </Typography>
+          <Typography className={classes.typography} variant="body2" component="p">
+            {props.props.description}
+          </Typography>
+        </CardContent>
+
         <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image={props.props.imgSrc}
-            title={props.props.name}
-          />
-          <CardContent>
-            <Typography className={classes.typography} gutterBottom variant="h5" component="h2">
-              {props.props.name}
-            </Typography>
-            <Typography className={classes.typography} variant="body2" component="p">
-              {props.props.description}
-            </Typography>
-          </CardContent>
+          <CardActions>
+            <a href={props.props.github} target="_blank" rel="noreferrer">
+              <Button className={classes.typography} size="small">
+                GitHub
+              </Button>
+            </a>
+            <a href={props.props.domain} target="_blank" rel="noreferrer">
+              <Button className={classes.typography} size="small">
+                Deployment
+              </Button>
+            </a>
+          </CardActions>
         </CardActionArea>
-        <CardActions>
-          <a href={props.props.github} target="_blank" rel="noreferrer">
-            <Button className={classes.typography} size="small">
-              GitHub
-            </Button>
-          </a>
-          <a href={props.props.domain} target="_blank" rel="noreferrer">
-            <Button className={classes.typography} size="small">
-              Deployment
-            </Button>
-          </a>
-        </CardActions>
       </Card>
     </GridListTile>
   );

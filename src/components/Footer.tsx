@@ -65,7 +65,7 @@ const Footer: React.FC = (): JSX.Element => {
                 >
                     <Grid item xs={12} sm={4}>
                         <Typography className={classes.typography} style={{ fontSize: ".8rem" }}>
-                            This portfolio was created using React, Typescript and Material UI.
+                            This portfolio was created using React, TypeScript and Material UI.
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={4}>
@@ -76,7 +76,9 @@ const Footer: React.FC = (): JSX.Element => {
                         </a>
                     </Grid>
                     <Grid item xs={12} sm={4}>
-
+                        <Typography className={classes.typography}>
+                            Last Updated: 06/23/2021
+                        </Typography>
                     </Grid>
 
                 </Grid>

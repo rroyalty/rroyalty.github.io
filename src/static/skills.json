@@ -1,0 +1,66 @@
+[
+    {
+        "index": "1",
+        "title": "Languages",
+        "list": [
+            {
+                "language": "TypeScript",
+                "avatar": "https://cdn.iconscout.com/icon/free/png-512/typescript-1174965.png"
+            },
+            {
+                "language": "JavaScript ES6+",
+                "avatar": "https://cdn.iconscout.com/icon/free/png-512/javascript-2752148-2284965.png"
+            },
+            {
+                "language": "HTML5",
+                "avatar": "https://cdn0.iconfinder.com/data/icons/social-network-7/50/22-512.png"
+            },
+            {
+                "language": "CSS3",
+                "avatar": "https://cdn2.iconfinder.com/data/icons/social-icon-3/512/social_style_3_css3-512.png"
+            },
+            {
+                "language": "SQL",
+                "avatar": "https://www.clipartmax.com/png/middle/243-2432711_azure-sql-database-icon.png"
+            },
+            {
+                "language": "NoSQL",
+                "avatar": "https://cdn6.aptoide.com/imgs/0/7/6/076303a788705113dc6cebc4fe59a02d_icon.png"
+            },
+            {
+                "language": "VBA",
+                "avatar": "https://cdn3.iconfinder.com/data/icons/flat-design-spreadsheet-set-5/24/macros-vba-512.png"
+            }
+        ]
+    },
+    {
+        "index": "2",
+        "title": "Applications",
+        "list": [
+            {
+                "language": "GitHub",
+                "avatar": "/images/GitHub-Mark-Light-64px.png"
+            },
+            {
+                "language": "Heroku",
+                "avatar": "https://image.flaticon.com/icons/png/512/873/873120.png"
+            },
+            {
+                "language": "VSCode",
+                "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png"
+            },
+            {
+                "language": "MySQL",
+                "avatar": "https://cdn.iconscout.com/icon/free/png-512/mysql-19-1174939.png"
+            },
+            {
+                "language": "MongoDB",
+                "avatar": "https://img.icons8.com/color/452/mongodb.png"
+            },
+            {
+                "language": "FileMaker",
+                "avatar": "https://s3.amazonaws.com/hbase-files/FM13-icon-green-blue.png"
+            }
+        ]
+    }
+]
