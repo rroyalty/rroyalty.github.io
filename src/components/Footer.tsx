@@ -38,12 +38,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         flexDirection: `row`,
         fontSize: `.7rem`
     },
-    iconLinks: {
-        display: `flex`,
-        flexDirection: `row`,
-        height: `48px`,
-        width: `48px`,
-    },
     anchorColor: {
         color: theme.palette.portfolio?.main,
     },
