@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     root: {
         display: `flex`,
         flexDirection: `column`,
-        backgroundColor: theme.palette.bg?.main,
+        backgroundColor: `#181D27`,
         borderTopWidth: `2px`,
         borderColor: theme.palette.portfolio?.main,
         borderStyle: `solid`,
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     nav: {
         display: `flex`,
         flexDirection: `column`,
-        backgroundColor: theme.palette.bg?.main,
+        backgroundColor: `#181D27`,
         justifyContent: `center`,
         alignItems: `center`,
         width: `90vw`,

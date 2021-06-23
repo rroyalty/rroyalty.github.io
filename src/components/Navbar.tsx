@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         justifyContent: `center`
     },
     navbar: {
-        backgroundColor: theme.palette.bg?.main,
+        backgroundColor: `#181D27`,
         borderBottomWidth: `2px`,
         borderLeftWidth: `2px`,
         borderRightWidth: `2px`,
@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         alignContent: `center`
     },
     menu: {
-        backgroundColor: theme.palette.bg?.main,
+        backgroundColor: `#181D27`,
         border: `0px`,
         borderLeftWidth: `2px`,
         borderColor: theme.palette.bio?.main,
