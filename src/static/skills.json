@@ -62,5 +62,47 @@
                 "avatar": "https://s3.amazonaws.com/hbase-files/FM13-icon-green-blue.png"
             }
         ]
+    },
+    {
+        "index": "3",
+        "title": "Tools",
+        "list": [
+            {
+                "language": "React",
+                "avatar": "https://cdn.iconscout.com/icon/free/png-512/react-1543566-1306069.png"
+            },
+            {
+                "language": "Redux",
+                "avatar": "https://cdn.iconscout.com/icon/free/png-512/redux-283024.png"
+            },
+            {
+                "language": "Express",
+                "avatar": "https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png"
+            },
+            {
+                "language": "Node",
+                "avatar": "https://cdn.iconscout.com/icon/free/png-512/node-js-1-1174935.png"
+            },
+            {
+                "language": "Sequelize",
+                "avatar": "https://cdn.iconscout.com/icon/free/png-512/sequelize-1175001.png"
+            },
+            {
+                "language": "Material UI",
+                "avatar": "https://material-ui.com/static/logo.png"
+            },
+            {
+                "language": "Axios",
+                "avatar": "https://symbols-electrical.getvecta.com/stencil_74/148_axios-icon.351c8889a7.png"
+            },
+            {
+                "language": "Auth0",
+                "avatar": "https://miro.medium.com/max/3150/1*kofg5S-_kcyij3HL-uCnZA.png"
+            },
+            {
+                "language": "Passport",
+                "avatar": "https://leolanchas.com/wp-content/uploads/2013/07/0d184ee3-fd8d-4b94-acf4-b4e686e57375.png"
+            }
+        ]
     }
 ]

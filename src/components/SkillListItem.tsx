@@ -9,13 +9,27 @@ interface IProps {
     avatar: string,
 }
 
-// interface IPropsArray extends Array<IProps>{}
-
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         typography: {
             color: theme.palette.skills?.main,
         },
+        listItem: {
+            justifyContent: `top`,
+            alignItems: `center`,
+            display: `flex`,
+            flexDirection: `row`,
+            [theme.breakpoints.down('md')]: {
+                flexDirection: `column`,
+            }
+        },
+        justifyAvatar: {
+            display: `flex`,
+            justifyContent: `center`,
+            alignItems: `center`,
+            alignSelf: `center`
+        }
+
     }));
 
 const SkillListItem: React.FC<IProps> = (props): JSX.Element => {
@@ -23,13 +37,13 @@ const SkillListItem: React.FC<IProps> = (props): JSX.Element => {
 
     return (
 
-        <ListItem>
-            <ListItemAvatar>
+        <ListItem className={classes.listItem}>
+            <ListItemAvatar className={classes.justifyAvatar}>
                 <Avatar src={props.avatar} variant="rounded" />
             </ListItemAvatar>
             <ListItemText
                 primary={props.language}
-                className = {classes.typography}
+                className={classes.typography}
             />
         </ListItem>
 

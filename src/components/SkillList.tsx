@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             backgroundColor: theme.palette.bg?.main,
+            alignItems: `center`,
             textAlign: 'center',
             padding: `25px`,
             display: `flex`,
@@ -30,8 +31,16 @@ const useStyles = makeStyles((theme: Theme) =>
             border: `2px`,
             borderStyle: `solid`,
             borderColor: theme.palette.skills?.main,
-            height: `60vh`,
-            margin: `10px`
+            [theme.breakpoints.down('xl')]: {
+                height: `70vh`,
+                maxWidth: `200px`,
+                margin: `10px`,
+            },
+            [theme.breakpoints.down('md')]: {
+                height: `92vh`,
+                width: `25vw`,
+                margin: `10px`,
+            }
           },
         typography: {
             marginTop: `20px`,
@@ -43,7 +52,7 @@ const SkillList: React.FC<IProps> = (props): JSX.Element => {
     const classes = useStyles();
 
     return (
-        <Grid className={classes.root} md={4} sm={12} item>
+        <Grid className={classes.root} xl={3} item>
             <Typography className={classes.typography} variant="h6" >
                 {props.title}
             </Typography>
