@@ -24,19 +24,19 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     linkText: {
         textDecoration: `none`,
         textTransform: `uppercase`,
-        color: `#C4AC91`,
+        color: theme.palette.bio?.main,
         justifyContent: `center`
     },
     navbar: {
-        backgroundColor: `#181D27`,
+        backgroundColor: theme.palette.bg?.main,
         borderBottomWidth: `2px`,
         borderLeftWidth: `2px`,
         borderRightWidth: `2px`,
-        borderColor: `#C4AC91`,
+        borderColor: theme.palette.bio?.main,
         borderBottomLeftRadius: 16,
         borderBottomRightRadius: 16,
         borderStyle: `solid`,
-        color: `#C4AC91`,
+        color: theme.palette.bio?.main,
         height: `66px`
     },
     iconLinks: {
@@ -68,8 +68,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     links: {
         margin: `5px`,
         padding: `5px`,
-        color: theme.palette.primary.main,
-        backgroundColor: `rgba(255,255,255,0.6)`,
         width: `100%`,
         fontSize: `1.2rem`,
         alignContent: `center`
@@ -78,7 +76,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         backgroundColor: `#181D27`,
         border: `0px`,
         borderLeftWidth: `2px`,
-        borderColor: `#C4AC91`,
+        borderColor: `#66cccc`,
         borderStyle: `solid`,
         color: `#C4AC91`,
         display: `flex`,

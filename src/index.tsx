@@ -6,15 +6,48 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "@material-ui/core";
 import { createMuiTheme, responsiveFontSizes, Theme } from "@material-ui/core/styles";
+import { purple, green, deepOrange, indigo, blue } from '@material-ui/core/colors/';
+import { fade } from '@material-ui/core/styles/colorManipulator';
+
+declare module "@material-ui/core/styles/createPalette" {
+  interface Palette {
+    bg?: Palette['primary'];
+    navbar?: Palette['primary'];
+    bio?: Palette['primary'];
+    skills?: Palette['primary'];
+    portfolio?: Palette['primary'];
+    footer?: Palette['primary'];
+  }
+  interface PaletteOptions {
+    bg?: PaletteOptions['primary'];
+    navbar?: PaletteOptions['primary'];
+    bio?: PaletteOptions['primary'];
+    skills?: PaletteOptions['primary'];
+    portfolio?: PaletteOptions['primary'];
+    footer?: PaletteOptions['primary'];
+  }
+}
 
 let theme: Theme = createMuiTheme({
   palette: {
-    primary: {
-      main: `#181D27`,
+    bg: {
+      main: fade(`#181D27`, 0.85),
     },
-    secondary: {
-      main: `#146CA1`,
+    navbar: {
+      main: blue[100],
     },
+    bio:{
+      main: blue[100],
+    },
+    skills:{
+      main: green[600],
+    },
+    portfolio:{
+      main: deepOrange[500],
+    },
+    footer:{
+      main: deepOrange[500],
+    }
   },
 });
 

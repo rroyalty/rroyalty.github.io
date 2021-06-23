@@ -10,10 +10,10 @@ interface IProps {
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
     root: {
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.bg?.main,
         border: `3px`,
         borderStyle: `solid`,
-        borderColor: `#C4AC91`,
+        borderColor: theme.palette.bio?.main,
         width: `70%`,
         display: `flex`,
         flexDirection: `column`,
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         marginRight: `15px`,
         marginTop: `10px`,
         marginBottom: `5px`,
-        color: `#C4AC91`,
+        color: theme.palette.bio?.main,
     },
     avatar: {
         height: "30vh",
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         borderStyle: `solid`,
         marginTop: `15px`,
         marginBottm: `5px`,
-        borderColor: `#C4AC91`
+        borderColor: theme.palette.bio?.main,
     },
 }));
 

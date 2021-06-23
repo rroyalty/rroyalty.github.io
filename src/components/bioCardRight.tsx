@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     width: "35vh",
     border: `3px`,
     borderStyle: `solid`,
-    borderColor: `#C4AC91`,
+    borderColor: theme.palette.bio?.main,
     marginTop: `-200px`,
     [theme.breakpoints.down('lg')]: {
       height: "20vh",

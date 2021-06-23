@@ -2,7 +2,7 @@
 import React from 'react';
 import { Grid, Avatar } from "@material-ui/core"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import Blurb from './Blurb'
+import Blurb from './Blurb';
 
 interface IProps {
   p: string,
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     width: "35vh",
     border: `3px`,
     borderStyle: `solid`,
-    borderColor: `#C4AC91`,
+    borderColor: theme.palette.bio?.main,
     marginTop: `200px`,
     [theme.breakpoints.down('lg')]: {
       height: "20vh",

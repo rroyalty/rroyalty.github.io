@@ -7,11 +7,11 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     root: {
         display: `flex`,
         flexDirection: `column`,
-        backgroundColor: `#181D27`,
+        backgroundColor: theme.palette.bg?.main,
         borderTopWidth: `2px`,
-        borderColor: `#C4AC91`,
+        borderColor: theme.palette.portfolio?.main,
         borderStyle: `solid`,
-        color: `#C4AC91`,
+        color: theme.palette.portfolio?.main,
         justifyContent: `center`,
         alignItems: `center`,
         width: `auto`,
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     nav: {
         display: `flex`,
         flexDirection: `column`,
-        backgroundColor: `#181D27`,
+        backgroundColor: theme.palette.bg?.main,
         justifyContent: `center`,
         alignItems: `center`,
         width: `90vw`,
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     typography: {
         display: `flex`,
-        color: `#C4AC91`,
+        color: theme.palette.portfolio?.main,
         alignItems: `center`,
         justifyContent: `center`,
         flexDirection: `row`,
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         width: `48px`,
     },
     anchorColor: {
-        color: `#C4AC91`
+        color: theme.palette.portfolio?.main,
     },
 }));
 

@@ -20,7 +20,7 @@ interface IProps {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      backgroundColor: theme.palette.primary.main,
+      backgroundColor: theme.palette.bg?.main,
       justifyContent: 'center',
       textAlign: 'center',
       padding: `25px`,
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexDirection: `column`,
       border: `2px`,
       borderStyle: `solid`,
-      borderColor: `#C4AC91`,
+      borderColor: theme.palette.portfolio?.main,
       height: `80%`,
       [theme.breakpoints.down('xl')]: {
         width: `20vw`,
@@ -50,10 +50,10 @@ const useStyles = makeStyles((theme: Theme) =>
       height: 140,
       border: `2px`,
       borderStyle: `solid`,
-      borderColor: `#C4AC91`,
+      borderColor: theme.palette.portfolio?.main,
     },
     typography: {
-      color: `#C4AC91`
+      color: theme.palette.portfolio?.main,
     },
     firstTile: {
       margin: `10px`,

@@ -12,15 +12,15 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 
     paper: {
         height: "20vh",
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.bg?.main,
         border: `3px`,
         borderStyle: `solid`,
-        borderColor: `#C4AC91`,
+        borderColor: theme.palette.bio?.main,
         width: `100%`
     },
     typography: {
         padding: `15px`,
-        color: `#C4AC91`,
+        color: theme.palette.bio?.main,
         [theme.breakpoints.down('md')]: {
             fontSize: `.8rem`
         },
