@@ -16,8 +16,12 @@ const useStyles = makeStyles((theme: Theme) =>
         typography: {
 
             color: theme.palette.portfolio?.main,
-            padding: `20px`,
+            margin: `10px`,
+            paddingTop: `70px`
 
+        },
+        margin: {
+            marginBottom: `50px`
         }
     }),
 );
@@ -37,7 +41,8 @@ const Portfolio: React.FC = (): JSX.Element => {
                 direction="row"
                 justify="center"
                 alignItems="center"
-            >    <GridList className={classes.gridList} cellHeight={160} >
+                className={classes.margin}
+            >    <GridList className={classes.gridList} cellHeight={160} cols={4}>
                     {projectList.map((item, index: number) => (
                         <ProjectCard key={item.name} props={item} index={index} length={length} />
                     ))}

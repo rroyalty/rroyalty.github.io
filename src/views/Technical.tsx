@@ -7,7 +7,8 @@ import SkillList from '../components/SkillList'
 const useStyles = makeStyles((theme: Theme) => createStyles({
     typography: {
         color: theme.palette.skills?.main,
-        padding: `20px`,
+        margin: `10px`,
+        paddingTop: `70px`
     }
 }))
 

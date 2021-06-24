@@ -42,9 +42,9 @@ const Blurb: React.FC<IProps> = (props): JSX.Element => {
 
     return (
         <Paper className={classes.paper} elevation={4}>
-            <Typography className={classes.typography} variant="h6">
+            {/* <Typography className={classes.typography} variant="h6">
                 {props.title}
-            </Typography>
+            </Typography> */}
             <Typography className={classes.typography}>
                 {props.p}
             </Typography>

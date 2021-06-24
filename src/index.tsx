@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "@material-ui/core";
 import { createMuiTheme, responsiveFontSizes, Theme } from "@material-ui/core/styles";
 import { fade } from '@material-ui/core/styles/colorManipulator';
+import { teal, deepOrange } from '@material-ui/core/colors/';
 
 declare module "@material-ui/core/styles/createPalette" {
   interface Palette {
@@ -33,20 +34,28 @@ let theme: Theme = createMuiTheme({
       main: fade("#292929", .95),
     },
     navbar: {
-      main: "#cccc66",
+      main: teal[300],
     },
     bio:{
-      main: "#669966",
+      main: teal[300],
     },
     skills:{
-      main: "#6699cc",
+      main: teal[300],
     },
     portfolio:{
-      main: "#993333",
+      main: teal[300],
     },
     footer:{
-      main: "#cccc66",
+      main: teal[300],
     }
+  },
+  typography: {
+    fontFamily: [
+      "Heebo",
+      "serif",
+    ].join(","),
+    fontSize: 8,
+    htmlFontSize: 8 
   },
 });
 

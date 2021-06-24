@@ -21,7 +21,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     typography: {
         color: theme.palette.bio?.main,
-        padding: `20px`,
+        margin: `10px`,
+        paddingTop: `70px`
     }
 }));
 

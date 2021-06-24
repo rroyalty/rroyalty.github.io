@@ -10,14 +10,13 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     position: `static`,
     display: `flex`,
     flexDirection: `column`,
-    backgroundSize: "contain",
+    backgroundSize: `auto`,
     backgroundRepeat: 'intial',
     backgroundPosition: 'center',
     justifyContent: `center`,
     alignItems: `center`
   },
   spacing: {
-    marginTop: `100px`,
     alignItems: `center`,
     justifyContent: `center`,
     alignText: `center`,
@@ -34,7 +33,7 @@ const App = () => {
 
   return (
     <>
-      <Container className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/wallpaperflare.com_wallpaper.png)` }}>
+      <Container className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/seamless-cogwheels-pattern-2532.png)` }}>
         <Container className={classes.spacing} id="bio" maxWidth='md' >
           <Bio />
         </Container>

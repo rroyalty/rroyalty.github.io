@@ -29,18 +29,18 @@ const useStyles = makeStyles((theme: Theme) =>
       border: `2px`,
       borderStyle: `solid`,
       borderColor: theme.palette.portfolio?.main,
-      height: `80%`,
+      height: `70%`,
       [theme.breakpoints.down('xl')]: {
-        width: `20vw`,
+        width: `15vw`,
       },
       [theme.breakpoints.down('lg')]: {
-        width: `25vw`,
+        width: `20vw`,
       },
       [theme.breakpoints.down('md')]: {
-        width: `30vw`,
+        width: `25vw`,
       },
       [theme.breakpoints.down('sm')]: {
-        width: `50vw`,
+        width: `30vw`,
       },
       [theme.breakpoints.down('xs')]: {
         width: `60vw`,
@@ -79,7 +79,7 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
   const classes = useStyles();
 
   return (
-    <GridListTile className={props.index !== props.length - 1 ? (props.index === 0 ? classes.firstTile : classes.allTiles) : classes.lastTile} cols={4}>
+    <GridListTile className={props.index !== props.length - 1 ? (props.index === 0 ? classes.firstTile : classes.allTiles) : classes.lastTile}>
       <Card className={classes.root}>
 
         <CardMedia
@@ -88,7 +88,7 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
           title={props.props.name}
         />
         <CardContent>
-          <Typography className={classes.typography} gutterBottom variant="h5" component="h2">
+          <Typography className={classes.typography} gutterBottom variant="h6" component="h3">
             {props.props.name}
           </Typography>
           <Typography className={classes.typography} variant="body2" component="p">

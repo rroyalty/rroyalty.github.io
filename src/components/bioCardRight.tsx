@@ -45,7 +45,7 @@ const BioCardRight: React.FC<IProps> = (props): JSX.Element => {
       </Grid>
 
       <Grid className={classes.grid} item xs={3} >
-        <Paper elevation={4}>
+        <Paper elevation={10}>
           <Avatar className={classes.avatar} alt={props.src} src={props.src} variant={`rounded`} />
         </Paper>
       </Grid>
