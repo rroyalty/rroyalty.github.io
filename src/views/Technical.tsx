@@ -5,17 +5,6 @@ import skillLists from '../static/skills.json'
 import SkillList from '../components/SkillList'
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
-    root: {
-        display: `flex`,
-        justifyContent: `center`,
-        alignItems: `center`,
-        [theme.breakpoints.down('xl')]: {
-            flexDirection: `row`
-        },
-        [theme.breakpoints.down('md')]: {
-            flexDirection: `column`
-        },
-    },
     typography: {
         color: theme.palette.skills?.main,
         padding: `20px`,
@@ -31,7 +20,13 @@ const Technical: React.FC = (): JSX.Element => {
                 Skills
             </Typography>
 
-            <Grid className={classes.root} container spacing={1} >
+            <Grid
+                container
+                direction="row"
+                justify="center"
+                alignItems="center"
+                spacing={3}>
+                    
                 {skillLists.map((item) => (
                     <SkillList key={item.index} props={item.list} title={item.title} />
                 ))}

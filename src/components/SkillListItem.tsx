@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { ListItem, ListItemAvatar, ListItemText, Avatar, Typography } from "@material-ui/core"
+import { Avatar, Typography, Grid } from "@material-ui/core"
 
 interface IProps {
     language: string,
@@ -33,19 +33,13 @@ const SkillListItem: React.FC<IProps> = (props): JSX.Element => {
     const classes = useStyles();
 
     return (
-
-        <div className={classes.listItem}>
-            {/* <ListItemAvatar className={classes.justifyAvatar}> */}
-                <Avatar src={props.avatar} variant="rounded" />
-            {/* </ListItemAvatar> */}
+        <Grid item xl={1} className={classes.listItem}>
+            <Avatar src={props.avatar} variant="rounded" />
             <Typography className={classes.typography}>
                 {props.language}
             </Typography>
-            {/* <ListItemText
-                primary={props.language}
-                className={classes.typography}
-            /> */}
-        </div>
+
+       </Grid>
 
     );
 }

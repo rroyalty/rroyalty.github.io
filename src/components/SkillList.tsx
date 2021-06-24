@@ -23,11 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             backgroundColor: theme.palette.bg?.main,
-            alignItems: `center`,
-            textAlign: 'center',
             padding: `25px`,
-            display: `flex`,
-            flexDirection: `column`,
             border: `2px`,
             borderStyle: `solid`,
             borderColor: theme.palette.skills?.main,
@@ -43,10 +39,8 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         typography: {
             marginTop: `20px`,
+            flexDirection: `column`,
             color: theme.palette.skills?.main,
-            [theme.breakpoints.down('sm')]: {
-                fontSize: `.9rem`
-            },
         },
     }));
 
@@ -54,18 +48,29 @@ const SkillList: React.FC<IProps> = (props): JSX.Element => {
     const classes = useStyles();
 
     return (
-        <Grid className={classes.root} xl={3} item container>
-            <Typography className={classes.typography} variant="h6" >
+        <Grid
+            item
+            container
+            xl={3}
+            direction="column"
+            justify="center"
+            alignItems="center">
+            <Typography className={classes.typography} align="center" variant="h6" >
                 {props.title}
             </Typography>
-
-            <Grid item lg={3}>
-                {props.props.map((item) => (
-                    <SkillListItem key={item.language} avatar={item.avatar} language={item.language} />
-                ))}
-            </Grid>
-
-        </Grid >
+            <Grid item>
+                <Grid
+                    container
+                    direction="column"
+                    justify="flex-start"
+                    alignItems="center"
+                    className={classes.root}>
+                    {props.props.map((item) => (
+                        <SkillListItem key={item.language} avatar={item.avatar} language={item.language} />
+                    ))}
+                </Grid >
+            </Grid >
+        </Grid>
     );
 }
 
