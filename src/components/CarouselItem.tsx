@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         borderStyle: `solid`,
         borderColor: theme.palette.bio?.main,
         width: `70%`,
-        height: `70vh`,
+        height: `80vh`,
         display: `flex`,
         flexDirection: `column`,
         alignItems: `center`,

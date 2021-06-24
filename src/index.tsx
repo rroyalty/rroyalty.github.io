@@ -31,7 +31,7 @@ declare module "@material-ui/core/styles/createPalette" {
 let theme: Theme = createMuiTheme({
   palette: {
     bg: {
-      main: fade("#292929", .95),
+      main: fade("#292929", .90),
     },
     navbar: {
       main: teal[300],

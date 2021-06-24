@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) =>
             borderStyle: `solid`,
             borderColor: theme.palette.skills?.main,
             [theme.breakpoints.down('xl')]: {
-                height: `80vh`,
+                height: `65vh`,
             },
             [theme.breakpoints.down('sm')]: {
                 height: `auto`,
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme: Theme) =>
             alignItems: `center`,
             display: `flex`,
             flexDirection: `column`,
-            width: `100%`,
+            width: `50%`,
             [theme.breakpoints.down('md')]: {
                 width: `33%`
             }
@@ -73,10 +73,10 @@ const SkillList: React.FC<IProps> = (props): JSX.Element => {
             item
             container
             xl={4}
-            sm={12}
+            sm={6}
             direction="column"
             justify="flex-start"
-            alignItems="center"
+            // alignItems="center"
             className={classes.testGrid}>
             <Grid item>
                 <Typography className={classes.typography1} align="center" variant="h6" >
@@ -88,12 +88,15 @@ const SkillList: React.FC<IProps> = (props): JSX.Element => {
                 container
                 direction="row"
                 justify="flex-start"
-                alignItems="center"
+                alignItems="flex-start"
                 className={classes.root}
                 spacing={2}>
                 {props.props.map((item) => (
-                    <Grid item key={item.language} xl={12} md={4} className={classes.listItem}>
-                        <Avatar src={item.avatar} variant="rounded" />
+                    <Grid 
+                    item 
+                    key={item.language} 
+                    className={classes.listItem}>
+                        {item.avatar ? <Avatar src={item.avatar} variant="rounded" /> : <div /> }
                         <Typography className={classes.typography2}>
                             {item.language}
                         </Typography>
