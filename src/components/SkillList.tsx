@@ -2,8 +2,7 @@
 
 import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { Grid, List, Typography } from "@material-ui/core"
-import SkillListItem from './SkillListItem'
+import { Grid, GridList, GridListTile, Avatar, Typography } from "@material-ui/core"
 
 interface PropType {
     language: string,
@@ -28,20 +27,42 @@ const useStyles = makeStyles((theme: Theme) =>
             borderStyle: `solid`,
             borderColor: theme.palette.skills?.main,
             [theme.breakpoints.down('xl')]: {
-                height: `70vh`,
-                maxWidth: `300px`,
-                margin: `10px`,
+                height: `80vh`,
             },
-            [theme.breakpoints.down('md')]: {
+            [theme.breakpoints.down('sm')]: {
                 height: `auto`,
-                margin: `10px`,
             }
         },
-        typography: {
-            marginTop: `20px`,
+        typography1: {
+            margin: `20px`,
             flexDirection: `column`,
             color: theme.palette.skills?.main,
         },
+        typography2: {
+            color: theme.palette.skills?.main,
+            [theme.breakpoints.down('xs')]: {
+                fontSize: `.8rem`
+            }
+        },
+        listItem: {
+            justifyContent: `top`,
+            alignItems: `center`,
+            display: `flex`,
+            flexDirection: `column`,
+            width: `100%`,
+            [theme.breakpoints.down('md')]: {
+                width: `33%`
+            }
+        },
+        justifyAvatar: {
+            display: `flex`,
+            justifyContent: `center`,
+            alignItems: `center`,
+            alignSelf: `center`
+        },
+        testGrid: {
+            width: `100%`,
+        }
     }));
 
 const SkillList: React.FC<IProps> = (props): JSX.Element => {
@@ -51,26 +72,35 @@ const SkillList: React.FC<IProps> = (props): JSX.Element => {
         <Grid
             item
             container
-            xl={3}
+            xl={4}
+            sm={12}
             direction="column"
-            justify="center"
-            alignItems="center">
-            <Typography className={classes.typography} align="center" variant="h6" >
-                {props.title}
-            </Typography>
+            justify="flex-start"
+            alignItems="center"
+            className={classes.testGrid}>
             <Grid item>
-                <Grid
-                    container
-                    direction="column"
-                    justify="flex-start"
-                    alignItems="center"
-                    className={classes.root}>
-                    {props.props.map((item) => (
-                        <SkillListItem key={item.language} avatar={item.avatar} language={item.language} />
-                    ))}
-                </Grid >
-            </Grid >
-        </Grid>
+                <Typography className={classes.typography1} align="center" variant="h6" >
+                    {props.title}
+                </Typography>
+            </Grid>
+            <Grid
+                item
+                container
+                direction="row"
+                justify="flex-start"
+                alignItems="center"
+                className={classes.root}
+                spacing={2}>
+                {props.props.map((item) => (
+                    <Grid item key={item.language} xl={12} md={4} className={classes.listItem}>
+                        <Avatar src={item.avatar} variant="rounded" />
+                        <Typography className={classes.typography2}>
+                            {item.language}
+                        </Typography>
+                    </Grid>
+                ))}
+            </Grid>
+        </Grid >
     );
 }
 

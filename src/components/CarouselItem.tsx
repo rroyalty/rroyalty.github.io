@@ -17,23 +17,35 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         borderStyle: `solid`,
         borderColor: theme.palette.bio?.main,
         width: `70%`,
-        height: `80vh`,
+        height: `70vh`,
         display: `flex`,
         flexDirection: `column`,
         alignItems: `center`,
         justifyContent: `center`,
         [theme.breakpoints.down('xs')]: {
-            width: `100%`,
-            maxWidth: `100%`,
+            width: `90%`,
         }
 
     },
-    typography: {
+    typography1: {
         marginLeft: `15px`,
         marginRight: `15px`,
         marginTop: `10px`,
         marginBottom: `5px`,
         color: theme.palette.bio?.main,
+        [theme.breakpoints.down('xs')]: {
+            fontSize: `.9rem`
+        }
+    },
+    typography2: {
+        marginLeft: `15px`,
+        marginRight: `15px`,
+        marginTop: `10px`,
+        marginBottom: `5px`,
+        color: theme.palette.bio?.main,
+        [theme.breakpoints.down('xs')]: {
+            fontSize: `.8rem`
+        }
     },
     avatar: {
         height: "30vh",
@@ -53,13 +65,13 @@ const CarouselItem: React.FC<IProps> = (props): JSX.Element => {
     return (
         <Paper className={classes.root} elevation={4}>
             <Avatar className={classes.avatar} src={props.src} variant="rounded" />
-            <Typography className={classes.typography} variant="h6">
+            <Typography className={classes.typography1} variant="h6">
                 {props.title}
             </Typography>
-            <Typography className={classes.typography} variant="body1">
+            <Typography className={classes.typography2} variant="body1">
                 {props.p}
             </Typography>
-            <Typography className={classes.typography} variant="body1">
+            <Typography className={classes.typography2} variant="body1">
                 {props.p2}
             </Typography>
         </Paper>

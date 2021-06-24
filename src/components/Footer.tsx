@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         backgroundColor: theme.palette.bg?.main,
         justifyContent: `center`,
         alignItems: `center`,
-        width: `90vw`,
+        width: `99%`,
         height: `auto`,
         margin: `0`,
         padding: `0`

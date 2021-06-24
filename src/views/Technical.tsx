@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         color: theme.palette.skills?.main,
         margin: `10px`,
         paddingTop: `70px`
-    }
+    },
 }))
 
 const Technical: React.FC = (): JSX.Element => {
@@ -24,8 +24,8 @@ const Technical: React.FC = (): JSX.Element => {
             <Grid
                 container
                 direction="row"
+                alignItems="flex-start"
                 justify="center"
-                alignItems="center"
                 spacing={3}>
                     
                 {skillLists.map((item) => (
