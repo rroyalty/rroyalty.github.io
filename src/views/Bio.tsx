@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Grid, Box } from "@material-ui/core"
-import { makeStyles, createStyles } from "@material-ui/core/styles";
+import { Grid, Box, Typography } from "@material-ui/core"
+import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import bio from '../static/bio.json';
 import BioCardRight from '../components/bioCardRight';
 import BioCardLeft from '../components/bioCardLeft';
 import Carousel from 'react-material-ui-carousel';
 import CarouselItem from '../components/CarouselItem';
 
-const useStyles = makeStyles(() => createStyles({
+const useStyles = makeStyles((theme: Theme) => createStyles({
     root: {
         display: `flex`,
         justifyContent: `center`,
@@ -16,11 +16,13 @@ const useStyles = makeStyles(() => createStyles({
     grid: {
         margin: `10px`,
         maxheight: `100vh`,
-        marginTop: `70px`,
         justifyContent: `center`,
         alignItems: `center`,
-
     },
+    typography: {
+        color: theme.palette.bio?.main,
+        padding: `20px`,
+    }
 }));
 
 const Bio: React.FC = (): JSX.Element => {
@@ -52,31 +54,41 @@ const Bio: React.FC = (): JSX.Element => {
 
     const bioDesktop = () => {
         return (
-            <Grid
-                container
-                direction="row"
-                justify="center"
-                alignItems="center"
-                className={classes.grid}
-                spacing={1}
-            >
-                {
-                    bio.map(item => (
-                        bio.indexOf(item) % 2 === 1 ? < BioCardRight key={item.index} src={item.src} p={item.p} p2={item.p2} title={item.title} /> : < BioCardLeft key={item.index} src={item.src} p={item.p} p2={item.p2} title={item.title} />
-                    ))
-                }
-            </Grid>
+            <>
+                <Typography className={classes.typography} align="center" variant="h1">
+                    Bio
+                </Typography>
+                <Grid
+                    container
+                    direction="row"
+                    justify="center"
+                    alignItems="center"
+                    className={classes.grid}
+                    spacing={1}
+                >
+                    {
+                        bio.map(item => (
+                            bio.indexOf(item) % 2 === 1 ? < BioCardRight key={item.index} src={item.src} p={item.p} p2={item.p2} title={item.title} /> : < BioCardLeft key={item.index} src={item.src} p={item.p} p2={item.p2} title={item.title} />
+                        ))
+                    }
+                </Grid>
+            </>
         )
     }
 
     const bioMobile = () => {
         return (
-                <Carousel  animation={"slide"} interval={10000}>
+            <>
+                <Typography className={classes.typography} variant="h2">
+                    Bio
+                </Typography>
+                <Carousel animation={"slide"} interval={10000}>
                     {bio.map((item) =>
                         <Box className={classes.root} key={item.index}>
                             <CarouselItem src={item.src} p={item.p} p2={item.p2} title={item.title} />
                         </Box>)}
                 </Carousel>
+            </>
         )
     }
 

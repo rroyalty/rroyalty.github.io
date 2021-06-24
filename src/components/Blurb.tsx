@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Grid, Paper, Typography } from "@material-ui/core"
+import { Box, Paper, Typography } from "@material-ui/core"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
 interface IProps {
@@ -18,10 +18,15 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         border: `2px`,
         borderStyle: `solid`,
         borderColor: theme.palette.bio?.main,
-        width: `100%`
+        width: `100%`,
+        justifyContent: `center`,
+        display: `flex`,
+        flexDirection: `column`
     },
     typography: {
         padding: `5px`,
+        paddingLeft: `20px`,
+        paddingRight: `20px`,
         color: theme.palette.bio?.main,
         [theme.breakpoints.down('lg')]: {
             fontSize: `.85rem`
@@ -29,11 +34,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         [theme.breakpoints.down('md')]: {
             fontSize: `.7rem`
         },
-    },
-    gridBits: {
-        justifyContent: `center`,
-        alignItems: `center`,
-        display: `flex`
     }
 }));
 
@@ -45,10 +45,10 @@ const Blurb: React.FC<IProps> = (props): JSX.Element => {
             <Typography className={classes.typography} variant="h6">
                 {props.title}
             </Typography>
-            <Typography className={classes.typography} variant="body1">
+            <Typography className={classes.typography}>
                 {props.p}
             </Typography>
-            <Typography className={classes.typography} variant="body1">
+            <Typography className={classes.typography}>
                 {props.p2}
             </Typography>
         </Paper>

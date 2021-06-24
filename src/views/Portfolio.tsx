@@ -1,19 +1,24 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard'
 import projectList from '../static/projects.json'
-import { createStyles, makeStyles, GridList, Grid } from '@material-ui/core';
+import { GridList, Grid, Typography } from '@material-ui/core';
+import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
 
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         gridList: {
-            // paddingTop: `20px`,
             display: `flex`,
             justifyContent: 'center',
             alignItems: 'top',
-            // maxHeight: `90vh`,
             width: `100%`
         },
+        typography: {
+
+            color: theme.palette.portfolio?.main,
+            padding: `20px`,
+
+        }
     }),
 );
 
@@ -23,17 +28,22 @@ const Portfolio: React.FC = (): JSX.Element => {
     const length: number = projectList.length
 
     return (
-        <Grid
-            container
-            direction="row"
-            justify="center"
-            alignItems="center"
-        >    <GridList className={classes.gridList} cellHeight={160} >
-                {projectList.map((item, index: number) => (
-                    <ProjectCard key={item.name} props={item} index={index} length={length} />
-                ))}
-            </GridList>
-        </Grid>
+        <>
+            <Typography className={classes.typography} align="center" variant="h1">
+                Portfolio
+            </Typography>
+            <Grid
+                container
+                direction="row"
+                justify="center"
+                alignItems="center"
+            >    <GridList className={classes.gridList} cellHeight={160} >
+                    {projectList.map((item, index: number) => (
+                        <ProjectCard key={item.name} props={item} index={index} length={length} />
+                    ))}
+                </GridList>
+            </Grid>
+        </>
     )
 }
 
