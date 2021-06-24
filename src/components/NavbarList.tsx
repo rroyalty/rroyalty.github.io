@@ -2,7 +2,7 @@ import React from 'react';
 import { Link as ScrollLink } from "react-scroll";
 import MailIcon from '@material-ui/icons/Mail';
 import DescriptionIcon from '@material-ui/icons/Description';
-import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import { makeStyles, createStyles } from "@material-ui/core/styles";
 import { List, ListItem, ListItemText } from "@material-ui/core"
 
 interface iProps {
@@ -15,11 +15,10 @@ const navLinks: { title: string, path: string }[] = [
     { title: `Portfolio`, path: `portfolio` },
 ]
 
-const useStyles = makeStyles((theme: Theme) => createStyles({
+const useStyles = makeStyles(() => createStyles({
     linkText: {
         textDecoration: `none`,
         textTransform: `uppercase`,
-        color: theme.palette.bio?.main,
         justifyContent: `center`
     },
     iconLinks: {

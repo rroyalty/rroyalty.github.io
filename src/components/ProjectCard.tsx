@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: `10px`,
       maxWidth: `95%`,
       [theme.breakpoints.down('sm')]: {
-        marginTop: `100px`,
+        marginTop: `10px`,
       },
     },
     lastTile: {

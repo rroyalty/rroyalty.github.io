@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         borderStyle: `solid`,
         borderColor: theme.palette.bio?.main,
         width: `70%`,
+        height: `80vh`,
         display: `flex`,
         flexDirection: `column`,
         alignItems: `center`,
@@ -33,9 +34,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         marginTop: `10px`,
         marginBottom: `5px`,
         color: theme.palette.bio?.main,
-        [theme.breakpoints.down('sm')]: {
-            fontSize: `.8rem`
-        },
     },
     avatar: {
         height: "30vh",

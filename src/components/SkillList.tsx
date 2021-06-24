@@ -33,15 +33,14 @@ const useStyles = makeStyles((theme: Theme) =>
             borderColor: theme.palette.skills?.main,
             [theme.breakpoints.down('xl')]: {
                 height: `70vh`,
-                maxWidth: `200px`,
+                maxWidth: `300px`,
                 margin: `10px`,
             },
             [theme.breakpoints.down('md')]: {
-                height: `92vh`,
-                width: `25vw`,
+                height: `auto`,
                 margin: `10px`,
             }
-          },
+        },
         typography: {
             marginTop: `20px`,
             color: theme.palette.skills?.main,
@@ -55,17 +54,17 @@ const SkillList: React.FC<IProps> = (props): JSX.Element => {
     const classes = useStyles();
 
     return (
-        <Grid className={classes.root} xl={3} item>
+        <Grid className={classes.root} xl={3} item container>
             <Typography className={classes.typography} variant="h6" >
                 {props.title}
             </Typography>
-            <div>
-                <List>
+
+            <Grid item lg={3}>
                 {props.props.map((item) => (
                     <SkillListItem key={item.language} avatar={item.avatar} language={item.language} />
                 ))}
-                </List>
-            </div>
+            </Grid>
+
         </Grid >
     );
 }

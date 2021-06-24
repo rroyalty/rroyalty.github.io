@@ -79,7 +79,7 @@ const Bio: React.FC = (): JSX.Element => {
     const bioMobile = () => {
         return (
             <>
-                <Typography className={classes.typography} variant="h2">
+                <Typography className={classes.typography} align="center"  variant="h1">
                     Bio
                 </Typography>
                 <Carousel animation={"slide"} interval={10000}>

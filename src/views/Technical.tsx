@@ -6,8 +6,15 @@ import SkillList from '../components/SkillList'
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
     root: {
+        display: `flex`,
         justifyContent: `center`,
         alignItems: `center`,
+        [theme.breakpoints.down('xl')]: {
+            flexDirection: `row`
+        },
+        [theme.breakpoints.down('md')]: {
+            flexDirection: `column`
+        },
     },
     typography: {
         color: theme.palette.skills?.main,
@@ -21,7 +28,7 @@ const Technical: React.FC = (): JSX.Element => {
     return (
         <>
             <Typography className={classes.typography} align="center" variant="h1">
-                Portfolio
+                Skills
             </Typography>
 
             <Grid className={classes.root} container spacing={1} >
