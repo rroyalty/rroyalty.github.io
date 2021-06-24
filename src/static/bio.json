@@ -1,22 +1,30 @@
-[
+[   
     {
         "index": "1",
-        "p": "I attended UMass Amherst from 2003 to 2008, where I earned a B.S. in Mathematics and studied to be a high school teacher. After two years of teaching, I decided that the profession was not a good fit for me and I moved onto other things; I worked as bartender at Chili's in Hadley, MA for a few years, after which I moved to Boston and took a job as a dog walker. In addition, I spent my Summers working as the outdoor education director at Birch Rock Summer Camp in Waterford, ME. While in Boston, I was fortunate to meet my wife, Samantha; who loves dogs as much as I do.",
+        "title": "Introduction",
+        "p": "Driven problem solver, looking to expand Full Stack web development skills and apply experience in data analytics and mathematics. Hungry to learn new technologies and discover his niche in the web development world.",
+        "p2": "Team player that is self-driven and a lifelong learner, with excellent verbal and written communication skills.",
         "src": "/images/weddingPic.jpg"
     },
     {
         "index": "2",
-        "p": "My current job is with Foresight Regulatory Strategies, where I analyze data, generate reports, and manage the inventory database (which I built from scratch) using FileMaker. Foresight is a medical device consulting company that runs clinical trials on contact lenses, and other eye related medical devices/solutions.",
+        "title": "Education",
+        "p": "Graduated from UMass Amherst in 2008, with a B.S. in Mathematics.",
+        "p2": "Earned a Full Stack Web Development certificate from University of New Hampshire in 2021.",
         "src": "/images/Frankie.jpg"
     },
     {
         "index": "3",
-        "p": "I took two significant breaks throughout all this, once in 2013 when I successfully thru-hiked the Appalachian Trail, and again in 2016, when I attempted to hike the Pacific Crest Trail but was forced to abandon the trip after 500 miles due to a medical emergency on the East coast. Now, I reside in Nottingham, NH with Sam and our two dogs, Franconia and Tuckerman.",
-        "src": "/images/at.jpg"
+        "title": "Employment",
+        "p": "Currently employed with Foresight Regulatory Strategies, Inc.",
+        "p2": "Responsibile for analyzing data, generating reports, and managing the inventory database (which was built from scratch using FileMaker.)",
+        "src": "/images/backpacking.jpg"
     },
     {
         "index": "4",
-        "p": " I recently graduated from UNH's Full Stack Coding Bootcamp course, where I developed new professional skills in the hopes of advancing my professional career. In my free time I enjoy backpacking, hiking, canoeing, video games, board games, spending time with my dogs, practicing Uechi Ryu Karate (in which I have a 2nd degree blackbelt,) and visiting new breweries. Also, I love Calvin and Hobbes.",
-        "src": "/images/backpacking.jpg"
+        "title": "Accomplishments",
+        "p": "Appalachian Trail Thru-Hiker, 2013 Cohort",
+        "p2": "2nd Degree Blackbelt, Uechi Ryu Karate",
+        "src": "/images/at.jpg"
     }
 ]

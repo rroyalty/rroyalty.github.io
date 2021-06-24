@@ -5,7 +5,9 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
 interface IProps {
     src: string,
-    p: string
+    p: string,
+    p2: string,
+    title: string
 }
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
@@ -13,17 +15,19 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     paper: {
         height: "20vh",
         backgroundColor: theme.palette.bg?.main,
-        border: `3px`,
+        border: `2px`,
         borderStyle: `solid`,
         borderColor: theme.palette.bio?.main,
         width: `100%`
     },
     typography: {
-        padding: `15px`,
-        fontWeight: `bolder`,
+        padding: `5px`,
         color: theme.palette.bio?.main,
+        [theme.breakpoints.down('lg')]: {
+            fontSize: `.85rem`
+        },
         [theme.breakpoints.down('md')]: {
-            fontSize: `.8rem`
+            fontSize: `.7rem`
         },
     },
     gridBits: {
@@ -37,13 +41,17 @@ const Blurb: React.FC<IProps> = (props): JSX.Element => {
     const classes = useStyles();
 
     return (
-        <Grid className={classes.gridBits} item xs={9}>
-            <Paper className={classes.paper}>
-                <Typography className={classes.typography}>
-                    {props.p}
-                </Typography>
-            </Paper>
-        </Grid>
+        <Paper className={classes.paper} elevation={4}>
+            <Typography className={classes.typography} variant="h6">
+                {props.title}
+            </Typography>
+            <Typography className={classes.typography} variant="body1">
+                {props.p}
+            </Typography>
+            <Typography className={classes.typography} variant="body1">
+                {props.p2}
+            </Typography>
+        </Paper>
     )
 };
 

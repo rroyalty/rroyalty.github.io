@@ -5,7 +5,9 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
 interface IProps {
     src: string,
-    p: string
+    p: string,
+    p2: string,
+    title: string
 }
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
@@ -51,10 +53,16 @@ const CarouselItem: React.FC<IProps> = (props): JSX.Element => {
     const classes = useStyles();
 
     return (
-        <Paper className={classes.root}>
+        <Paper className={classes.root} elevation={4}>
             <Avatar className={classes.avatar} src={props.src} variant="rounded" />
-            <Typography className={classes.typography}>
+            <Typography className={classes.typography} variant="h6">
+                {props.title}
+            </Typography>
+            <Typography className={classes.typography} variant="body1">
                 {props.p}
+            </Typography>
+            <Typography className={classes.typography} variant="body1">
+                {props.p2}
             </Typography>
         </Paper>
     )

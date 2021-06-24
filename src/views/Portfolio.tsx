@@ -7,13 +7,11 @@ import { createStyles, makeStyles, GridList, Grid } from '@material-ui/core';
 const useStyles = makeStyles(() =>
     createStyles({
         gridList: {
-            paddingTop: `20px`,
+            // paddingTop: `20px`,
             display: `flex`,
             justifyContent: 'center',
             alignItems: 'top',
-            overflowX: 'hidden',
-            maxHeight: `90vh`,
-            overflow: `auto`,
+            // maxHeight: `90vh`,
             width: `100%`
         },
     }),

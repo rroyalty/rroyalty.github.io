@@ -23,9 +23,6 @@ const useStyles = makeStyles(() => createStyles({
     },
 }));
 
-
-
-
 const Bio: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
@@ -51,6 +48,8 @@ const Bio: React.FC = (): JSX.Element => {
         window.addEventListener('resize', () => setResponsiveness())
     }, [])
 
+    console.log(bio)
+
     const bioDesktop = () => {
         return (
             <Grid
@@ -63,7 +62,7 @@ const Bio: React.FC = (): JSX.Element => {
             >
                 {
                     bio.map(item => (
-                        bio.indexOf(item) % 2 === 1 ? < BioCardRight key={item.index} src={item.src} p={item.p} /> : < BioCardLeft key={item.index} src={item.src} p={item.p} />
+                        bio.indexOf(item) % 2 === 1 ? < BioCardRight key={item.index} src={item.src} p={item.p} p2={item.p2} title={item.title} /> : < BioCardLeft key={item.index} src={item.src} p={item.p} p2={item.p2} title={item.title} />
                     ))
                 }
             </Grid>
@@ -75,13 +74,11 @@ const Bio: React.FC = (): JSX.Element => {
                 <Carousel  animation={"slide"} interval={10000}>
                     {bio.map((item) =>
                         <Box className={classes.root} key={item.index}>
-                            <CarouselItem src={item.src} p={item.p} />
+                            <CarouselItem src={item.src} p={item.p} p2={item.p2} title={item.title} />
                         </Box>)}
                 </Carousel>
         )
     }
-
-
 
     return (
         <div>

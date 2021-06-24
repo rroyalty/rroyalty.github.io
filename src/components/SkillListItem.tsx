@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         typography: {
             color: theme.palette.skills?.main,
-            [theme.breakpoints.down('sm')]: {
+            [theme.breakpoints.down('xs')]: {
                 display: `none`
             }
         },
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) =>
             alignItems: `center`,
             display: `flex`,
             flexDirection: `row`,
-            [theme.breakpoints.down('md')]: {
+            [theme.breakpoints.down('sm')]: {
                 flexDirection: `column`,
             }
         },

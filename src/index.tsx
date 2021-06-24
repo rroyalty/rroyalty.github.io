@@ -6,7 +6,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "@material-ui/core";
 import { createMuiTheme, responsiveFontSizes, Theme } from "@material-ui/core/styles";
-import {  green, deepOrange, blue } from '@material-ui/core/colors/';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 
 declare module "@material-ui/core/styles/createPalette" {
@@ -31,22 +30,22 @@ declare module "@material-ui/core/styles/createPalette" {
 let theme: Theme = createMuiTheme({
   palette: {
     bg: {
-      main: fade(`#181D27`, 0.92),
+      main: fade("#292929", .95),
     },
     navbar: {
-      main: blue[100],
+      main: "#cccc66",
     },
     bio:{
-      main: blue[100],
+      main: "#669966",
     },
     skills:{
-      main: green[600],
+      main: "#6699cc",
     },
     portfolio:{
-      main: deepOrange[500],
+      main: "#993333",
     },
     footer:{
-      main: deepOrange[500],
+      main: "#cccc66",
     }
   },
 });

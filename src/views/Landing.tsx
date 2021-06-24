@@ -7,14 +7,19 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
+    position: `static`,
     display: `flex`,
-    backgroundSize: "cover",
-    backgroundRepeat: 'no-repeat',
+    flexDirection: `column`,
+    backgroundSize: "contain",
+    backgroundRepeat: 'intial',
     backgroundPosition: 'center',
-    height: "100vh",
+    // height: "100vh",
     justifyContent: `center`,
     alignItems: `center`
   },
+  spacing: {
+    marginTop: `50px`,
+  }
 
 }));
 
@@ -23,17 +28,19 @@ const App = () => {
   const classes = useStyles();
 
   return (
-      <>
-        <Container id="bio" className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/code-Background2.png)` }} >
-            <Bio />
-        </Container>
-        <Container id="technical" className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/mario-Background.png)` }} >
-            <Technical />
-        </Container>
-        <Container id="portfolio" className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/gandalf-vs-the-balrog.png)` }} >
-            <Portfolio />
-        </Container>
-      </>
+    <>
+    <Container className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/wallpaperflare.com_wallpaper.png)` }}>
+      <Container className={classes.spacing} id="bio" maxWidth='md' >
+        <Bio />
+      </Container>
+      <Container className={classes.spacing} id="technical" maxWidth='md' >
+        <Technical />
+      </Container>
+      <Container className={classes.spacing} id="portfolio" maxWidth='md' >
+        <Portfolio />
+      </Container>
+    </Container>
+    </>
   );
 }
 

@@ -11,15 +11,15 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         justifyContent: `space-between`
     },
     navbar: {
-        backgroundColor: `#181D27`,
+        backgroundColor: theme.palette.bg?.main,
         borderBottomWidth: `2px`,
         borderLeftWidth: `2px`,
         borderRightWidth: `2px`,
-        borderColor: theme.palette.bio?.main,
+        borderColor: theme.palette.navbar?.main,
         borderBottomLeftRadius: 16,
         borderBottomRightRadius: 16,
         borderStyle: `solid`,
-        color: theme.palette.bio?.main,
+        color: theme.palette.navbar?.main,
         height: `66px`
     },
     iconLinks: {
@@ -45,19 +45,15 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 
     },
     menu: {
-        backgroundColor: `#181D27`,
+        backgroundColor: theme.palette.bg?.main,
         border: `0px`,
         borderLeftWidth: `2px`,
-        borderColor: theme.palette.bio?.main,
+        borderColor: theme.palette.navbar?.main,
         borderStyle: `solid`,
-        color: theme.palette.bio?.main,
+        color: theme.palette.navbar?.main,
         display: `flex`,
         flexDirection: `column`,
         alignItems: `center`,
-        backgroundSize: "cover",
-        backgroundRepeat: 'no-repeat',
-        height: "100vh",
-        backgroundImage: `url(/menuImage.jpg)`,
         width: `40vw`,
     }
 }))
