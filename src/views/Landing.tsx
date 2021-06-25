@@ -4,6 +4,7 @@ import Portfolio from './Portfolio';
 import Technical from './Technical';
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
+const random: number =  Math.floor(Math.random() * 6)
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     backgroundPosition: 'center',
     justifyContent: `center`,
     alignItems: `center`,
-    backgroundImage: `url(/images/bg.png)`,
+    backgroundImage: `url(/images/bg${random}.png)`,
     backgroundColor: theme.palette.wayback?.main
   },
   spacing: {
