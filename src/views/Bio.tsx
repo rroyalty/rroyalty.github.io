@@ -98,7 +98,7 @@ const Bio: React.FC = (): JSX.Element => {
                 justify="center"
                 alignItems="center"
                 spacing={10} >
-                <Carousel animation={"slide"} interval={10000} navButtonsAlwaysInvisible={true}>
+                <Carousel animation={"slide"} interval={5000} navButtonsAlwaysInvisible={true}>
                     {bioPic.map((item) =>
                         <Box className={classes.root} key={item.index}>
                             <CarouselItem src={item.src} />
