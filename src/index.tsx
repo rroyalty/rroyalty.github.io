@@ -30,7 +30,7 @@ let theme: Theme = createMuiTheme({
       main: "FFFFFF",
     },
     bg: {
-      main: fade("#A9B18F", .90),
+      main: fade("#A9B18F", 1),
     },
     dark: {
       main: "#353535",

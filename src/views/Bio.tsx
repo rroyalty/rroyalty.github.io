@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     bgColor: {
         border: `6px`,
+        padding: `10px`,
         borderStyle: `solid`,
         borderRadius: 0,
         borderColor: theme.palette.light?.main,
@@ -89,7 +90,7 @@ const Bio: React.FC = (): JSX.Element => {
                         direction="row"
                         justify="center"
                         alignItems="center"
-                        spacing={10} >
+                        spacing={6} >
                         {bioPic.map((item: IItem) => (
                             <Grid key={item.index} item md={4}>
                                 <Paper elevation={20}>
@@ -98,7 +99,7 @@ const Bio: React.FC = (): JSX.Element => {
                             </Grid>
                         ))}
                     </Grid>
-                    <Grid item style={{marginTop: `25px`}}>
+                    <Grid item style={{marginLeft: `-10px`, marginRight: `-10px`}}>
                         <Paper elevation={4} className={classes.bgColor}>
                             {
                                 bioText.map(item => (

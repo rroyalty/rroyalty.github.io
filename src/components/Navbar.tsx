@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton'
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import { AppBar, Toolbar, Drawer } from "@material-ui/core"
+import { AppBar, Toolbar, Drawer, Typography } from "@material-ui/core"
 import NavbarList from './NavbarList'
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
@@ -101,7 +101,7 @@ const Navbar: React.FC = (): JSX.Element => {
                         open: drawerOpen,
                         onClose: handleDrawerClose,
                     }}>
-                        <NavbarList classprop = {classes.menu} />
+                    <NavbarList classprop={classes.menu} />
                 </Drawer>
             </AppBar>
         )
@@ -112,9 +112,11 @@ const Navbar: React.FC = (): JSX.Element => {
         return (
             <AppBar position="fixed" className={classes.navbar}>
                 <Toolbar className="nav-style">
-                    <h3 className={classes.justifyContent}>{`RYAN ROYALTY`}</h3>
+                    <Typography className={classes.justifyContent} component="h3">
+                        RYAN ROYALTY
+                    </Typography>
                     <section className={classes.rightAppBar}>
-                        <NavbarList classprop = {classes.navDisplayFlex} />
+                        <NavbarList classprop={classes.navDisplayFlex} />
                     </section>
                 </Toolbar>
             </AppBar>

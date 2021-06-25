@@ -34,7 +34,7 @@ const Portfolio: React.FC = (): JSX.Element => {
     return (
         <>
             <Typography className={classes.typography} align="center" variant="h2">
-                Portfolio
+                PORTFOLIO
             </Typography>
             <Grid
                 container
