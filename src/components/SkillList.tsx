@@ -72,7 +72,7 @@ const SkillList: React.FC<IProps> = (props): JSX.Element => {
         <Grid
             item
             container
-            xl={4}
+            md={4}
             xs={12}
             direction="column"
             justify="flex-start"
