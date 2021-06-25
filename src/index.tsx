@@ -7,7 +7,6 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "@material-ui/core";
 import { createMuiTheme, responsiveFontSizes, Theme } from "@material-ui/core/styles";
 import { fade } from '@material-ui/core/styles/colorManipulator';
-import { purple  } from '@material-ui/core/colors/';
 
 declare module "@material-ui/core/styles/createPalette" {
   interface Palette {
@@ -36,7 +35,7 @@ let theme: Theme = createMuiTheme({
       main: "#353535",
     },
     light:{
-      main: "#353535",
+      main: "#003300",
     }
   },
   typography: {

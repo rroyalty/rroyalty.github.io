@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
       border: `5px`,
       borderStyle: `solid`,
       borderRadius: 0,
-      borderColor: theme.palette.dark?.main,
+      borderColor: theme.palette.light?.main,
       height: `70%`,
       [theme.breakpoints.down('xl')]: {
         width: `20vw`,
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme: Theme) =>
       borderColor: theme.palette.light?.main,
     },
     typography: {
-      color: theme.palette.light?.main,
+      color: theme.palette.dark?.main,
     },
     firstTile: {
       margin: `10px`,

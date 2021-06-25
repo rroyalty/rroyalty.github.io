@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) =>
             padding: `25px`,
             border: `6px`,
             borderStyle: `solid`,
-            borderColor: theme.palette.dark?.main,
+            borderColor: theme.palette.light?.main,
             [theme.breakpoints.down('xl')]: {
                 height: `65vh`,
             },
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme: Theme) =>
             color: theme.palette.dark?.main,
         },
         typography2: {
-            color: theme.palette.light?.main,
+            color: theme.palette.dark?.main,
             [theme.breakpoints.down('xs')]: {
                 fontSize: `.8rem`
             }

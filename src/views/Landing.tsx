@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     backgroundPosition: 'center',
     justifyContent: `center`,
     alignItems: `center`,
+    backgroundImage: `url(/images/bg.png)`,
     backgroundColor: theme.palette.wayback?.main
   },
   spacing: {
