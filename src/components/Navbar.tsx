@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         borderLeftWidth: `2px`,
         borderColor: theme.palette.dark?.main,
         borderStyle: `solid`,
-        color: theme.palette.light?.main,
+        color: theme.palette.dark?.main,
         display: `flex`,
         flexDirection: `column`,
         alignItems: `center`,
