@@ -3,8 +3,6 @@ import { Grid, Box, Typography, Avatar, Paper } from "@material-ui/core"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import bioPic from '../static/bioPic.json';
 import bioText from '../static/bioText.json';
-import BioCardRight from '../components/bioCardRight';
-import BioCardLeft from '../components/bioCardLeft';
 import Carousel from 'react-material-ui-carousel';
 import CarouselItem from '../components/CarouselItem';
 
@@ -23,7 +21,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         color: theme.palette.dark?.main,
         padding: `15px`,
         marginLeft: `10px`,
-        marginRight: `10px`
+        marginRight: `10px`,
+        fontSize: "1.2rem"
     },
     avatar: {
         height: `auto`,
@@ -63,7 +62,7 @@ const Bio: React.FC = (): JSX.Element => {
 
     useEffect(() => {
         const setResponsiveness = () => {
-            return window.innerWidth < 900
+            return window.innerWidth < 600
                 ? setState((prevState) => ({ ...prevState, mobileView: true }))
                 : setState((prevState) => ({ ...prevState, mobileView: false }))
         };
@@ -73,71 +72,69 @@ const Bio: React.FC = (): JSX.Element => {
 
     const bioDesktop = () => {
         return (
-            <>
-                <Typography className={classes.typography1} align="center" variant="h2">
-                    BIO
-                </Typography>
-                <Grid
-                    container
-                    direction="column"
-                    justify="center"
-                    alignItems="center"
-                    spacing={6}
-                >
 
-                    <Grid
-                        item container
-                        direction="row"
-                        justify="center"
-                        alignItems="center"
-                        spacing={6} >
-                        {bioPic.map((item: IItem) => (
-                            <Grid key={item.index} item md={4}>
-                                <Paper elevation={20}>
-                                    <Avatar className={classes.avatar} alt={item.alt} src={item.src} variant={`square`} />
-                                </Paper>
-                            </Grid>
-                        ))}
-                    </Grid>
-                    <Grid item style={{marginLeft: `-10px`, marginRight: `-10px`}}>
-                        <Paper elevation={4} className={classes.bgColor}>
-                            {
-                                bioText.map(item => (
-                                    <Typography className={classes.typography2} key={item.index}>
-                                        {item.p}
-                                    </Typography>
-                                ))
-                            }
+            <Grid
+                item container
+                direction="row"
+                justify="center"
+                alignItems="center"
+                spacing={6} >
+                {bioPic.map((item: IItem) => (
+                    <Grid key={item.index} item sm={4}>
+                        <Paper elevation={4}>
+                            <Avatar className={classes.avatar} alt={item.alt} src={item.src} variant={`square`} />
                         </Paper>
                     </Grid>
-                </Grid>
-            </>
+                ))}
+            </Grid>
         )
     }
 
-    // const bioMobile = () => {
-    //     return (
-    //         <>
-    //             <Typography className={classes.typography} align="center" variant="h1">
-    //                 Bio
-    //             </Typography>
-    //             <Carousel animation={"slide"} interval={10000}>
-    //                 {bio.map((item) =>
-    //                     <Box className={classes.root} key={item.index}>
-    //                         <CarouselItem src={item.src} p={item.p} p2={item.p2} title={item.title} />
-    //                     </Box>)}
-    //             </Carousel>
-    //         </>
-    //     )
-    // }
+    const bioMobile = () => {
+        return (
+            <Grid
+                item
+                direction="row"
+                justify="center"
+                alignItems="center"
+                spacing={10} >
+                <Carousel animation={"slide"} interval={10000} navButtonsAlwaysInvisible={true}>
+                    {bioPic.map((item) =>
+                        <Box className={classes.root} key={item.index}>
+                            <CarouselItem src={item.src} />
+                        </Box>)}
+                </Carousel>
+            </Grid>
+        )
+    }
 
     return (
-        <div>
-            {mobileView ? bioDesktop() : bioDesktop()}
-        </div>
+        <>
+            <Typography className={classes.typography1} align="center" variant="h2">
+                BIO
+            </Typography>
+            <Grid
+                container
+                direction="column"
+                justify="center"
+                alignItems="center"
+                spacing={10}
+            >
+                {mobileView ? bioMobile() : bioDesktop()}
+                <Grid item style={{ marginLeft: `-10px`, marginRight: `-10px` }}>
+                    <Paper elevation={4} className={classes.bgColor}>
+                        {
+                            bioText.map(item => (
+                                <Typography className={classes.typography2} key={item.index}>
+                                    {item.p}
+                                </Typography>
+                            ))
+                        }
+                    </Paper>
+                </Grid>
+            </Grid>
+        </>
     )
-
-
 }
 
 export default Bio

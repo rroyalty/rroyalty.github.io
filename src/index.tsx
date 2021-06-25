@@ -27,10 +27,10 @@ declare module "@material-ui/core/styles/createPalette" {
 let theme: Theme = createMuiTheme({
   palette: {
     wayback: {
-      main: "FFFFFF",
+      main: "#f3f9ed",
     },
     bg: {
-      main: fade("#A9B18F", 1),
+      main: fade("#899d73", 1),
     },
     dark: {
       main: "#353535",
