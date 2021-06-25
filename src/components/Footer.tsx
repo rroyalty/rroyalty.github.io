@@ -9,9 +9,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         flexDirection: `column`,
         backgroundColor: theme.palette.bg?.main,
         borderTopWidth: `2px`,
-        borderColor: theme.palette.dark?.main,
+        borderColor: theme.palette.light?.main,
         borderStyle: `solid`,
-        color: theme.palette.light?.main,
+        color: theme.palette.dark?.main,
         justifyContent: `center`,
         alignItems: `center`,
         width: `100%`,
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     typography: {
         display: `flex`,
-        color: theme.palette.light?.main,
+        color: theme.palette.dark?.main,
         alignItems: `center`,
         justifyContent: `center`,
         flexDirection: `row`,
@@ -72,7 +72,7 @@ const Footer: React.FC = (): JSX.Element => {
                     </Grid>
                     <Grid item xs={12} sm={4}>
                         <Typography className={classes.typography}>
-                            Last Updated: 06/23/2021
+                            Last Updated: 06/25/2021
                         </Typography>
                     </Grid>
 
