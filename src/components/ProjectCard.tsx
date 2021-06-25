@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme: Theme) =>
       height: 140,
       border: `3px`,
       borderStyle: `solid`,
-      borderColor: theme.palette.light?.main,
+      borderColor: theme.palette.dark?.main,
     },
     typography: {
       color: theme.palette.dark?.main,
