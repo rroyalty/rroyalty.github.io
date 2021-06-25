@@ -9,9 +9,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         flexDirection: `column`,
         backgroundColor: theme.palette.bg?.main,
         borderTopWidth: `2px`,
-        borderColor: theme.palette.navbar?.main,
+        borderColor: theme.palette.dark?.main,
         borderStyle: `solid`,
-        color: theme.palette.navbar?.main,
+        color: theme.palette.light?.main,
         justifyContent: `center`,
         alignItems: `center`,
         width: `100%`,
@@ -32,14 +32,14 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     typography: {
         display: `flex`,
-        color: theme.palette.navbar?.main,
+        color: theme.palette.light?.main,
         alignItems: `center`,
         justifyContent: `center`,
         flexDirection: `row`,
         fontSize: `.7rem`
     },
     anchorColor: {
-        color: theme.palette.navbar?.main,
+        color: theme.palette.light?.main,
     },
 }));
 

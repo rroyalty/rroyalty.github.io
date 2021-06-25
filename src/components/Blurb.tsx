@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Box, Paper, Typography } from "@material-ui/core"
+import { Paper, Typography } from "@material-ui/core"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
 interface IProps {
@@ -15,9 +15,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     paper: {
         height: "20vh",
         backgroundColor: theme.palette.bg?.main,
-        border: `2px`,
+        border: `3px`,
         borderStyle: `solid`,
-        borderColor: theme.palette.bio?.main,
+        borderColor: theme.palette.dark?.main,
         width: `100%`,
         justifyContent: `center`,
         display: `flex`,
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         padding: `5px`,
         paddingLeft: `20px`,
         paddingRight: `20px`,
-        color: theme.palette.bio?.main,
+        color: theme.palette.light?.main,
         [theme.breakpoints.down('lg')]: {
             fontSize: `.85rem`
         },

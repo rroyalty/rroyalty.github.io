@@ -22,9 +22,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
   avatar: {
     height: "20vh",
     width: "20vh",
-    border: `2px`,
+    border: `3px`,
     borderStyle: `solid`,
-    borderColor: theme.palette.bio?.main,
+    borderColor: theme.palette.dark?.main,
   },
 }));
 

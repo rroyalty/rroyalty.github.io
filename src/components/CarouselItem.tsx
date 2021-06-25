@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         backgroundColor: theme.palette.bg?.main,
         border: `3px`,
         borderStyle: `solid`,
-        borderColor: theme.palette.bio?.main,
+        borderColor: theme.palette.dark?.main,
         width: `70%`,
         height: `80vh`,
         display: `flex`,
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         marginRight: `15px`,
         marginTop: `10px`,
         marginBottom: `5px`,
-        color: theme.palette.bio?.main,
+        color: theme.palette.light?.main,
         [theme.breakpoints.down('xs')]: {
             fontSize: `.9rem`
         }
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         marginRight: `15px`,
         marginTop: `10px`,
         marginBottom: `5px`,
-        color: theme.palette.bio?.main,
+        color: theme.palette.light?.main,
         [theme.breakpoints.down('xs')]: {
             fontSize: `.8rem`
         }
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         borderStyle: `solid`,
         marginTop: `15px`,
         marginBottm: `5px`,
-        borderColor: theme.palette.bio?.main,
+        borderColor: theme.palette.light?.main,
     },
 }));
 

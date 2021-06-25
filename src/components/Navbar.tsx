@@ -12,14 +12,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     navbar: {
         backgroundColor: theme.palette.bg?.main,
-        borderBottomWidth: `2px`,
-        borderLeftWidth: `2px`,
-        borderRightWidth: `2px`,
-        borderColor: theme.palette.navbar?.main,
-        borderBottomLeftRadius: 16,
-        borderBottomRightRadius: 16,
-        borderStyle: `solid`,
-        color: theme.palette.navbar?.main,
+        borderColor: theme.palette.dark?.main,
+        color: theme.palette.light?.main,
         height: `66px`
     },
     iconLinks: {
@@ -48,9 +42,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         backgroundColor: theme.palette.bg?.main,
         border: `0px`,
         borderLeftWidth: `2px`,
-        borderColor: theme.palette.navbar?.main,
+        borderColor: theme.palette.dark?.main,
         borderStyle: `solid`,
-        color: theme.palette.navbar?.main,
+        color: theme.palette.light?.main,
         display: `flex`,
         flexDirection: `column`,
         alignItems: `center`,

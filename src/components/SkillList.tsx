@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { Grid, GridList, GridListTile, Avatar, Typography } from "@material-ui/core"
+import { Grid, Avatar, Typography } from "@material-ui/core"
 
 interface PropType {
     language: string,
@@ -21,11 +21,11 @@ interface IProps {
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            backgroundColor: theme.palette.bg?.main,
+            backgroundColor: theme.palette.wayback?.main,
             padding: `25px`,
-            border: `2px`,
+            border: `5px`,
             borderStyle: `solid`,
-            borderColor: theme.palette.skills?.main,
+            borderColor: theme.palette.dark?.main,
             [theme.breakpoints.down('xl')]: {
                 height: `65vh`,
             },
@@ -36,10 +36,10 @@ const useStyles = makeStyles((theme: Theme) =>
         typography1: {
             margin: `20px`,
             flexDirection: `column`,
-            color: theme.palette.skills?.main,
+            color: theme.palette.dark?.main,
         },
         typography2: {
-            color: theme.palette.skills?.main,
+            color: theme.palette.light?.main,
             [theme.breakpoints.down('xs')]: {
                 fontSize: `.8rem`
             }
@@ -73,7 +73,7 @@ const SkillList: React.FC<IProps> = (props): JSX.Element => {
             item
             container
             xl={4}
-            sm={6}
+            xs={6}
             direction="column"
             justify="flex-start"
             // alignItems="center"

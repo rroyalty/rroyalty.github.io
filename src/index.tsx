@@ -7,51 +7,41 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "@material-ui/core";
 import { createMuiTheme, responsiveFontSizes, Theme } from "@material-ui/core/styles";
 import { fade } from '@material-ui/core/styles/colorManipulator';
-import { teal, deepOrange } from '@material-ui/core/colors/';
+import { purple  } from '@material-ui/core/colors/';
 
 declare module "@material-ui/core/styles/createPalette" {
   interface Palette {
-    bg?: Palette['primary'];
-    navbar?: Palette['primary'];
-    bio?: Palette['primary'];
-    skills?: Palette['primary'];
-    portfolio?: Palette['primary'];
-    footer?: Palette['primary'];
+    wayback?: Palette['primary']; 
+    bg?: Palette['primary']; 
+    dark?: Palette['primary'];
+    light?: Palette['primary'];
   }
   interface PaletteOptions {
+    wayback?: PaletteOptions['primary']; 
     bg?: PaletteOptions['primary'];
-    navbar?: PaletteOptions['primary'];
-    bio?: PaletteOptions['primary'];
-    skills?: PaletteOptions['primary'];
-    portfolio?: PaletteOptions['primary'];
-    footer?: PaletteOptions['primary'];
+    dark?: PaletteOptions['primary'];
+    light?: PaletteOptions['primary'];
   }
 }
 
 let theme: Theme = createMuiTheme({
   palette: {
+    wayback: {
+      main: "FFFFFF",
+    },
     bg: {
-      main: fade("#292929", .90),
+      main: fade("#A9B18F", .90),
     },
-    navbar: {
-      main: teal[300],
+    dark: {
+      main: "#353535",
     },
-    bio:{
-      main: teal[300],
-    },
-    skills:{
-      main: teal[300],
-    },
-    portfolio:{
-      main: teal[300],
-    },
-    footer:{
-      main: teal[300],
+    light:{
+      main: "#353535",
     }
   },
   typography: {
     fontFamily: [
-      "Heebo",
+      "Lora",
       "serif",
     ].join(","),
     fontSize: 8,

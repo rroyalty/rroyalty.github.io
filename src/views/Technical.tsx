@@ -1,13 +1,13 @@
 import React from 'react';
-import { Container, Grid, Typography } from "@material-ui/core"
+import { Grid, Typography } from "@material-ui/core"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import skillLists from '../static/skills.json'
 import SkillList from '../components/SkillList'
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
     typography: {
-        color: theme.palette.skills?.main,
-        margin: `10px`,
+        color: theme.palette.wayback?.main,
+        margin: `30px`,
         paddingTop: `70px`
     },
 }))
@@ -17,8 +17,8 @@ const Technical: React.FC = (): JSX.Element => {
 
     return (
         <>
-            <Typography className={classes.typography} align="center" variant="h1">
-                Skills
+            <Typography className={classes.typography} align="center" variant="h2">
+                SKILLS
             </Typography>
 
             <Grid

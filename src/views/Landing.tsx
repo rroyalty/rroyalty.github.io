@@ -1,4 +1,4 @@
-import { Container, Typography } from "@material-ui/core";
+import { Container  } from "@material-ui/core";
 import Bio from './Bio';
 import Portfolio from './Portfolio';
 import Technical from './Technical';
@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     backgroundRepeat: 'intial',
     backgroundPosition: 'center',
     justifyContent: `center`,
-    alignItems: `center`
+    alignItems: `center`,
+    backgroundColor: theme.palette.wayback?.main
   },
   spacing: {
     alignItems: `center`,
@@ -33,7 +34,7 @@ const App = () => {
 
   return (
     <>
-      <Container className={classes.root} maxWidth='xl' style={{ backgroundImage: `url(/images/seamless-cogwheels-pattern-2532.png)` }}>
+      <Container className={classes.root} maxWidth='xl'>
         <Container className={classes.spacing} id="bio" maxWidth='md' >
           <Bio />
         </Container>
