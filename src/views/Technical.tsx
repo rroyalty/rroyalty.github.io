@@ -4,6 +4,18 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import skillLists from '../static/skills.json'
 import SkillList from '../components/SkillList'
 
+interface IList {
+    language: string,
+    avatar: string
+}
+
+interface IListArray extends Array<IList>{}
+
+interface IItem {
+    title: string,
+    list: IListArray
+}
+
 const useStyles = makeStyles((theme: Theme) => createStyles({
     typography: {
         color: theme.palette.dark?.main,
@@ -28,8 +40,8 @@ const Technical: React.FC = (): JSX.Element => {
                 justify="center"
                 spacing={3}>
                     
-                {skillLists.map((item) => (
-                    <SkillList key={item.index} props={item.list} title={item.title} />
+                {skillLists.map((item: IItem, index: number) => (
+                    <SkillList key={index} props={item.list} title={item.title} />
                 ))}
             </Grid>
         </>

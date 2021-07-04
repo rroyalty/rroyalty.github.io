@@ -37,10 +37,10 @@ const NavbarList: React.FC<iProps> = (props): JSX.Element => {
 
     return (
         <List component="nav" aria-labelledby="main navigation" className={props.classprop}>
-            {navLinks.map(({ title, path }) => (
-                <ScrollLink smooth={true} duration={500} to={path} key={title} className={classes.linkText}>
+            {navLinks.map((item, index: number) => (
+                <ScrollLink smooth={true} duration={500} to={item.path} key={index} className={classes.linkText}>
                     <ListItem button>
-                        <ListItemText primary={title} />
+                        <ListItemText primary={item.title} />
                     </ListItem>
                 </ScrollLink>
             ))}

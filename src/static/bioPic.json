@@ -1,16 +1,13 @@
 [   
     {
-        "index": "1",
         "alt": "Wedding Pic",
         "src": "/images/weddingPic.png"
     },
     {
-        "index": "2",
         "alt": "Dog Pic",
         "src": "/images/Frankie.png"
     },
     {
-        "index": "3",
         "alt": "Hiking Pic",
         "src": "/images/backpacking.png"
     }

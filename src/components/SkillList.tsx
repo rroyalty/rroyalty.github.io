@@ -26,12 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
             border: `6px`,
             borderStyle: `solid`,
             borderColor: theme.palette.light?.main,
-            [theme.breakpoints.down('xl')]: {
-                height: `65vh`,
-            },
-            [theme.breakpoints.down('xs')]: {
-                height: `auto`,
-            }
+
         },
         typography1: {
             margin: `20px`,
@@ -50,6 +45,7 @@ const useStyles = makeStyles((theme: Theme) =>
             display: `flex`,
             flexDirection: `column`,
             width: `50%`,
+            height: `80px`,
             [theme.breakpoints.down('md')]: {
                 width: `33%`
             }
@@ -60,8 +56,9 @@ const useStyles = makeStyles((theme: Theme) =>
             alignItems: `center`,
             alignSelf: `center`
         },
-        testGrid: {
+        grid: {
             width: `100%`,
+
         }
     }));
 
@@ -77,7 +74,7 @@ const SkillList: React.FC<IProps> = (props): JSX.Element => {
             direction="column"
             justify="flex-start"
             // alignItems="center"
-            className={classes.testGrid}>
+            className={classes.grid}>
             <Grid
                 item>
                 <Typography className={classes.typography1} align="center" variant="h6" >
@@ -92,10 +89,10 @@ const SkillList: React.FC<IProps> = (props): JSX.Element => {
                 alignItems="flex-start"
                 className={classes.root}
                 spacing={2}>
-                {props.props.map((item) => (
+                {props.props.map((item, index: number) => (
                     <Grid
                         item
-                        key={item.language}
+                        key={`${props.title} ${index}`}
                         className={classes.listItem}>
                         {item.avatar ? <Avatar src={item.avatar} variant="rounded" /> : <div />}
                         <Typography className={classes.typography2}>

@@ -38,10 +38,13 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
 }));
 
-interface IItem {
-    index: string,
+interface IPictureItem {
     src: string,
     alt: string
+}
+
+interface ITextItem {
+    p: string
 }
 
 const Bio: React.FC = (): JSX.Element => {
@@ -78,8 +81,8 @@ const Bio: React.FC = (): JSX.Element => {
                 justify="center"
                 alignItems="center"
                 spacing={6} >
-                {bioPic.map((item: IItem) => (
-                    <Grid key={item.index} item sm={4}>
+                {bioPic.map((item: IPictureItem, index: number) => (
+                    <Grid key={index} item sm={4}>
                         <Paper elevation={4}>
                             <Avatar className={classes.avatar} alt={item.alt} src={item.src} variant={`square`} />
                         </Paper>
@@ -98,8 +101,8 @@ const Bio: React.FC = (): JSX.Element => {
                 alignItems="center"
                 spacing={10} >
                 <Carousel animation={"slide"} interval={5000} navButtonsAlwaysInvisible={true}>
-                    {bioPic.map((item) =>
-                        <Box className={classes.root} key={item.index}>
+                    {bioPic.map((item: IPictureItem, index: number) =>
+                        <Box className={classes.root} key={index}>
                             <Paper elevation={4}>
                                 <Avatar className={classes.avatar} src={item.src} variant={`square`} />
                             </Paper>
@@ -125,8 +128,8 @@ const Bio: React.FC = (): JSX.Element => {
                 <Grid item style={{ marginLeft: `-10px`, marginRight: `-10px` }}>
                     <Paper elevation={4} className={classes.bgColor}>
                         {
-                            bioText.map(item => (
-                                <Typography className={classes.typography2} key={item.index}>
+                            bioText.map((item: ITextItem, index: number) => (
+                                <Typography className={classes.typography2} key={index}>
                                     {item.p}
                                 </Typography>
                             ))

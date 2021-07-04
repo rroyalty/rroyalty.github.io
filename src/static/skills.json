@@ -1,6 +1,5 @@
 [
     {
-        "index": "1",
         "title": "Languages",
         "list": [
             {
@@ -38,19 +37,10 @@
             {
                 "language": "",
                 "avatar": ""
-            },
-            {
-                "language": "",
-                "avatar": ""
-            },
-            {
-                "language": "",
-                "avatar": ""
             }
         ]
     },
     {
-        "index": "2",
         "title": "Applications",
         "list": [
             {
@@ -88,27 +78,10 @@
             {
                 "language": "",
                 "avatar": ""
-            },
-            {
-                "language": "",
-                "avatar": ""
-            },
-            {
-                "language": "",
-                "avatar": ""
-            },
-            {
-                "language": "",
-                "avatar": ""
-            },
-            {
-                "language": "",
-                "avatar": ""
             }
         ]
     },
     {
-        "index": "3",
         "title": "Tools",
         "list": [
             {
