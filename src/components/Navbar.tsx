@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         backgroundColor: theme.palette.bg?.main,
         borderColor: theme.palette.dark?.main,
         color: theme.palette.dark?.main,
-        height: `66px`
+        height: `66px`,
+        widht: `100%`
     },
     iconLinks: {
         display: `inline-flex`,

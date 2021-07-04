@@ -47,7 +47,8 @@ const useStyles = makeStyles((theme: Theme) =>
             width: `50%`,
             height: `80px`,
             [theme.breakpoints.down('md')]: {
-                width: `33%`
+                width: `33%`,
+                height: `auto`
             }
         },
         justifyAvatar: {

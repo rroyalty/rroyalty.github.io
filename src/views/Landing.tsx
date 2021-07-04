@@ -8,7 +8,6 @@ const random: number =  Math.floor(Math.random() * 6)
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
-    position: `static`,
     display: `flex`,
     flexDirection: `column`,
     backgroundSize: `auto`,
@@ -17,7 +16,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     justifyContent: `center`,
     alignItems: `center`,
     backgroundImage: `url(/images/bg${random}.png)`,
-    backgroundColor: theme.palette.wayback?.main
+    backgroundColor: theme.palette.wayback?.main,
+    overflowX: "hidden"
   },
   spacing: {
     alignItems: `center`,
