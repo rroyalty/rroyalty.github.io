@@ -4,7 +4,6 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import bioPic from '../static/bioPic.json';
 import bioText from '../static/bioText.json';
 import Carousel from 'react-material-ui-carousel';
-import CarouselItem from '../components/CarouselItem';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
     root: {
@@ -101,7 +100,9 @@ const Bio: React.FC = (): JSX.Element => {
                 <Carousel animation={"slide"} interval={5000} navButtonsAlwaysInvisible={true}>
                     {bioPic.map((item) =>
                         <Box className={classes.root} key={item.index}>
-                            <CarouselItem src={item.src} />
+                            <Paper elevation={4}>
+                                <Avatar className={classes.avatar} src={item.src} variant={`square`} />
+                            </Paper>
                         </Box>)}
                 </Carousel>
             </Grid>
