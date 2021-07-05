@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         justifyContent: `space-between`
     },
     navbar: {
+        display: `flex`,
         backgroundColor: theme.palette.bg?.main,
         borderColor: theme.palette.dark?.main,
         color: theme.palette.dark?.main,
@@ -87,7 +88,7 @@ const Navbar: React.FC = (): JSX.Element => {
             setState((prevState) => ({ ...prevState, drawerOpen: false }));
 
         return (
-            <AppBar className={classes.appBar} position="fixed" >
+            <AppBar className={classes.appBar} >
                 <Toolbar className={classes.navbar}>
                     <IconButton
                         edge='start'
@@ -113,7 +114,7 @@ const Navbar: React.FC = (): JSX.Element => {
 
     const displayDesktop = () => {
         return (
-            <AppBar position="fixed" className={classes.navbar}>
+            <AppBar className={classes.navbar}>
                 <Toolbar className="nav-style">
                     <Typography className={classes.justifyContent} component="h3">
                         RYAN ROYALTY

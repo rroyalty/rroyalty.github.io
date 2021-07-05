@@ -76,13 +76,16 @@ const Bio: React.FC = (): JSX.Element => {
         return (
 
             <Grid
-                item container
+                item
+                container
                 direction="row"
                 justify="center"
                 alignItems="center"
-                spacing={6} >
+                spacing={6}
+                
+            >
                 {bioPic.map((item: IPictureItem, index: number) => (
-                    <Grid key={index} item sm={4}>
+                    <Grid key={index} item sm={4} >
                         <Paper elevation={4}>
                             <Avatar className={classes.avatar} alt={item.alt} src={item.src} variant={`square`} />
                         </Paper>
@@ -96,10 +99,8 @@ const Bio: React.FC = (): JSX.Element => {
         return (
             <Grid
                 item
-                direction="row"
-                justify="center"
-                alignItems="center"
-                spacing={10} >
+                spacing={10}
+                 >
                 <Carousel animation={"slide"} interval={5000} navButtonsAlwaysInvisible={true}>
                     {bioPic.map((item: IPictureItem, index: number) =>
                         <Box className={classes.root} key={index}>
