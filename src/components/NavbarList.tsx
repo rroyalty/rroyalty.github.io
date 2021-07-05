@@ -6,7 +6,7 @@ import { makeStyles, createStyles } from "@material-ui/core/styles";
 import { List, ListItem, ListItemText } from "@material-ui/core"
 
 interface iProps {
-    classprop: any;
+    classProp: any;
 }
 
 const navLinks: { title: string, path: string }[] = [
@@ -36,7 +36,7 @@ const NavbarList: React.FC<iProps> = (props): JSX.Element => {
     const classes = useStyles();
 
     return (
-        <List component="nav" aria-labelledby="main navigation" className={props.classprop}>
+        <List component="nav" aria-labelledby="main navigation" className={props.classProp}>
             {navLinks.map((item, index: number) => (
                 <ScrollLink smooth={true} duration={500} to={item.path} key={index} className={classes.linkText}>
                     <ListItem button>

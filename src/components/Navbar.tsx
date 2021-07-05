@@ -6,7 +6,7 @@ import { AppBar, Toolbar, Drawer, Typography } from "@material-ui/core"
 import NavbarList from './NavbarList'
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
-    navDisplayFlex: {
+    navbarDesktop: {
         display: `inline-flex`,
         justifyContent: `space-between`
     },
@@ -15,12 +15,15 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         borderColor: theme.palette.dark?.main,
         color: theme.palette.dark?.main,
         height: `66px`,
+        marginLeft: `auto`,
+        [theme.breakpoints.down('md')]: {
+            marginRight: -12,
+          },
     },
-    iconLinks: {
+    icon: {
         display: `inline-flex`,
         height: `48px`,
         width: `48px`,
-
     },
     rightAppBar: {
         marginLeft: `auto`,
@@ -30,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         display: `flex`,
         justifyContent: `center`
     },
-    mobileNav: {
+    hamburger: {
         display: `flex`,
         flexDirection: `column`,
         textDecoration: `none`,
@@ -38,7 +41,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         justifyContent: `flex-end`,
 
     },
-    menu: {
+    drawer: {
         backgroundColor: theme.palette.bg?.main,
         border: `0px`,
         borderLeftWidth: `2px`,
@@ -50,6 +53,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         alignItems: `center`,
         height: "100vh",
         width: `40vw`,
+    },
+    appBar: {
+        backgroundColor: theme.palette.bg?.main,
     }
 }))
 
@@ -81,27 +87,24 @@ const Navbar: React.FC = (): JSX.Element => {
             setState((prevState) => ({ ...prevState, drawerOpen: false }));
 
         return (
-            <AppBar position="fixed" className={classes.navbar}>
-                <IconButton
-                    {...{
-                        edge: 'start',
-                        color: 'inherit',
-                        'aria-label': 'menu',
-                        'aria-haspopup': 'true',
-                        onClick: handleDrawerOpen,
-
-                    }}
-                    className={classes.mobileNav}
-                >
-                    <MenuIcon />
-                </IconButton>
+            <AppBar className={classes.appBar} position="fixed" >
+                <Toolbar className={classes.navbar}>
+                    <IconButton
+                        edge='start'
+                        color='inherit'
+                        onClick={handleDrawerOpen}
+                        className={classes.hamburger}
+                    >
+                        <MenuIcon className={classes.icon} />
+                    </IconButton>
+                </Toolbar>
                 <Drawer
                     {...{
                         anchor: 'right',
                         open: drawerOpen,
                         onClose: handleDrawerClose,
                     }}>
-                    <NavbarList classprop={classes.menu} />
+                    <NavbarList classProp={classes.drawer} />
                 </Drawer>
             </AppBar>
         )
@@ -116,7 +119,7 @@ const Navbar: React.FC = (): JSX.Element => {
                         RYAN ROYALTY
                     </Typography>
                     <section className={classes.rightAppBar}>
-                        <NavbarList classprop={classes.navDisplayFlex} />
+                        <NavbarList classProp={classes.navbarDesktop} />
                     </section>
                 </Toolbar>
             </AppBar>
@@ -124,9 +127,9 @@ const Navbar: React.FC = (): JSX.Element => {
     }
 
     return (
-        <div>
+        <>
             {mobileView ? displayMobile() : displayDesktop()}
-        </div>
+        </>
     )
 }
 
