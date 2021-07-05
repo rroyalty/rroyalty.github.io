@@ -19,11 +19,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     backgroundColor: theme.palette.wayback?.main,
     overflowX: "hidden"
   },
-  spacing: {
-    alignItems: `center`,
-    justifyContent: `center`,
-    alignText: `center`,
-  },
   typography: {
     alignItems: `center`
   }
@@ -37,13 +32,13 @@ const App = () => {
   return (
     <>
       <Container className={classes.root} maxWidth='xl'>
-        <Container className={classes.spacing} id="bio" maxWidth='md' >
+        <Container id="bio" maxWidth='md' >
           <Bio />
         </Container>
-        <Container className={classes.spacing} id="technical" maxWidth='md' >
+        <Container id="technical" maxWidth='md' >
           <Technical />
         </Container>
-        <Container className={classes.spacing} id="portfolio" maxWidth='xl' >
+        <Container id="portfolio" maxWidth='xl' >
           <Portfolio />
         </Container>
       </Container>

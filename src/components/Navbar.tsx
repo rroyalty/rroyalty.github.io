@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         borderColor: theme.palette.dark?.main,
         color: theme.palette.dark?.main,
         height: `66px`,
-        widht: `100%`
     },
     iconLinks: {
         display: `inline-flex`,
@@ -94,7 +93,7 @@ const Navbar: React.FC = (): JSX.Element => {
                     }}
                     className={classes.mobileNav}
                 >
-                    <MenuIcon className={classes.iconLinks} />
+                    <MenuIcon />
                 </IconButton>
                 <Drawer
                     {...{
