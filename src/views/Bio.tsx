@@ -21,7 +21,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         padding: `15px`,
         marginLeft: `10px`,
         marginRight: `10px`,
-        fontSize: "1.2rem"
+        fontSize: "1.2rem",
+        [theme.breakpoints.down('md')]: {
+            fontSize: "1rem"
+        }
     },
     avatar: {
         height: `auto`,

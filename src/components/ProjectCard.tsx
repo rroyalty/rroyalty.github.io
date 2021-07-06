@@ -59,7 +59,10 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     typography2: {
       color: theme.palette.dark?.main,
-      marginBottom: `10px`
+      marginBottom: `10px`,
+      [theme.breakpoints.down('md')]: {
+        fontSize: `.9rem`
+      }
     },
     typography3: {
       color: theme.palette.dark?.main,
