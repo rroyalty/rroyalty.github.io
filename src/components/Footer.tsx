@@ -8,8 +8,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         display: `flex`,
         flexDirection: `column`,
         backgroundColor: theme.palette.bg?.main,
-        borderTopWidth: `2px`,
-        borderColor: theme.palette.light?.main,
+        borderColor: theme.palette.bg?.main,
         borderStyle: `solid`,
         color: theme.palette.dark?.main,
         justifyContent: `center`,
@@ -72,7 +71,7 @@ const Footer: React.FC = (): JSX.Element => {
                     </Grid>
                     <Grid item xs={12} sm={4}>
                         <Typography className={classes.typography}>
-                            Last Updated: 06/25/2021
+                            Last Updated: 07/06/2021
                         </Typography>
                     </Grid>
 

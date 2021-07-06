@@ -10,6 +10,7 @@ interface IProps {
     domain: string,
     github: string,
     imgSrc: string,
+    tech: Array<string>
   },
   index: number,
   length: number
@@ -56,6 +57,21 @@ const useStyles = makeStyles((theme: Theme) =>
     typography: {
       color: theme.palette.dark?.main,
     },
+    typography2: {
+      color: theme.palette.dark?.main,
+      marginBottom: `10px`
+    },
+    typography3: {
+      color: theme.palette.dark?.main,
+      fontSize: `.7rem`,
+      fontStyle: `italic`,
+      textDecoration: `underline`
+    },
+    typography4: {
+      color: theme.palette.dark?.main,
+      fontSize: `.7rem`,
+      fontStyle: `italic`
+    },
     firstTile: {
       margin: `10px`,
       maxWidth: `95%`,
@@ -73,6 +89,11 @@ const useStyles = makeStyles((theme: Theme) =>
     allTiles: {
       maxWidth: `95%`,
       margin: `10px`,
+    },
+    justify: {
+      justifyContent: `center`,
+      margin: `0px`,
+      padding: `0px`
     }
   }));
 
@@ -92,25 +113,37 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
           <Typography className={classes.typography} gutterBottom variant="h6" component="h3">
             {props.props.name}
           </Typography>
-          <Typography className={classes.typography} variant="body2" component="p">
+          <Typography className={classes.typography2} variant="body1" component="h6">
             {props.props.description}
+          </Typography>
+          <Typography className={classes.typography3}component="p">
+            {`Technologies Used:`}
+          </Typography>
+          <Typography className={classes.typography4} component="p">
+            {props.props.tech.join(', ')}
           </Typography>
         </CardContent>
 
-        <CardActionArea>
-          <CardActions>
-            <a href={props.props.github} target="_blank" rel="noreferrer">
+
+        <CardActions className={classes.justify}>
+          <a href={props.props.github} target="_blank" rel="noreferrer">
+            <CardActionArea>
               <Button className={classes.typography} size="small">
                 GitHub
               </Button>
-            </a>
-            <a href={props.props.domain} target="_blank" rel="noreferrer">
+            </CardActionArea>
+          </a>
+
+
+          <a href={props.props.domain} target="_blank" rel="noreferrer">
+            <CardActionArea>
               <Button className={classes.typography} size="small">
                 Deployment
               </Button>
-            </a>
-          </CardActions>
-        </CardActionArea>
+            </CardActionArea>
+          </a>
+        </CardActions>
+
       </Card>
     </GridListTile>
   );
