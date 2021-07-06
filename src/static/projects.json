@@ -5,7 +5,7 @@
         "domain": "https://bandwi-d-th.herokuapp.com/",
         "github": "https://github.com/rroyalty/bandwidth",
         "imgSrc": "/images/bandwidth.jpg",
-        "tech": ["TypeScript", "React", "Material UI", "Sequelize", "Express", "Auth0", "Axios"]
+        "tech": ["TypeScript", "React", "Material UI", "Node", "Sequelize", "Express", "Auth0", "Axios"]
     },
     {   
         "name": "Easy Recipeazy",             
@@ -21,7 +21,7 @@
         "domain": "http://stretch-n-strengthen.herokuapp.com/",
         "github": "https://github.com/crrmarchese/stretch-n-strengthen",
         "imgSrc": "https://raw.githubusercontent.com/crrmarchese/stretch-n-strengthen/main/public/assets/images/stretch-n-strengthen.jpg",
-        "tech": ["JavaScript", "Express", "Sequelize", "BCrypt", "Passport", "Axios", "Handlebars"]
+        "tech": ["JavaScript", "Node", "Express", "Sequelize", "BCrypt", "Passport", "Axios", "Handlebars"]
     },
     {   
         "name": "Pop Culture Trivia",             
