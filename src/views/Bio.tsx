@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         margin: `30px`,
         paddingTop: `70px`,
         [theme.breakpoints.down('sm')]: {
-            visibility: `hidden`
+            fontSize: `1.7rem`
         }
     },
     typography2: {

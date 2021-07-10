@@ -20,7 +20,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     typography: {
         color: theme.palette.dark?.main,
         margin: `30px`,
-        paddingTop: `70px`
+        paddingTop: `70px`,
+        [theme.breakpoints.down('sm')]: {
+            fontSize: `1.7rem`
+          },
     },
 }))
 

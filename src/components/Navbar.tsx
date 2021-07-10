@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         flexDirection: `column`,
         alignItems: `center`,
         height: "100vh",
-        width: `40vw`,
+        width: `45vw`,
     },
     appBar: {
         backgroundColor: theme.palette.bg?.main,
