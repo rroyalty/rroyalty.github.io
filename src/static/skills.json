@@ -56,6 +56,10 @@
                 "avatar": "https://material-ui.com/static/logo.png"
             },
             {
+                "language": "JQuery",
+                "avatar": "https://cdn.iconscout.com/icon/free/png-256/jquery-7-1175152.png"
+            },
+            {
                 "language": "Auth0",
                 "avatar": "https://miro.medium.com/max/3150/1*kofg5S-_kcyij3HL-uCnZA.png"
             },
@@ -74,10 +78,6 @@
             {
                 "language": "Sequelize",
                 "avatar": "https://cdn.iconscout.com/icon/free/png-512/sequelize-1175001.png"
-            },
-            {
-                "language": "",
-                "avatar": ""
             }
         ]
     },
