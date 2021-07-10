@@ -30,7 +30,7 @@ const Technical: React.FC = (): JSX.Element => {
     return (
         <>
             <Typography className={classes.typography} align="center" variant="h2">
-                FRONT TO BACK
+                TECHNOLOGIES
             </Typography>
 
             <Grid
