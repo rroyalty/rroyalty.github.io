@@ -14,7 +14,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     typography1: {
         color: theme.palette.dark?.main,
         margin: `30px`,
-        paddingTop: `70px`
+        paddingTop: `70px`,
+        [theme.breakpoints.down('sm')]: {
+            visibility: `hidden`
+        }
     },
     typography2: {
         color: theme.palette.dark?.main,
@@ -77,24 +80,26 @@ const Bio: React.FC = (): JSX.Element => {
 
     const bioDesktop = () => {
         return (
+            <>
 
-            <Grid
-                item
-                container
-                direction="row"
-                justify="center"
-                alignItems="center"
-                spacing={6}
-                
-            >
-                {bioPic.map((item: IPictureItem, index: number) => (
-                    <Grid key={index} item sm={4} >
-                        <Paper elevation={4}>
-                            <Avatar className={classes.avatar} alt={item.alt} src={item.src} variant={`square`} />
-                        </Paper>
-                    </Grid>
-                ))}
-            </Grid>
+                <Grid
+                    item
+                    container
+                    direction="row"
+                    justify="center"
+                    alignItems="center"
+                    spacing={6}
+
+                >
+                    {bioPic.map((item: IPictureItem, index: number) => (
+                        <Grid key={index} item sm={4} >
+                            <Paper elevation={4}>
+                                <Avatar className={classes.avatar} alt={item.alt} src={item.src} variant={`square`} />
+                            </Paper>
+                        </Grid>
+                    ))}
+                </Grid>
+            </>
         )
     }
 
@@ -103,7 +108,7 @@ const Bio: React.FC = (): JSX.Element => {
             <Grid
                 item
                 spacing={10}
-                 >
+            >
                 <Carousel animation={"slide"} interval={5000} navButtonsAlwaysInvisible={true}>
                     {bioPic.map((item: IPictureItem, index: number) =>
                         <Box className={classes.root} key={index}>
@@ -119,7 +124,7 @@ const Bio: React.FC = (): JSX.Element => {
     return (
         <>
             <Typography className={classes.typography1} align="center" variant="h2">
-                BIO
+                INTRO
             </Typography>
             <Grid
                 container

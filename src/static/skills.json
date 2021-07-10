@@ -41,8 +41,65 @@
         ]
     },
     {
-        "title": "Applications",
+        "title": "Frameworks/Libraries",
         "list": [
+            {
+                "language": "React",
+                "avatar": "https://cdn.iconscout.com/icon/free/png-512/react-1543566-1306069.png"
+            },
+            {
+                "language": "Redux",
+                "avatar": "https://cdn.iconscout.com/icon/free/png-512/redux-283024.png"
+            },
+            {
+                "language": "Material UI",
+                "avatar": "https://material-ui.com/static/logo.png"
+            },
+            {
+                "language": "Auth0",
+                "avatar": "https://miro.medium.com/max/3150/1*kofg5S-_kcyij3HL-uCnZA.png"
+            },
+            {
+                "language": "Passport",
+                "avatar": "https://leolanchas.com/wp-content/uploads/2013/07/0d184ee3-fd8d-4b94-acf4-b4e686e57375.png"
+            },
+            {
+                "language": "Express",
+                "avatar": "https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png"
+            },
+            {
+                "language": "Axios",
+                "avatar": "https://symbols-electrical.getvecta.com/stencil_74/148_axios-icon.351c8889a7.png"
+            },
+            {
+                "language": "Sequelize",
+                "avatar": "https://cdn.iconscout.com/icon/free/png-512/sequelize-1175001.png"
+            },
+            {
+                "language": "",
+                "avatar": ""
+            }
+        ]
+    },
+    {
+        "title": "Environments/Tools",
+        "list": [
+            {
+                "language": "Git",
+                "avatar": "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+            },
+            {
+                "language": "Bash",
+                "avatar": "https://orion42.net/wp-content/uploads/2019/10/full_colored_dark_green42.png"
+            },
+            {
+                "language": "Node",
+                "avatar": "https://cdn.iconscout.com/icon/free/png-512/node-js-1-1174935.png"
+            },
+            {
+                "language": "VSCode",
+                "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png"
+            },
             {
                 "language": "GitHub",
                 "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png"
@@ -52,8 +109,8 @@
                 "avatar": "https://image.flaticon.com/icons/png/512/873/873120.png"
             },
             {
-                "language": "VSCode",
-                "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png"
+                "language": "Firebase",
+                "avatar": "https://img.icons8.com/color/452/firebase.png"
             },
             {
                 "language": "MySQL",
@@ -66,60 +123,8 @@
             {
                 "language": "FileMaker",
                 "avatar": "https://s3.amazonaws.com/hbase-files/FM13-icon-green-blue.png"
-            },
-            {
-                "language": "",
-                "avatar": ""
-            },
-            {
-                "language": "",
-                "avatar": ""
-            },
-            {
-                "language": "",
-                "avatar": ""
-            }
-        ]
-    },
-    {
-        "title": "Tools",
-        "list": [
-            {
-                "language": "React",
-                "avatar": "https://cdn.iconscout.com/icon/free/png-512/react-1543566-1306069.png"
-            },
-            {
-                "language": "Redux",
-                "avatar": "https://cdn.iconscout.com/icon/free/png-512/redux-283024.png"
-            },
-            {
-                "language": "Express",
-                "avatar": "https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png"
-            },
-            {
-                "language": "Node",
-                "avatar": "https://cdn.iconscout.com/icon/free/png-512/node-js-1-1174935.png"
-            },
-            {
-                "language": "Sequelize",
-                "avatar": "https://cdn.iconscout.com/icon/free/png-512/sequelize-1175001.png"
-            },
-            {
-                "language": "Material UI",
-                "avatar": "https://material-ui.com/static/logo.png"
-            },
-            {
-                "language": "Axios",
-                "avatar": "https://symbols-electrical.getvecta.com/stencil_74/148_axios-icon.351c8889a7.png"
-            },
-            {
-                "language": "Auth0",
-                "avatar": "https://miro.medium.com/max/3150/1*kofg5S-_kcyij3HL-uCnZA.png"
-            },
-            {
-                "language": "Passport",
-                "avatar": "https://leolanchas.com/wp-content/uploads/2013/07/0d184ee3-fd8d-4b94-acf4-b4e686e57375.png"
             }
         ]
     }
+    
 ]

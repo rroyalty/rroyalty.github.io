@@ -31,7 +31,7 @@ let theme: Theme = createMuiTheme({
       main: fade("#899d73", 1),
     },
     dark: {
-      main: "#353535",
+      main: "#252525",
     },
     light:{
       main: "#003300",

@@ -10,7 +10,7 @@ interface iProps {
 }
 
 const navLinks: { title: string, path: string }[] = [
-    { title: `Bio`, path: `bio` },
+    { title: `Intro`, path: `bio` },
     { title: `Skills`, path: `technical` },
     { title: `Portfolio`, path: `portfolio` },
 ]
