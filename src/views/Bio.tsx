@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         alignItems: `center`,
     },
     topPadding: {
-        paddingTop: `110px`,
+        paddingTop: `190px`,
     },
     typography: {
         padding: `15px`,
@@ -78,7 +78,7 @@ const Bio: React.FC = (): JSX.Element => {
                     direction="row"
                     justify="center"
                     alignItems="center"
-                    spacing={6}
+                    spacing={4}
 
                 >
                     {bioPic.map((item: IPictureItem, index: number) => (

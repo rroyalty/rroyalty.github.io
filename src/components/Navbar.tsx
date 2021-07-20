@@ -17,7 +17,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         backgroundColor: theme.palette.bg?.main,
         borderColor: theme.palette.dark?.main,
         color: theme.palette.dark?.main,
-        height: `66px`,
+        justifyContent: `center`,
+        height: `80px`,
         marginLeft: `auto`,
         [theme.breakpoints.down('md')]: {
             marginRight: -12,

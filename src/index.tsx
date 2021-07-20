@@ -44,23 +44,24 @@ let theme: Theme = createMuiTheme({
       "serif",
     ].join(","),
     htmlFontSize: 20,
+    fontSize: 20,
     h2: {
-      fontSize: `4rem`,
+      fontSize: `5rem`,
       paddingTop: `110px!important`,
       paddingBottom: `30px!important`
     },
     h3: {
-      fontSize: "1rem",
-      lineHeight: "150%"
+      fontSize: `1.2rem`,
+      lineHeight: 1.5
     },
     h4: {
       fontSize: "1.3rem"
     },
     subtitle1: {
-      fontSize: ".8rem"
+      fontSize: "1rem"
     },
     subtitle2: {
-      fontSize: `.7rem`,
+      fontSize: `.9rem`,
       fontStyle: `italic`
     },
     button: {
@@ -73,7 +74,7 @@ let theme: Theme = createMuiTheme({
   overrides: {
     MuiListItemText: {
       primary: {
-        fontSize: '1rem',
+        fontSize: '1.2rem',
       },
     },
   },

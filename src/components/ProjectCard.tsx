@@ -23,8 +23,8 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: theme.palette.wayback?.main,
       justifyContent: 'center',
       textAlign: 'center',
-      height: `286px`,
-      widht: `286px`,
+      height: `320px`,
+      widht: `320px`,
       borderStyle: `solid`,
       border: `5px`,
       borderRadius: `0px`,
@@ -68,7 +68,7 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
           <Typography style={{textDecoration: `underline`}} variant="subtitle2" component="p">
             {`Technologies Used:`}
           </Typography>
-          <Typography variant="subtitle2" component="p">
+          <Typography variant="subtitle2" component="p" style={{paddingLeft: `10px`, paddingRight: `10px`}}>
             {props.props.tech.join(', ')}
           </Typography>
 
