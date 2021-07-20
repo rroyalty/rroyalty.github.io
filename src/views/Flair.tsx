@@ -22,6 +22,9 @@ const Flair: React.FC = (): JSX.Element => {
             <Typography align="center" variant="h2" component="h2">
                 FLAIR
             </Typography>
+            <Typography align="center" variant="h3" component="h3">
+                Under Construction
+            </Typography>
         </>
     )
 }

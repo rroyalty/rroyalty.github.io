@@ -29,14 +29,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         margin: `0`,
         padding: `0`
     },
-    typography: {
-        display: `flex`,
-        color: theme.palette.dark?.main,
-        alignItems: `center`,
-        justifyContent: `center`,
-        flexDirection: `row`,
-        fontSize: `.7rem`
-    },
     anchorColor: {
         color: theme.palette.light?.main,
     },
@@ -58,20 +50,20 @@ const Footer: React.FC = (): JSX.Element => {
                     spacing={1}
                 >
                     <Grid item xs={12} sm={4}>
-                        <Typography className={classes.typography}>
+                        <Typography align="center" variant="subtitle2" component="p">
                             This portfolio was created using React, TypeScript and Material UI.
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={4}>
                         <a className={classes.anchorColor} href="https://github.com/rroyalty/rroyalty.github.io" target="_blank" rel="noreferrer">
-                            <Typography className={classes.typography}>
+                            <Typography align="center" variant="subtitle2" component="p">
                                 Portfolio Repository
                             </Typography>
                         </a>
                     </Grid>
                     <Grid item xs={12} sm={4}>
-                        <Typography className={classes.typography}>
-                            Last Updated: 07/06/2021
+                        <Typography align="center" variant="subtitle2" component="p">
+                            Last Updated: 07/20/2021
                         </Typography>
                     </Grid>
 
