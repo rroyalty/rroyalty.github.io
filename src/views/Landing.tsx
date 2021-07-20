@@ -2,6 +2,7 @@ import { Container  } from "@material-ui/core";
 import Bio from './Bio';
 import Portfolio from './Portfolio';
 import Technical from './Technical';
+import Flair from './Flair';
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
 const random: number =  Math.floor(Math.random() * 6)
@@ -18,16 +19,13 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     backgroundImage: `url(/images/bg${random}.png)`,
     backgroundColor: theme.palette.wayback?.main,
     overflowX: "hidden"
-  },
-  typography: {
-    alignItems: `center`
   }
-
 }));
 
 
 const App = () => {
   const classes = useStyles();
+  
 
   return (
     <>
@@ -40,6 +38,9 @@ const App = () => {
         </Container>
         <Container id="portfolio" maxWidth='xl' >
           <Portfolio />
+        </Container>
+        <Container id="flair" maxWidth='md' >
+          <Flair />
         </Container>
       </Container>
     </>

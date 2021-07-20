@@ -6,16 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "@material-ui/core";
 import { createMuiTheme, responsiveFontSizes, Theme } from "@material-ui/core/styles";
 import { fade } from '@material-ui/core/styles/colorManipulator';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 declare module "@material-ui/core/styles/createPalette" {
   interface Palette {
-    wayback?: Palette['primary']; 
-    bg?: Palette['primary']; 
+    wayback?: Palette['primary'];
+    bg?: Palette['primary'];
     dark?: Palette['primary'];
     light?: Palette['primary'];
   }
   interface PaletteOptions {
-    wayback?: PaletteOptions['primary']; 
+    wayback?: PaletteOptions['primary'];
     bg?: PaletteOptions['primary'];
     dark?: PaletteOptions['primary'];
     light?: PaletteOptions['primary'];
@@ -33,7 +34,7 @@ let theme: Theme = createMuiTheme({
     dark: {
       main: "#252525",
     },
-    light:{
+    light: {
       main: "#003300",
     }
   },
@@ -42,14 +43,42 @@ let theme: Theme = createMuiTheme({
       "Lora",
       "serif",
     ].join(","),
-    fontSize: 8,
-    htmlFontSize: 8 
+    htmlFontSize: 10,
+    h2: {
+      fontSize: `4rem`,
+      paddingTop: `110px!important`,
+      paddingBottom: `30px!important`
+    },
+    h3: {
+      fontSize: "1rem",
+      lineHeight: "150%"
+    },
+    h4: {
+      fontSize: "1.3rem"
+    },
+    subtitle1: {
+      fontSize: ".8rem"
+    },
+    button: {
+      fontSize: "1rem"
+    },
+    allVariants: {
+      color: "#252525",
+    }
+  },
+  overrides: {
+    MuiListItemText: {
+      primary: {
+        fontSize: '1rem',
+      },
+    },
   },
 });
 
 theme = responsiveFontSizes(theme);
 ReactDOM.render(
   <React.StrictMode>
+    <CssBaseline />
     <ThemeProvider theme={theme}>
       <App />
     </ThemeProvider>

@@ -18,12 +18,8 @@ interface IItem {
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
     typography: {
-        color: theme.palette.dark?.main,
-        margin: `30px`,
-        paddingTop: `70px`,
-        [theme.breakpoints.down('sm')]: {
-            fontSize: `1.7rem`
-          },
+        paddingTop: `110px`,
+        paddingBottom: `30px`
     },
 }))
 
@@ -33,7 +29,7 @@ const Technical: React.FC = (): JSX.Element => {
     return (
         <>
             <Typography className={classes.typography} align="center" variant="h2">
-                TECHNOLOGIES
+                SKILLSET
             </Typography>
 
             <Grid

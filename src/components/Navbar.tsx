@@ -2,16 +2,18 @@ import React, { useState, useEffect } from 'react';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton'
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import { AppBar, Toolbar, Drawer, Typography } from "@material-ui/core"
-import NavbarList from './NavbarList'
+import { AppBar, Toolbar, Drawer } from "@material-ui/core";
+import NavbarList from './NavbarList';
+import { Link as ScrollLink } from "react-scroll";
+import { List, ListItem, ListItemText } from "@material-ui/core"
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
     navbarDesktop: {
-        display: `inline-flex`,
-        justifyContent: `space-between`
+        display: `flex`,
+        justifyContent: `center`,
+        alignItems: `center`
     },
     navbar: {
-        display: `flex`,
         backgroundColor: theme.palette.bg?.main,
         borderColor: theme.palette.dark?.main,
         color: theme.palette.dark?.main,
@@ -19,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         marginLeft: `auto`,
         [theme.breakpoints.down('md')]: {
             marginRight: -12,
-          },
+        },
     },
     icon: {
         display: `inline-flex`,
@@ -53,11 +55,22 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         flexDirection: `column`,
         alignItems: `center`,
         height: "100vh",
-        width: `45vw`,
+        width: `178px`,
     },
     appBar: {
         backgroundColor: theme.palette.bg?.main,
-    }
+    },
+    linkText: {
+        textDecoration: `none`,
+        textTransform: `uppercase`,
+        backgroundColor: theme.palette.bg?.main,
+        [theme.breakpoints.down('md')]: {
+            border: `0px`,
+            borderLeftWidth: `2px`,
+            borderColor: theme.palette.dark?.main,
+            borderStyle: `solid`,
+        },        
+    },
 }))
 
 
@@ -73,7 +86,7 @@ const Navbar: React.FC = (): JSX.Element => {
 
     useEffect(() => {
         const setResponsiveness = () => {
-            return window.innerWidth < 900
+            return window.innerWidth < 960
                 ? setState((prevState) => ({ ...prevState, mobileView: true }))
                 : setState((prevState) => ({ ...prevState, mobileView: false }))
         };
@@ -88,6 +101,8 @@ const Navbar: React.FC = (): JSX.Element => {
             setState((prevState) => ({ ...prevState, drawerOpen: false }));
 
         return (
+
+
             <AppBar className={classes.appBar} >
                 <Toolbar className={classes.navbar}>
                     <IconButton
@@ -104,7 +119,12 @@ const Navbar: React.FC = (): JSX.Element => {
                         anchor: 'right',
                         open: drawerOpen,
                         onClose: handleDrawerClose,
-                    }}>
+                    }} style={{alignItems: "center"}}>
+                    <ScrollLink smooth={true} duration={500} to="bio" className={classes.linkText}>
+                        <ListItem button style={{textAlign: "center"}}>
+                            <ListItemText primary="RYAN ROYALTY" />
+                        </ListItem>
+                    </ScrollLink>
                     <NavbarList classProp={classes.drawer} />
                 </Drawer>
             </AppBar>
@@ -116,9 +136,11 @@ const Navbar: React.FC = (): JSX.Element => {
         return (
             <AppBar className={classes.navbar}>
                 <Toolbar className="nav-style">
-                    <Typography className={classes.justifyContent} component="h3">
-                        RYAN ROYALTY
-                    </Typography>
+                    <ScrollLink smooth={true} duration={500} to="bio" className={classes.linkText}>
+                        <ListItem button>
+                            <ListItemText primary="RYAN ROYALTY" />
+                        </ListItem>
+                    </ScrollLink>
                     <section className={classes.rightAppBar}>
                         <NavbarList classProp={classes.navbarDesktop} />
                     </section>

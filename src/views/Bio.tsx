@@ -11,23 +11,13 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         justifyContent: `center`,
         alignItems: `center`,
     },
-    typography1: {
-        color: theme.palette.dark?.main,
-        margin: `30px`,
-        paddingTop: `70px`,
-        [theme.breakpoints.down('sm')]: {
-            fontSize: `1.7rem`
-        }
+    topPadding: {
+        paddingTop: `110px`,
     },
-    typography2: {
-        color: theme.palette.dark?.main,
+    typography: {
         padding: `15px`,
         marginLeft: `10px`,
         marginRight: `10px`,
-        fontSize: "1.2rem",
-        [theme.breakpoints.down('md')]: {
-            fontSize: "1rem"
-        }
     },
     avatar: {
         height: `auto`,
@@ -123,22 +113,20 @@ const Bio: React.FC = (): JSX.Element => {
 
     return (
         <>
-            <Typography className={classes.typography1} align="center" variant="h2">
-                INTRO
-            </Typography>
             <Grid
                 container
                 direction="column"
                 justify="center"
                 alignItems="center"
-                spacing={10}
+                spacing={4}
+                className={classes.topPadding}
             >
                 {mobileView ? bioMobile() : bioDesktop()}
                 <Grid item style={{ marginLeft: `-10px`, marginRight: `-10px` }}>
                     <Paper elevation={4} className={classes.bgColor}>
                         {
                             bioText.map((item: ITextItem, index: number) => (
-                                <Typography className={classes.typography2} key={index}>
+                                <Typography className={classes.typography} key={index} variant="h3" component="h3">
                                     {item.p}
                                 </Typography>
                             ))

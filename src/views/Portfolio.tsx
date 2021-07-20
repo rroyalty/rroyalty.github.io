@@ -21,16 +21,6 @@ const useStyles = makeStyles((theme: Theme) =>
             alignItems: 'top',
             width: `100%`
         },
-        typography: {
-
-            color: theme.palette.dark?.main,
-            margin: `30px`,
-            paddingTop: `70px`,
-            [theme.breakpoints.down('sm')]: {
-                fontSize: `1.7rem`
-              },
-
-        },
         margin: {
             marginBottom: `50px`
         }
@@ -40,11 +30,10 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Portfolio: React.FC = (): JSX.Element => {
     const classes = useStyles();
-    const length: number = projectList.length
 
     return (
         <>
-            <Typography className={classes.typography} align="center" variant="h2">
+            <Typography align="center" variant="h2" component="h2">
                 PORTFOLIO
             </Typography>
             <Grid
@@ -55,7 +44,7 @@ const Portfolio: React.FC = (): JSX.Element => {
                 className={classes.margin}
             >    <GridList className={classes.gridList} cellHeight={160} cols={3}>
                     {projectList.map((item: IItem, index: number) => (
-                        <ProjectCard key={item.name} props={item} index={index} length={length} />
+                        <ProjectCard key={item.name} props={item} index={index} />
                     ))}
                 </GridList>
             </Grid>

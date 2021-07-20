@@ -10,16 +10,15 @@ interface iProps {
 }
 
 const navLinks: { title: string, path: string }[] = [
-    { title: `Intro`, path: `bio` },
-    { title: `Technologies`, path: `technical` },
+    { title: `Skillset`, path: `technical` },
     { title: `Portfolio`, path: `portfolio` },
+    { title: `Flair`, path: `flair` }
 ]
 
 const useStyles = makeStyles(() => createStyles({
     linkText: {
         textDecoration: `none`,
-        textTransform: `uppercase`,
-        justifyContent: `center`
+        textTransform: `uppercase`
     },
     iconLinks: {
         display: `inline-flex`,
@@ -51,6 +50,10 @@ const NavbarList: React.FC<iProps> = (props): JSX.Element => {
             <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
             <a className={classes.iconLinks} href="https://www.linkedin.com/in/rroyalty/" target="_blank" rel="noreferrer">
                 <img alt="Linked In" className={classes.iconLinks} src="/images/LinkedIn.png" />
+            </a>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <a className={classes.iconLinks} href="https://www.reddit.com/user/rroyaltywebdev" target="_blank" rel="noreferrer">
+                <img alt="Reddit" className={classes.iconLinks} src="https://image.flaticon.com/icons/png/512/1384/1384019.png" />
             </a>
             <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
             <a className={classes.anchorColor} href="mailto: rroyalty@gmail.com">

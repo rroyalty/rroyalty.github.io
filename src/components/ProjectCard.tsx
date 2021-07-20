@@ -12,8 +12,7 @@ interface IProps {
     imgSrc: string,
     tech: Array<string>
   },
-  index: number,
-  length: number
+  index: number
 }
 
 // interface IPropsArray extends Array<IProps>{}
@@ -27,21 +26,12 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: `25px`,
       display: `flex`,
       flexDirection: `column`,
-      border: `5px`,
+      border: `6px`,
       borderStyle: `solid`,
       borderRadius: 0,
       borderColor: theme.palette.light?.main,
       height: `70%`,
-      [theme.breakpoints.down('xl')]: {
-        width: `20vw`,
-      },
-      [theme.breakpoints.down('lg')]: {
-        width: `20vw`,
-      },
-      [theme.breakpoints.down('md')]: {
-        width: `25vw`,
-      },
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.up('md')]: {
         width: `30vw`,
       },
       [theme.breakpoints.down('xs')]: {
@@ -54,15 +44,8 @@ const useStyles = makeStyles((theme: Theme) =>
       borderStyle: `solid`,
       borderColor: theme.palette.dark?.main,
     },
-    typography: {
-      color: theme.palette.dark?.main,
-    },
     typography2: {
-      color: theme.palette.dark?.main,
       marginBottom: `10px`,
-      [theme.breakpoints.down('md')]: {
-        fontSize: `.9rem`
-      }
     },
     typography3: {
       color: theme.palette.dark?.main,
@@ -80,18 +63,15 @@ const useStyles = makeStyles((theme: Theme) =>
       maxWidth: `95%`,
       [theme.breakpoints.down('sm')]: {
         marginTop: `10px`,
-      },
-    },
-    lastTile: {
-      margin: `10px`,
-      maxWidth: `95%`,
-      [theme.breakpoints.down('sm')]: {
-        marginBottom: `100px`,
+        maxWidth: `100%`,
       },
     },
     allTiles: {
       maxWidth: `95%`,
       margin: `10px`,
+      [theme.breakpoints.down('sm')]: {
+        maxWidth: `100%`,
+      },
     },
     justify: {
       justifyContent: `center`,
@@ -104,7 +84,7 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
   const classes = useStyles();
 
   return (
-    <GridListTile className={props.index !== props.length - 1 ? (props.index === 0 ? classes.firstTile : classes.allTiles) : classes.lastTile}>
+    <GridListTile className={props.index === 0 ? classes.firstTile : classes.allTiles}>
       <Card className={classes.root}>
 
         <CardMedia
@@ -113,13 +93,13 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
           title={props.props.name}
         />
         <CardContent>
-          <Typography className={classes.typography} gutterBottom variant="h6" component="h3">
+          <Typography gutterBottom variant="h4" component="h4">
             {props.props.name}
           </Typography>
-          <Typography className={classes.typography2} variant="body1" component="h6">
+          <Typography variant="h3" component="h3">
             {props.props.description}
           </Typography>
-          <Typography className={classes.typography3}component="p">
+          <Typography className={classes.typography3} component="p">
             {`Technologies Used:`}
           </Typography>
           <Typography className={classes.typography4} component="p">
@@ -131,7 +111,7 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
         <CardActions className={classes.justify}>
           <a href={props.props.github} target="_blank" rel="noreferrer">
             <CardActionArea>
-              <Button className={classes.typography} size="small">
+              <Button>
                 GitHub
               </Button>
             </CardActionArea>
@@ -140,7 +120,7 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
 
           <a href={props.props.domain} target="_blank" rel="noreferrer">
             <CardActionArea>
-              <Button className={classes.typography} size="small">
+              <Button>
                 Deployment
               </Button>
             </CardActionArea>

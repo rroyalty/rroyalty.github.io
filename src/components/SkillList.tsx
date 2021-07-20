@@ -78,7 +78,7 @@ const SkillList: React.FC<IProps> = (props): JSX.Element => {
             className={classes.grid}>
             <Grid
                 item>
-                <Typography className={classes.typography1} align="center" variant="h6" >
+                <Typography className={classes.typography1} align="center" variant="h4" component="h4" >
                     {props.title}
                 </Typography>
             </Grid>
@@ -96,7 +96,7 @@ const SkillList: React.FC<IProps> = (props): JSX.Element => {
                         key={`${props.title} ${index}`}
                         className={classes.listItem}>
                         {item.avatar ? <Avatar src={item.avatar} variant="rounded" /> : <div />}
-                        <Typography className={classes.typography2}>
+                        <Typography className={classes.typography2} align="center" variant="subtitle1" component="p">
                             {item.language}
                         </Typography>
                     </Grid>
