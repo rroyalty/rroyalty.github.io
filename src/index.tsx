@@ -43,7 +43,7 @@ let theme: Theme = createMuiTheme({
       "Lora",
       "serif",
     ].join(","),
-    htmlFontSize: 10,
+    htmlFontSize: 12,
     h2: {
       fontSize: `4rem`,
       paddingTop: `110px!important`,
