@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard'
 import projectList from '../static/projects.json'
-import { GridList, Grid, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
 interface IItem {
@@ -21,9 +21,6 @@ const useStyles = makeStyles((theme: Theme) =>
             alignItems: 'top',
             width: `100%`
         },
-        margin: {
-            marginBottom: `50px`
-        }
     }),
 );
 
@@ -41,12 +38,11 @@ const Portfolio: React.FC = (): JSX.Element => {
                 direction="row"
                 justify="center"
                 alignItems="center"
-                className={classes.margin}
-            >    <GridList className={classes.gridList} cellHeight={160} cols={3}>
+                spacing={4}
+            >    
                     {projectList.map((item: IItem, index: number) => (
                         <ProjectCard key={item.name} props={item} index={index} />
                     ))}
-                </GridList>
             </Grid>
         </>
     )

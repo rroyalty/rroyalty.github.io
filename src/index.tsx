@@ -59,6 +59,10 @@ let theme: Theme = createMuiTheme({
     subtitle1: {
       fontSize: ".8rem"
     },
+    subtitle2: {
+      fontSize: `.7rem`,
+      fontStyle: `italic`
+    },
     button: {
       fontSize: "1rem"
     },

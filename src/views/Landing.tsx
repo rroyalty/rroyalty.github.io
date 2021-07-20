@@ -36,7 +36,7 @@ const App = () => {
         <Container id="technical" maxWidth='md' >
           <Technical />
         </Container>
-        <Container id="portfolio" maxWidth='xl' >
+        <Container id="portfolio" maxWidth='md' >
           <Portfolio />
         </Container>
         <Container id="flair" maxWidth='md' >
