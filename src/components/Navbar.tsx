@@ -5,7 +5,7 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import { AppBar, Toolbar, Drawer } from "@material-ui/core";
 import NavbarList from './NavbarList';
 import { Link as ScrollLink } from "react-scroll";
-import { List, ListItem, ListItemText } from "@material-ui/core"
+import { ListItem, ListItemText } from "@material-ui/core"
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
     navbarDesktop: {

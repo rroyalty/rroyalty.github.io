@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, Grid } from "@material-ui/core"
 import Top5 from '../components/Top5';
 import Wall from '../components/Wall';
+import Snoo from '../components/Snoo';
 
 
 const Flair: React.FC = (): JSX.Element => {
@@ -20,6 +21,7 @@ const Flair: React.FC = (): JSX.Element => {
                 spacing={3}>
                     <Top5 />
                     <Wall />
+                    <Snoo />
             </Grid>
         </>
     )
