@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
             display: `flex`,
             justifyContent: `center`,
             alignItems: `center`,
+            padding: `5px`
         },
         topPadding: {
             paddingTop: `190px`,
@@ -28,14 +29,6 @@ const useStyles = makeStyles((theme: Theme) =>
             height: `auto`,
             width: `100%`,
             borderColor: theme.palette.dark?.main,
-        },
-        bgColor: {
-            border: `6px`,
-            padding: `10px`,
-            borderStyle: `solid`,
-            borderRadius: 0,
-            borderColor: theme.palette.light?.main,
-            backgroundColor: theme.palette.wayback?.main,
         },
     }));
 
@@ -63,7 +56,6 @@ const Wall: React.FC = (): JSX.Element => {
             <Grid
                 item
                 xl={12}
-                className={classes.root}
                 spacing={2}>
                 <Carousel animation={"slide"} interval={5000} navButtonsAlwaysInvisible={true}>
                     {wall.map((item: IPictureItem, index: number) =>
