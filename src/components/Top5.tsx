@@ -16,7 +16,7 @@ interface ITop5 {
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
-        root: {
+        listGrid: {
             backgroundColor: theme.palette.wayback?.main,
             padding: `25px`,
             border: `6px`,
@@ -49,7 +49,8 @@ const Top5: React.FC = (theme): JSX.Element => {
             xs={12}
             direction="column"
             justify="center"
-            alignItems="stretch" >
+            alignItems="stretch"
+             >
 
             <Grid
                 item
@@ -62,7 +63,7 @@ const Top5: React.FC = (theme): JSX.Element => {
             <Grid
                 item
                 xl={12}
-                className={classes.root}
+                className={classes.listGrid}
                 spacing={2}>
                 <List>
                     <ListItem>

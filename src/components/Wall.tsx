@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Grid, Avatar, Box, Paper, Typography } from "@material-ui/core";
 import Carousel from 'react-material-ui-carousel';
-import wall from '../static/wall.json';
+import wall from '../static/wallPic.json';
 
 interface IPictureItem {
     src: string,
@@ -11,7 +11,7 @@ interface IPictureItem {
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
-        root: {
+        box: {
             display: `flex`,
             justifyContent: `center`,
             alignItems: `center`,
@@ -59,7 +59,7 @@ const Wall: React.FC = (): JSX.Element => {
                 spacing={2}>
                 <Carousel animation={"slide"} interval={5000} navButtonsAlwaysInvisible={true}>
                     {wall.map((item: IPictureItem, index: number) =>
-                        <Box className={classes.root} key={index}>
+                        <Box className={classes.box} key={index}>
                             <Paper elevation={4}>
                                 <Avatar className={classes.avatar} src={item.src} variant={`square`} />
                             </Paper>
