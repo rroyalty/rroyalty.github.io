@@ -31,13 +31,6 @@ const useStyles = makeStyles((theme: Theme) =>
         typography1: {
             margin: `20px`,
             flexDirection: `column`,
-            color: theme.palette.dark?.main,
-        },
-        typography2: {
-            color: theme.palette.dark?.main,
-            [theme.breakpoints.down('xs')]: {
-                fontSize: `.8rem`
-            }
         },
         listItem: {
             justifyContent: `top`,
@@ -74,7 +67,6 @@ const SkillList: React.FC<IProps> = (props): JSX.Element => {
             xs={12}
             direction="column"
             justify="flex-start"
-            // alignItems="center"
             className={classes.grid}>
             <Grid
                 item>
@@ -96,7 +88,7 @@ const SkillList: React.FC<IProps> = (props): JSX.Element => {
                         key={`${props.title} ${index}`}
                         className={classes.listItem}>
                         {item.avatar ? <Avatar src={item.avatar} variant="rounded" /> : <div />}
-                        <Typography className={classes.typography2} align="center" variant="subtitle1" component="p">
+                        <Typography align="center" variant="subtitle1" component="p">
                             {item.language}
                         </Typography>
                     </Grid>

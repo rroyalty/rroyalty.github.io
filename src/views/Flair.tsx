@@ -1,13 +1,13 @@
 import React from 'react';
-import { Typography } from "@material-ui/core"
-
+import { Typography, Grid } from "@material-ui/core"
+import Top5 from '../components/Top5';
 
 interface IList {
     language: string,
     avatar: string
 }
 
-interface IListArray extends Array<IList>{}
+interface IListArray extends Array<IList> { }
 
 interface IItem {
     title: string,
@@ -19,12 +19,18 @@ const Flair: React.FC = (): JSX.Element => {
 
     return (
         <>
-            <Typography align="center" variant="h2" component="h2">
+            <Typography align="center" variant="h2">
                 FLAIR
             </Typography>
-            <Typography align="center" variant="h3" component="h3">
-                Under Construction
-            </Typography>
+
+            <Grid
+                container
+                direction="row"
+                alignItems="flex-start"
+                justify="center"
+                spacing={3}>
+                    <Top5 />
+            </Grid>
         </>
     )
 }

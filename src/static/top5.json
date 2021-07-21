@@ -1,0 +1,42 @@
+[
+    {   
+        "title": "Movies",
+        "one": "Eternal Sunshine of the Spotless Mind",
+        "two": "The Dark Knight",
+        "three": "Finding Nemo",
+        "four": "It: Part 1 (2017)",
+        "five": "Alien (& Aliens)"
+    },
+    {   
+        "title": "Musical Artists",
+        "one": "The Gorillaz",
+        "two": "Taylor Swift",
+        "three": "Glass Animals",
+        "four": "Red Hot Chili Peppers",
+        "five": "Hans Zimmer"
+    },
+    {   
+        "title": "Pastimes",
+        "one": "Hiking",
+        "two": "Gaming (Both video and board)",
+        "three": "Trying new restaurants",
+        "four": "Burning my dogs' energy",
+        "five": "Reading"
+    },
+    {   
+        "title": "TV Shows",
+        "one": "Breaking Bad",
+        "two": "The Expanse",
+        "three": "New Girl",
+        "four": "Stranger Things",
+        "five": "Schitt's Creek"
+    },
+    {   
+        "title": "Fiction Books",
+        "one": "Hyperion Cantos",
+        "two": "Dune Series",
+        "three": "The First Law Trilogy",
+        "four": "Neverwhere",
+        "five": "The Stormlight Archives"
+    }
+]
