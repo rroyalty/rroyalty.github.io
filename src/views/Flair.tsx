@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography, Grid } from "@material-ui/core"
 import Top5 from '../components/Top5';
+import Wall from '../components/Wall';
 
 interface IList {
     language: string,
@@ -30,6 +31,7 @@ const Flair: React.FC = (): JSX.Element => {
                 justify="center"
                 spacing={3}>
                     <Top5 />
+                    <Wall />
             </Grid>
         </>
     )

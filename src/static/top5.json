@@ -4,7 +4,7 @@
         "one": "Eternal Sunshine of the Spotless Mind",
         "two": "The Dark Knight",
         "three": "Finding Nemo",
-        "four": "It: Part 1 (2017)",
+        "four": "Gladiator",
         "five": "Alien (& Aliens)"
     },
     {   
@@ -18,14 +18,14 @@
     {   
         "title": "Pastimes",
         "one": "Hiking",
-        "two": "Gaming (Both video and board)",
+        "two": "Gaming (Video/Board)",
         "three": "Trying new restaurants",
         "four": "Burning my dogs' energy",
         "five": "Reading"
     },
     {   
         "title": "TV Shows",
-        "one": "Breaking Bad",
+        "one": "Star Trek TNG",
         "two": "The Expanse",
         "three": "New Girl",
         "four": "Stranger Things",
@@ -38,5 +38,13 @@
         "three": "The First Law Trilogy",
         "four": "Neverwhere",
         "five": "The Stormlight Archives"
+    },
+    {   
+        "title": "Foods",
+        "one": "Pizza",
+        "two": "Hasbro Gummy Bears",
+        "three": "Mexican Cuisine",
+        "four": "Asian Cuisine",
+        "five": "Salted Caramel Anything"
     }
 ]

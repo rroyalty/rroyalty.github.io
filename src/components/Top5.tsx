@@ -24,36 +24,16 @@ const useStyles = makeStyles((theme: Theme) =>
             borderColor: theme.palette.light?.main,
 
         },
-        typography1: {
-            margin: `20px`,
-            flexDirection: `column`,
-        },
         justifyAvatar: {
             display: `flex`,
             justifyContent: `center`,
             alignItems: `center`,
             alignSelf: `center`
-        },
+        }
     }));
 
-const Top5: React.FC = (): JSX.Element => {
+const Top5: React.FC = (theme): JSX.Element => {
     const classes = useStyles();
-
-    // let storedTop5: Array<ITop5> = top5
-
-    // const arrayShuf = (array: Array<ITop5>): Array<ITop5> => {
-    //     let j: number = 0;
-    //     let temp: ITop5;
-
-    //     for (let i = array.length - 1; i > 0; i--) {
-    //       j = Math.floor(Math.random() * (i + 1));
-    //       temp = array[i];
-    //       array[i] = array[j];
-    //       array[j] = temp;
-    //     }
-
-    //     return array;
-    //   }
 
     const randomTop5 = (): ITop5 => {
         return top5[Math.floor(Math.random() * top5.length)]
@@ -69,12 +49,12 @@ const Top5: React.FC = (): JSX.Element => {
             xs={12}
             direction="column"
             justify="center"
-            alignItems="center" >
+            alignItems="stretch" >
 
             <Grid
                 item
                 xl={12}>
-                <Typography className={classes.typography1} align="center" variant="h4" component="h4" >
+                <Typography style={{margin: `20px`}} align="center" variant="h4" component="h4" >
                     {`Top 5 ${state.title}`}
                 </Typography>
             </Grid>
@@ -86,7 +66,7 @@ const Top5: React.FC = (): JSX.Element => {
                 spacing={2}>
                 <List>
                     <ListItem>
-                        <ListItemText>
+                        <ListItemText >
                             {`1: ${state.one}`}
                         </ListItemText>
                     </ListItem>
@@ -113,10 +93,12 @@ const Top5: React.FC = (): JSX.Element => {
                 </List>
             </Grid>
             <Grid 
-                item 
-                xl={12} >
+                item
+                container 
+                xl={12}
+                justify="center" >
                 <IconButton onClick={() => setState(randomTop5)}>
-                    <RefreshIcon style={{width: "50px", height: "50px"}} />
+                    <RefreshIcon style={{width: `50px`, height: `50px`}} />
                 </IconButton>
             </Grid>
         </Grid>
