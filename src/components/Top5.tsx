@@ -39,7 +39,7 @@ const Top5: React.FC = (theme): JSX.Element => {
         return top5[Math.floor(Math.random() * top5.length)]
     }
 
-    const [state, setState] = useState(randomTop5)
+    const [state, setState] = useState<ITop5>(randomTop5)
 
     return (
         <Grid
