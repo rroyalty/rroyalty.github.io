@@ -27,10 +27,12 @@ const Snoo: React.FC = (): JSX.Element => {
 
     const [title, setTitle] = useState<string>("");
     const [text, setText] = useState<string>("");
+    const [date, setDate] = useState<string>("");
 
     useEffect(() => {
         API.getNewestTitle().then(async (res) => {setTitle(await res.data)})
         API.getNewestText().then(async (res) => {setText(await res.data)})
+        API.getNewestDate().then(async (res) => {setDate(await res.data)})
     })
 
 
@@ -58,8 +60,8 @@ const Snoo: React.FC = (): JSX.Element => {
                 xl={12}
                 className={classes.listGrid}
                 spacing={2}>
-                <Typography>
-                    {title}
+                <Typography style={{fontWeight: `bold`}}>
+                    {`${title}: ${date}`}
                 </Typography>
                 <Typography>
                     {text}
