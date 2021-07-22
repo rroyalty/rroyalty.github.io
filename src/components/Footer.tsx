@@ -49,22 +49,25 @@ const Footer: React.FC = (): JSX.Element => {
                     alignItems="flex-start"
                     spacing={1}
                 >
-                    <Grid item xs={12} sm={4}>
+                    <Grid item xs={12} sm={6}>
                         <Typography align="center" variant="subtitle2" component="p">
-                            This portfolio was created using React, TypeScript and Material UI.
+                            This front of this portfolio was created using React, TypeScript, Material UI, Axios, and GitHub Pages.
                         </Typography>
-                    </Grid>
-                    <Grid item xs={12} sm={4}>
                         <a className={classes.anchorColor} href="https://github.com/rroyalty/rroyalty.github.io" target="_blank" rel="noreferrer">
                             <Typography align="center" variant="subtitle2" component="p">
-                                Portfolio Repository
+                                Front Repository
                             </Typography>
                         </a>
                     </Grid>
-                    <Grid item xs={12} sm={4}>
+                    <Grid item xs={12} sm={6}>
                         <Typography align="center" variant="subtitle2" component="p">
-                            Last Updated: 07/20/2021
+                            This back of this portfolio was created using Node, Express, TypeScript, Snoowrap, and Heroku.
                         </Typography>
+                        <a className={classes.anchorColor} href="https://github.com/rroyalty/portfolio-be" target="_blank" rel="noreferrer">
+                            <Typography align="center" variant="subtitle2" component="p">
+                                Back Repository
+                            </Typography>
+                        </a>
                     </Grid>
 
                 </Grid>
