@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { Grid, Typography } from "@material-ui/core"
+import { Grid, Typography } from "@material-ui/core";
+import axios from 'axios';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -20,9 +21,15 @@ const useStyles = makeStyles((theme: Theme) =>
         }
     }));
 
+
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
-    
+
+    const snooText = async () => { await axios.get(`https://rrprofile.herokuapp.com/api/self/newestText`).then((response)=> {return response}) }
+    const snooTitle = async () => { await axios.get(`https://rrprofile.herokuapp.com/api/self/newestTitle`).then((response)=> {return response}) }
+
+    console.log(snooText())
+    console.log(snooTitle())
     return (
         <Grid
             item
@@ -32,12 +39,12 @@ const Snoo: React.FC = (): JSX.Element => {
             direction="column"
             justify="center"
             alignItems="stretch"
-             >
+        >
 
             <Grid
                 item
                 xl={12}>
-                <Typography style={{margin: `20px`}} align="center" variant="h4" component="h4" >
+                <Typography style={{ margin: `20px` }} align="center" variant="h4" component="h4" >
                     Reddit
                 </Typography>
             </Grid>
@@ -47,9 +54,12 @@ const Snoo: React.FC = (): JSX.Element => {
                 xl={12}
                 className={classes.listGrid}
                 spacing={2}>
-                    <Typography>
-                        {/* {recentPost()} */}
-                    </Typography>
+                <Typography>
+                    {/* {snooTitle()} */}
+                </Typography>
+                <Typography>
+                    {/* {snooText()} */}
+                </Typography>
 
             </Grid>
 

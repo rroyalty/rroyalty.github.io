@@ -5,7 +5,7 @@ import Technical from './Technical';
 import Flair from './Flair';
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
-const random: number =  Math.floor(Math.random() * 6)
+const random: number =  Math.floor(Math.random() * 3)
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
