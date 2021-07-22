@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Grid, Typography } from "@material-ui/core"
-import recentPost from '../scripts/snoowrap';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -23,13 +22,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
-
-    const test = async () => {
-        return await recentPost()
-    }
-
-    console.log(test())
-
+    
     return (
         <Grid
             item
