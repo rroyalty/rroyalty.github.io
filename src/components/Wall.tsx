@@ -59,16 +59,17 @@ const Wall: React.FC = (): JSX.Element => {
                 item
                 xl={12}
                 spacing={2}>
-                <Zoom>
-                    <Carousel animation={"slide"} interval={5000} navButtonsAlwaysInvisible={true}>
-                        {wall.map((item: IPictureItem, index: number) =>
-                            <Box className={classes.box} key={index}>
+                <Carousel animation={"slide"} interval={5000} navButtonsAlwaysInvisible={true}>
+                    {wall.map((item: IPictureItem, index: number) =>
+                        <Box className={classes.box} key={index}>
+                            <Zoom>
                                 <Paper elevation={4}>
                                     <Avatar className={classes.avatar} src={item.src} variant={`square`} />
                                 </Paper>
-                            </Box>)}
-                    </Carousel>
-                </Zoom>
+                            </Zoom>
+                        </Box>)}
+                </Carousel>
+
             </Grid>
         </Grid>
     );
