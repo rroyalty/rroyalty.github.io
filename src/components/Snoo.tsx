@@ -25,10 +25,16 @@ const useStyles = makeStyles((theme: Theme) =>
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
-    const snooTextPromise = async () => { await axios.get(`https://rrprofile.herokuapp.com/api/self/newestText`).then((response)=> {return response.data})}
-    const snooTitlePromise = async () => { await axios.get(`https://rrprofile.herokuapp.com/api/self/newestTitle`).then((response)=> {return response.data})}
+    const snooTextPromise = async () => {
+        await axios.get(`https://rrprofile.herokuapp.com/api/self/newestText`).then((response) => {
+            console.log(response)
+            console.log(response.data)
+            return response.data
+        })
+    }
+    const snooTitlePromise = async () => { await axios.get(`https://rrprofile.herokuapp.com/api/self/newestTitle`).then((response) => { return response.data }) }
 
-    console.log(snooTextPromise())
+    snooTextPromise()
 
     return (
         <Grid
