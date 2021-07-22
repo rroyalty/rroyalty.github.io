@@ -28,7 +28,7 @@ const Snoo: React.FC = (): JSX.Element => {
     const snooTextPromise = async () => { await axios.get(`https://rrprofile.herokuapp.com/api/self/newestText`).then((response)=> {return response.data})}
     const snooTitlePromise = async () => { await axios.get(`https://rrprofile.herokuapp.com/api/self/newestTitle`).then((response)=> {return response.data})}
 
-    console.log(snooTextPromise)
+    console.log(snooTextPromise())
 
     return (
         <Grid
