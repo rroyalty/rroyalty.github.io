@@ -3,6 +3,8 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Grid, Avatar, Box, Paper, Typography } from "@material-ui/core";
 import Carousel from 'react-material-ui-carousel';
 import wall from '../static/wallPic.json';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 interface IPictureItem {
     src: string,
@@ -57,14 +59,16 @@ const Wall: React.FC = (): JSX.Element => {
                 item
                 xl={12}
                 spacing={2}>
-                <Carousel animation={"slide"} interval={5000} navButtonsAlwaysInvisible={true}>
-                    {wall.map((item: IPictureItem, index: number) =>
-                        <Box className={classes.box} key={index}>
-                            <Paper elevation={4}>
-                                <Avatar className={classes.avatar} src={item.src} variant={`square`} />
-                            </Paper>
-                        </Box>)}
-                </Carousel>
+                <Zoom>
+                    <Carousel animation={"slide"} interval={5000} navButtonsAlwaysInvisible={true}>
+                        {wall.map((item: IPictureItem, index: number) =>
+                            <Box className={classes.box} key={index}>
+                                <Paper elevation={4}>
+                                    <Avatar className={classes.avatar} src={item.src} variant={`square`} />
+                                </Paper>
+                            </Box>)}
+                    </Carousel>
+                </Zoom>
             </Grid>
         </Grid>
     );
