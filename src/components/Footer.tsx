@@ -63,7 +63,7 @@ const Footer: React.FC = (): JSX.Element => {
                         <Typography align="center" variant="subtitle2" component="p">
                             This back of this portfolio was created using Node, Express, TypeScript, Snoowrap, and Heroku.
                         </Typography>
-                        <a className={classes.anchorColor} href="https://github.com/rroyalty/portfolio-be" target="_blank" rel="noreferrer">
+                        <a className={classes.anchorColor} href="https://github.com/rroyalty/profile-be" target="_blank" rel="noreferrer">
                             <Typography align="center" variant="subtitle2" component="p">
                                 Back Repository
                             </Typography>
