@@ -25,8 +25,13 @@ const useStyles = makeStyles((theme: Theme) =>
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
-    const [title, setTitle] = useState(API.getNewestTitle().then(async (res) => {setTitle(await res.data)}));
-    const [text, setText] = useState(API.getNewestText().then(async (res) => {setText(await res.data)}));
+    const [title, setTitle] = useState<string>("");
+    const [text, setText] = useState<string>("");
+
+    useEffect(() => {
+        API.getNewestTitle().then(async (res) => {setTitle(await res.data)})
+        API.getNewestText().then(async (res) => {setText(await res.data)})
+    })
 
 
     return (
