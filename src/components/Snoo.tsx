@@ -45,7 +45,7 @@ const Snoo: React.FC = (): JSX.Element => {
                 item
                 xl={12}>
                 <Typography style={{ margin: `20px` }} align="center" variant="h4" component="h4" >
-                    Reddit
+                    Dev Blog
                 </Typography>
             </Grid>
 
