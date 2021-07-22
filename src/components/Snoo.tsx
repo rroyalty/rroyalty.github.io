@@ -13,12 +13,6 @@ const useStyles = makeStyles((theme: Theme) =>
             borderColor: theme.palette.light?.main,
 
         },
-        justifyAvatar: {
-            display: `flex`,
-            justifyContent: `center`,
-            alignItems: `center`,
-            alignSelf: `center`
-        }
     }));
 
 
