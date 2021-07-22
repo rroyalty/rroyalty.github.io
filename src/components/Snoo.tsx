@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Grid, Typography } from "@material-ui/core";
-import axios from 'axios';
+import API from '../API/API'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -25,17 +25,9 @@ const useStyles = makeStyles((theme: Theme) =>
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
-    let snooText: string = "";
-    let snooTitle: string = "";
+    const [title, setTitle] = useState(API.getNewestTitle().then(async (res) => {setTitle(await res.data)}));
+    const [text, setText] = useState(API.getNewestText().then(async (res) => {setText(await res.data)}));
 
-    const snooTextPromise = async () => { await axios.get(`https://rrprofile.herokuapp.com/api/self/newestText`).then(async (response) => { snooText = await response.data }) }
-    const snooTitlePromise = async () => { await axios.get(`https://rrprofile.herokuapp.com/api/self/newestTitle`).then(async (response) => { snooTitle = await response.data }) }
-
-    snooTextPromise();
-    snooTitlePromise();
-
-    console.log(snooText);
-    console.log(snooTitle);
 
     return (
         <Grid
@@ -62,10 +54,10 @@ const Snoo: React.FC = (): JSX.Element => {
                 className={classes.listGrid}
                 spacing={2}>
                 <Typography>
-                    {snooText}
+                    {title}
                 </Typography>
                 <Typography>
-                    {snooTitle}
+                    {text}
                 </Typography>
 
             </Grid>
