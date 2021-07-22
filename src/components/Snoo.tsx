@@ -61,7 +61,7 @@ const Snoo: React.FC = (): JSX.Element => {
                 className={classes.listGrid}
                 spacing={2}>
                 <Typography style={{fontWeight: `bold`}}>
-                    {`${title}: ${date}`}
+                    {`${title}: ${date}\n\n`}
                 </Typography>
                 <Typography>
                     {text}
