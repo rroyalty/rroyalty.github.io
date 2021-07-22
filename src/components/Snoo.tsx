@@ -28,11 +28,14 @@ const Snoo: React.FC = (): JSX.Element => {
     let snooText: string = "";
     let snooTitle: string = "";
 
-    const snooTextPromise = async () => { await axios.get(`https://rrprofile.herokuapp.com/api/self/newestText`).then((response) => { snooText = response.data }) }
-    const snooTitlePromise = async () => { await axios.get(`https://rrprofile.herokuapp.com/api/self/newestTitle`).then((response) => { snooTitle = response.data }) }
+    const snooTextPromise = async () => { await axios.get(`https://rrprofile.herokuapp.com/api/self/newestText`).then(async (response) => { snooText = await response.data }) }
+    const snooTitlePromise = async () => { await axios.get(`https://rrprofile.herokuapp.com/api/self/newestTitle`).then(async (response) => { snooTitle = await response.data }) }
 
     snooTextPromise();
     snooTitlePromise();
+
+    console.log(snooText);
+    console.log(snooTitle);
 
     return (
         <Grid
