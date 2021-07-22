@@ -25,16 +25,14 @@ const useStyles = makeStyles((theme: Theme) =>
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
-    const snooTextPromise = async () => {
-        await axios.get(`https://rrprofile.herokuapp.com/api/self/newestText`).then((response) => {
-            console.log(response)
-            console.log(response.data)
-            return response.data
-        })
-    }
-    const snooTitlePromise = async () => { await axios.get(`https://rrprofile.herokuapp.com/api/self/newestTitle`).then((response) => { return response.data }) }
+    let snooText: string = "";
+    let snooTitle: string = "";
 
-    snooTextPromise()
+    const snooTextPromise = async () => { await axios.get(`https://rrprofile.herokuapp.com/api/self/newestText`).then((response) => { snooText = response.data }) }
+    const snooTitlePromise = async () => { await axios.get(`https://rrprofile.herokuapp.com/api/self/newestTitle`).then((response) => { snooTitle = response.data }) }
+
+    snooTextPromise();
+    snooTitlePromise();
 
     return (
         <Grid
@@ -61,10 +59,10 @@ const Snoo: React.FC = (): JSX.Element => {
                 className={classes.listGrid}
                 spacing={2}>
                 <Typography>
-                    {/* {snooTitle()} */}
+                    {snooText}
                 </Typography>
                 <Typography>
-                    {/* {snooText()} */}
+                    {snooTitle}
                 </Typography>
 
             </Grid>
