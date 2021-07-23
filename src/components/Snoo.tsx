@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Grid, Typography, IconButton } from "@material-ui/core";
 import API from '../API/API';
-import showdown from 'showdown'
 
 import FirstPageIcon from '@material-ui/icons/FirstPage';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
@@ -29,10 +28,11 @@ const useStyles = makeStyles((theme: Theme) =>
         }
     }));
 
-const converter = new showdown.Converter();
-
+    
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
+
+    API.getAllPosts().then((res) => { setAllPosts(res.data)} )
 
     const [index, setIndex] = useState<number>(0)
     const [length, setLength] = useState<number>(0)
@@ -43,10 +43,9 @@ const Snoo: React.FC = (): JSX.Element => {
 
     useEffect(() => {
         API.getAllPosts().then((res) => {
-            setAllPosts(res.data);
-            setLength(res.data.length);
-            setTitle(res.data[index].title);
-            setText(res.data[index].selftext);
+            setLength(allPosts.length);
+            setTitle(allPosts[index].title);
+            setText(allPosts[index].selftext);
         })
     }, [index])
 
