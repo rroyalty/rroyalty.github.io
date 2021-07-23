@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
             marginTop: `6px`,
             borderColor: theme.palette.light?.main,
             overflowY: `scroll`,
-            wordWrap: `normal`
+            wordWrap: `break-word`
         },
         img: {
             display: `flex`,
