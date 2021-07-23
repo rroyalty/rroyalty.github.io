@@ -30,14 +30,19 @@ const useStyles = makeStyles((theme: Theme) =>
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
+    const [length, setLength] = useState<number>(1)
+    const [allPosts, setAllPosts] = useState<JSON | null>(null)
     const [title, setTitle] = useState<string | null>(null);
     const [text, setText] = useState<string | null>(null);
-    const [date, setDate] = useState<string | null>(null);
+    // const [date, setDate] = useState<string | null>(null);
 
     useEffect(() => {
-        API.getNewestTitle().then(async (res) => { setTitle(await res.data) })
-        API.getNewestText().then(async (res) => { setText(await res.data) })
-        API.getNewestDate().then(async (res) => { setDate(await res.data) })
+        API.getAllPosts().then(async (res) => { 
+            setAllPosts(await res.data);
+            setLength(await res.data.length);
+            setTitle(await res.data[length - 1].title);
+            setText(await res.data[length - 1].selftext) 
+        })
     })
 
     const loadingGrid = () => {
