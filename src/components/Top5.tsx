@@ -45,7 +45,7 @@ const Top5: React.FC = (theme): JSX.Element => {
         <Grid
             item
             container
-            md={6}
+            md={4}
             xs={12}
             direction="column"
             justify="center"
