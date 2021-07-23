@@ -41,11 +41,12 @@ const Snoo: React.FC = (): JSX.Element => {
     // const [date, setDate] = useState<string | null>(null);
 
     useEffect(() => {
-        API.getAllPosts().then(async (res) => {
-            setAllPosts(await res.data);
-            setLength(await res.data.length);
+        API.getAllPosts().then((res) => {
+            setAllPosts(res.data);
+            setLength(res.data.length);
             setTitle(res.data[res.data.length - 1].title);
             setText(res.data[res.data.length - 1].selftext);
+            console.log(res.data.length)
         })
     })
 
