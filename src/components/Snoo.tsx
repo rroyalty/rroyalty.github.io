@@ -44,8 +44,8 @@ const Snoo: React.FC = (): JSX.Element => {
         API.getAllPosts().then(async (res) => {
             setAllPosts(await res.data);
             setLength(await res.data.length);
-            setTitle(await res.data[res.data.length - 1].title);
-            setText(await res.data[res.data.length - 1].selftext);
+            setTitle(res.data[res.data.length - 1].title);
+            setText(res.data[res.data.length - 1].selftext);
         })
     })
 
