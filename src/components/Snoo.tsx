@@ -43,7 +43,7 @@ const Snoo: React.FC = (): JSX.Element => {
             setAllPosts(await res.data);
             setLength(allPosts.length);
             setTitle(allPosts[length - 1].title);
-            setText(allPosts[length - 1].selftext);
+            setText(allPosts[length - 1].selftext_html);
             console.log(length)
         })
     })
