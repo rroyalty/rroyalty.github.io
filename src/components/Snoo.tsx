@@ -32,25 +32,17 @@ const useStyles = makeStyles((theme: Theme) =>
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
-    const getAllPosts = async () => {
-        await API.getAllPosts().then((res) => {
-            setAllPosts(res.data)
-            setLength(allPosts.length);
-            setIndex(0)
-        })
-    }
-
     const [index, setIndex] = useState<number>(0)
     const [length, setLength] = useState<number>(0)
-    const [allPosts, setAllPosts] = useState<any>(getAllPosts())
     const [title, setTitle] = useState<string>();
     const [text, setText] = useState<string>();
     // const [date, setDate] = useState<string | null>(null);
 
     useEffect(() => {
         API.getAllPosts().then((res) => {
-            setTitle(allPosts[index].title);
-            setText(allPosts[index].selftext);
+            setTitle(res.data[index].title);
+            setText(res.data[index].selftext);
+            setLength(res.data.length)
         })
     }, [index])
 
