@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme: Theme) =>
             marginTop: `6px`,
             borderColor: theme.palette.light?.main,
             overflowY: `scroll`,
-            wordWrap: `break-word`
         },
         img: {
             display: `flex`,
@@ -63,7 +62,7 @@ const Snoo: React.FC = (): JSX.Element => {
                 <Typography style={{ fontWeight: `bold` }}>
                     {title}
                 </Typography>
-                <Typography>
+                <Typography style={{wordWrap: `break-word`}}>
                     {text}
                 </Typography>
             </div>
