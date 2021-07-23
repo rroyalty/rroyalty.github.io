@@ -37,7 +37,7 @@ const Snoo: React.FC = (): JSX.Element => {
     const [length, setLength] = useState<number>(1)
     const [allPosts, setAllPosts] = useState<any>()
     const [title, setTitle] = useState<string>();
-    const [text, setText] = useState<JSX.Element>();
+    const [text, setText] = useState<any>();
     // const [date, setDate] = useState<string | null>(null);
 
     useEffect(() => {
