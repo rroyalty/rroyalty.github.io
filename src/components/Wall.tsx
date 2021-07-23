@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) =>
             marginRight: `10px`,
         },
         avatar: {
-            height: `auto`,
+            height: `302px`,
             width: `100%`,
             borderColor: theme.palette.dark?.main,
         },
@@ -59,17 +59,16 @@ const Wall: React.FC = (): JSX.Element => {
                 item
                 xl={12}
                 spacing={2}>
-                <Carousel animation={"slide"} interval={5000} navButtonsAlwaysInvisible={true}>
-                    {wall.map((item: IPictureItem, index: number) =>
-                        <Box className={classes.box} key={index}>
-                            <Zoom>
-                                <Paper elevation={4}>
-                                    <Avatar className={classes.avatar} src={item.src} variant={`square`} />
-                                </Paper>
-                            </Zoom>
-                        </Box>)}
-                </Carousel>
-
+                    <Carousel animation={"slide"} interval={5000} navButtonsAlwaysInvisible={true}>
+                        {wall.map((item: IPictureItem, index: number) =>
+                            <Box className={classes.box} key={index}>
+                                <Zoom>
+                                    <Paper elevation={4}>
+                                        <Avatar className={classes.avatar} src={item.src} variant={`square`} />
+                                    </Paper>
+                                </Zoom>
+                            </Box>)}
+                    </Carousel>
             </Grid>
         </Grid>
     );

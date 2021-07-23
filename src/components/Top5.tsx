@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
             padding: `25px`,
             border: `6px`,
             borderStyle: `solid`,
+            marginTop: `6px`,
             borderColor: theme.palette.light?.main,
 
         },
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
         }
     }));
 
-const Top5: React.FC = (theme): JSX.Element => {
+const Top5: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
     const randomTop5 = (): ITop5 => {
@@ -65,7 +66,7 @@ const Top5: React.FC = (theme): JSX.Element => {
                 xl={12}
                 className={classes.listGrid}
                 spacing={2}>
-                <List>
+                <List dense={true} style={{ height: `240px` }}>
                     <ListItem>
                         <ListItemText >
                             {`1: ${state.one}`}
@@ -93,6 +94,7 @@ const Top5: React.FC = (theme): JSX.Element => {
                     </ListItem>
                 </List>
             </Grid>
+
             <Grid 
                 item
                 container 
