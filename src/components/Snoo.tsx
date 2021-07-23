@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Grid, Typography } from "@material-ui/core";
 import API from '../API/API';
+
 import FirstPageIcon from '@material-ui/icons/FirstPage';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
@@ -16,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
             borderStyle: `solid`,
             marginTop: `6px`,
             borderColor: theme.palette.light?.main,
-            overflowY: `scroll` 
+            overflowY: `scroll`
         },
         img: {
             display: `flex`,
@@ -31,50 +32,39 @@ const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
     const [length, setLength] = useState<number>(1)
-    const [allPosts, setAllPosts] = useState<JSON | null>(null)
-    const [title, setTitle] = useState<string | null>(null);
-    const [text, setText] = useState<string | null>(null);
+    const [allPosts, setAllPosts] = useState<any>()
+    const [title, setTitle] = useState<string>();
+    const [text, setText] = useState<string>();
     // const [date, setDate] = useState<string | null>(null);
 
     useEffect(() => {
-        API.getAllPosts().then(async (res) => { 
-            setAllPosts(await res.data);
-            setLength(await res.data.length);
-            setTitle(await res.data[length - 1].title);
-            setText(await res.data[length - 1].selftext) 
+        API.getAllPosts().then(async (res) => {
+            await res
+            setAllPosts(res.data);
+            setLength(allPosts.length);
+            setTitle(allPosts[length - 1].title);
+            setText(allPosts[length - 1].selftext);
         })
     })
 
     const loadingGrid = () => {
         return (
-            <Grid
-                item
-                xl={12}
-                className={classes.listGrid}
-                spacing={2}>
-                <div className={classes.img} >
-                    <img src="/images/loading-buffering.gif" />
-                </div>
-            </Grid>
+            <div className={classes.img} >
+                <img src="/images/loading-buffering.gif" />
+            </div>
         )
     }
 
     const loadedGrid = () => {
         return (
-            <Grid
-                item
-                xl={12}
-                className={classes.listGrid}
-                spacing={2}>
-                <div style={{ height: `240px` }}>
-                    <Typography style={{ fontWeight: `bold` }}>
-                        {title}
-                    </Typography>
-                    <Typography>
-                        {text}
-                    </Typography>
-                </div>
-            </Grid>
+            <div style={{ height: `240px` }}>
+                <Typography style={{ fontWeight: `bold` }}>
+                    {title}
+                </Typography>
+                <Typography>
+                    {text}
+                </Typography>
+            </div>
         )
     }
 
@@ -96,9 +86,13 @@ const Snoo: React.FC = (): JSX.Element => {
                     Dev Blog
                 </Typography>
             </Grid>
-
-            {text ? loadedGrid() : loadingGrid()}
-
+            <Grid
+                item
+                xl={12}
+                className={classes.listGrid}
+                spacing={2}>
+                {text ? loadedGrid() : loadingGrid()}
+            </Grid>
             <Grid
                 item
                 container
