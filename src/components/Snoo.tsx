@@ -35,20 +35,20 @@ const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
     const [length, setLength] = useState<number>(1)
-    const [allPosts, setAllPosts] = useState<any>(API.getAllPosts().then((res) => {setAllPosts(res.data)}));
-    const [title, setTitle] = useState<any>(API.getAllPosts().then((res) => {setAllPosts(res.data[res.data.length - 1].title)}));
-    const [text, setText] = useState<any>(API.getAllPosts().then((res) => {setAllPosts(res.data[res.data.length - 1].text)}));
+    const [allPosts, setAllPosts] = useState<any>()
+    const [title, setTitle] = useState<string>();
+    const [text, setText] = useState<string>();
     // const [date, setDate] = useState<string | null>(null);
 
-    // useEffect(() => {
-    //     API.getAllPosts().then((res) => {
-    //         setAllPosts(res.data);
-    //         setLength(allPosts.length);
-    //         // setLength(res.data.length);
-    //         setTitle(res.data[res.data.length - 1].title);
-    //         setText(res.data[res.data.length - 1].selftext);
-    //     })
-    // })
+    useEffect(() => {
+        API.getAllPosts().then(async (res) => {
+            await res
+            setAllPosts(res.data);
+            setLength(res.data.length);
+            setTitle(res.data[res.data.length - 1].title);
+            setText(res.data[res.data.length - 1].selftext);
+        })
+    })
 
     const loadingGrid = () => {
         return (
