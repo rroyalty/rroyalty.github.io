@@ -34,7 +34,7 @@ const Snoo: React.FC = (): JSX.Element => {
         <Grid
             item
             container
-            md={4}
+            md={6}
             xs={12}
             direction="column"
             justify="center"
