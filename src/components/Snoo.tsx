@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Grid, Typography } from "@material-ui/core";
 import API from '../API/API';
+import showdown from 'showdown'
 
 import FirstPageIcon from '@material-ui/icons/FirstPage';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
@@ -28,6 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
         }
     }));
 
+const converter = new showdown.Converter();
 
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
@@ -44,7 +46,7 @@ const Snoo: React.FC = (): JSX.Element => {
             setLength(allPosts.length);
             // setLength(res.data.length);
             setTitle(res.data[res.data.length - 1].title);
-            setText(res.data[res.data.length - 1].selftext_html);
+            setText(converter.makeHtml(res.data[res.data.length - 1].selftext));
             console.log(length)
         })
     })
