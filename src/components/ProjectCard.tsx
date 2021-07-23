@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
       height: `320px`,
       widht: `320px`,
       borderStyle: `solid`,
-      border: `5px`,
+      border: `6px`,
       borderRadius: `0px`,
       borderColor: theme.palette.light?.main
     },

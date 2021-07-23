@@ -22,7 +22,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     avatar: {
         height: `auto`,
         width: `100%`,
-        borderColor: theme.palette.dark?.main,
     },
     bgColor: {
         border: `6px`,
