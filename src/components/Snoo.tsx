@@ -34,7 +34,7 @@ const converter = new showdown.Converter();
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
-    const [length, setLength] = useState<number>(1)
+    const [length, setLength] = useState<number>(0)
     const [allPosts, setAllPosts] = useState<any>()
     const [title, setTitle] = useState<string>();
     const [text, setText] = useState<string>();
@@ -44,9 +44,8 @@ const Snoo: React.FC = (): JSX.Element => {
         API.getAllPosts().then((res) => {
             setAllPosts(res.data);
             setLength(res.data.length);
-            setTitle(res.data[res.data.length - 1].title);
-            setText(res.data[res.data.length - 1].selftext);
-            console.log(res.data.length)
+            setTitle(res.data[0].title);
+            setText(res.data[0].selftext);
         })
     })
 
