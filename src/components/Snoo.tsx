@@ -107,7 +107,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xl={3}
                     justify="center">
-                    <IconButton onClick={() => setIndex(0)} >
+                    <IconButton onClick={() => setIndex(length)} >
                         <FirstPageIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
                 </Grid>
@@ -116,7 +116,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xl={3}
                     justify="center">
-                    <IconButton onClick={() => setIndex(index - 1)}>
+                    <IconButton onClick={() => setIndex(index + 1)}>
                         <NavigateBeforeIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
                 </Grid>
@@ -125,7 +125,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xl={3}
                     justify="center">
-                    <IconButton onClick={() => setIndex(index + 1)}>
+                    <IconButton onClick={() => setIndex(index - 1)}>
                         <NavigateNextIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
                 </Grid>
@@ -134,7 +134,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xl={3}
                     justify="center">
-                    <IconButton onClick={() => setIndex(length)}>
+                    <IconButton onClick={() => setIndex(0)}>
                         <LastPageIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
                 </Grid>
