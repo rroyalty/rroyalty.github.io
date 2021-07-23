@@ -32,6 +32,13 @@ const useStyles = makeStyles((theme: Theme) =>
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
+    const [index, setIndex] = useState<number>(0)
+    const [length, setLength] = useState<number>(0)
+    const [allPosts, setAllPosts] = useState<any>(getAllPosts())
+    const [title, setTitle] = useState<string>();
+    const [text, setText] = useState<string>();
+    // const [date, setDate] = useState<string | null>(null);
+
     const getAllPosts = async () => {
         await API.getAllPosts().then((res) => {
             setAllPosts(res.data)
@@ -40,13 +47,6 @@ const Snoo: React.FC = (): JSX.Element => {
     }
 
     console.log(allPosts)
-
-    const [index, setIndex] = useState<number>(0)
-    const [length, setLength] = useState<number>(0)
-    const [allPosts, setAllPosts] = useState<any>(getAllPosts())
-    const [title, setTitle] = useState<string>();
-    const [text, setText] = useState<string>();
-    // const [date, setDate] = useState<string | null>(null);
 
     useEffect(() => {
         API.getAllPosts().then((res) => {
