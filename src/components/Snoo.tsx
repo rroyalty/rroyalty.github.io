@@ -39,6 +39,8 @@ const Snoo: React.FC = (): JSX.Element => {
         })
     }
 
+    console.log(allPosts)
+
     const [index, setIndex] = useState<number>(0)
     const [length, setLength] = useState<number>(0)
     const [allPosts, setAllPosts] = useState<any>(getAllPosts())
