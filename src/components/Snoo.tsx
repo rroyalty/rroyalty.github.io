@@ -75,9 +75,9 @@ const Snoo: React.FC = (): JSX.Element => {
             container
             md={4}
             xs={12}
-            direction="row"
             justify="center"
-            alignItems="center"
+            alignItems="stretch"
+            direction="column"
         >
 
             <Grid
@@ -100,11 +100,11 @@ const Snoo: React.FC = (): JSX.Element => {
                 xl={12}
                 justify="center"
                 alignItems="center"
-                direction="row" >
+                direction="row">
                 <Grid
                     item
                     container
-                    xl={3}
+                    xs={3}
                     justify="center"
                     className={index === length - 1 ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(length - 1)} >
@@ -114,7 +114,7 @@ const Snoo: React.FC = (): JSX.Element => {
                 <Grid
                     item
                     container
-                    xl={3}
+                    xs={3}
                     justify="center"
                     className={index === length - 1 ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(index + 1)}>
@@ -124,7 +124,7 @@ const Snoo: React.FC = (): JSX.Element => {
                 <Grid
                     item
                     container
-                    xl={3}
+                    xs={3}
                     justify="center"
                     className={index === 0 ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(index - 1)}>
@@ -134,7 +134,7 @@ const Snoo: React.FC = (): JSX.Element => {
                 <Grid
                     item
                     container
-                    xl={3}
+                    xs={3}
                     justify="center"
                     className={index === 0 ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(0)}>
