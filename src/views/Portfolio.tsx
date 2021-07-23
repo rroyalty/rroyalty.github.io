@@ -37,7 +37,7 @@ const Portfolio: React.FC = (): JSX.Element => {
                 container
                 direction="row"
                 justify="center"
-                alignItems="center"
+                alignItems="stretch"
                 spacing={4}
             >    
                     {projectList.map((item: IItem, index: number) => (

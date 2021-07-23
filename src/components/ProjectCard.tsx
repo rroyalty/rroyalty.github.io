@@ -24,11 +24,11 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'center',
       textAlign: 'center',
       height: `320px`,
-      widht: `320px`,
       borderStyle: `solid`,
       border: `6px`,
       borderRadius: `0px`,
-      borderColor: theme.palette.light?.main
+      borderColor: theme.palette.light?.main,
+      alignItems: `stretch`
     },
     media: {
       justifyContent: 'center',
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     justify: {
       justifyContent: `center`,
-      alignItems: `center`,
+      alignItems: `stretch`,
       margin: `0px`,
       padding: `0px`
     }
@@ -49,7 +49,15 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
   const classes = useStyles();
 
   return (
-    <Grid item className={classes.justify} lg={6} sm={12} >
+    <Grid 
+      item
+      container
+      alignItems="stretch"
+      justify="space-around"
+      direction="column"
+      lg={6} 
+      sm={12}
+      style={{width: "100%"}} >
       <Typography gutterBottom variant="h4" component="h4" align="center">
         {props.props.name}
       </Typography>
