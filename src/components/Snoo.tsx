@@ -48,7 +48,7 @@ const Snoo: React.FC = (): JSX.Element => {
             setTitle(res.data[index].title);
             setText(res.data[index].selftext);
         })
-    })
+    }, [index])
 
     const loadingGrid = () => {
         return (
