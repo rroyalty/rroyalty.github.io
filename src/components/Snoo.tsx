@@ -36,6 +36,7 @@ const Snoo: React.FC = (): JSX.Element => {
         await API.getAllPosts().then((res) => {
             setAllPosts(res.data)
             setLength(allPosts.length);
+            setIndex(0)
         })
     }
 
@@ -45,8 +46,6 @@ const Snoo: React.FC = (): JSX.Element => {
     const [title, setTitle] = useState<string>();
     const [text, setText] = useState<string>();
     // const [date, setDate] = useState<string | null>(null);
-
-    console.log(allPosts)
 
     useEffect(() => {
         API.getAllPosts().then((res) => {
