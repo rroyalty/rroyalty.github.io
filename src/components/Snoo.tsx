@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, IconButton } from "@material-ui/core";
 import API from '../API/API';
 import showdown from 'showdown'
 
@@ -100,6 +100,34 @@ const Snoo: React.FC = (): JSX.Element => {
                 container
                 xl={12}
                 justify="center" >
+                <Grid 
+                    item
+                    xl={3}>
+                <IconButton >
+                    <FirstPageIcon style={{width: `50px`, height: `50px`}} />
+                </IconButton>
+                </Grid>
+                <Grid 
+                    item
+                    xl={3}>
+                <IconButton >
+                    <NavigateBeforeIcon style={{width: `50px`, height: `50px`}} />
+                </IconButton>
+                </Grid>
+                <Grid 
+                    item
+                    xl={3}>
+                <IconButton >
+                    <NavigateNextIcon style={{width: `50px`, height: `50px`}} />
+                </IconButton>
+                </Grid>
+                <Grid 
+                    item
+                    xl={3}>
+                <IconButton >
+                    <LastPageIcon style={{width: `50px`, height: `50px`}} />
+                </IconButton>
+                </Grid>
 
             </Grid>
 
