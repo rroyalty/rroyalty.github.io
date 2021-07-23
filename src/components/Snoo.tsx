@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) =>
             justifyContent: `center`,
             alignItems: `center`,
             height: `240px`
-        }, 
+        },
         hidden: {
             visibility: `hidden`
         }
@@ -106,7 +106,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xl={3}
                     justify="center"
-                    className={index === length ? classes.hidden : "" }>
+                    className={index === length ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(length)} >
                         <FirstPageIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
@@ -115,8 +115,8 @@ const Snoo: React.FC = (): JSX.Element => {
                     item
                     container
                     xl={3}
-                    justify="center">
-                        className={index === length ? classes.hidden : "" }
+                    justify="center"
+                    className={index === length ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(index + 1)}>
                         <NavigateBeforeIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
@@ -126,7 +126,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xl={3}
                     justify="center"
-                    className={index === 0 ? classes.hidden : "" }>
+                    className={index === 0 ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(index - 1)}>
                         <NavigateNextIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
@@ -136,7 +136,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xl={3}
                     justify="center"
-                    className={index === 0 ? classes.hidden : "" }>
+                    className={index === 0 ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(0)}>
                         <LastPageIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
