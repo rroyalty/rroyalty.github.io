@@ -17,7 +17,8 @@ const useStyles = makeStyles((theme: Theme) =>
             borderStyle: `solid`,
             marginTop: `6px`,
             borderColor: theme.palette.light?.main,
-            overflowY: `scroll`
+            overflowY: `scroll`,
+            wordWrap: `normal`
         },
         img: {
             display: `flex`,
