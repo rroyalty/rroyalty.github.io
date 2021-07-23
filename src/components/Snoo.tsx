@@ -65,9 +65,9 @@ const Snoo: React.FC = (): JSX.Element => {
                 <Typography style={{ fontWeight: `bold` }}>
                     {title}
                 </Typography>
-                <Typography>
+                {/* <Typography> */}
                     {text}
-                </Typography>
+                {/* </Typography> */}
             </div>
         )
     }
