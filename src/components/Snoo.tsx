@@ -75,7 +75,7 @@ const Snoo: React.FC = (): JSX.Element => {
             container
             md={4}
             xs={12}
-            direction="row"
+            direction="column"
             justify="center"
             alignItems="stretch"
         >
@@ -99,7 +99,8 @@ const Snoo: React.FC = (): JSX.Element => {
                 container
                 xl={12}
                 justify="center"
-                alignItems="center" >
+                alignItems="center"
+                direction="column" >
                 <Grid
                     item
                     container
