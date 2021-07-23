@@ -34,6 +34,7 @@ const converter = new showdown.Converter();
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
+    const [index, setIndex] = useState<number>(0)
     const [length, setLength] = useState<number>(0)
     const [allPosts, setAllPosts] = useState<any>()
     const [title, setTitle] = useState<string>();
@@ -44,8 +45,8 @@ const Snoo: React.FC = (): JSX.Element => {
         API.getAllPosts().then((res) => {
             setAllPosts(res.data);
             setLength(res.data.length);
-            setTitle(res.data[0].title);
-            setText(res.data[0].selftext);
+            setTitle(res.data[index].title);
+            setText(res.data[index].selftext);
         })
     })
 
@@ -99,34 +100,43 @@ const Snoo: React.FC = (): JSX.Element => {
                 item
                 container
                 xl={12}
-                justify="center" >
-                <Grid 
+                justify="center"
+                alignItems="center" >
+                <Grid
                     item
-                    xl={3}>
-                <IconButton >
-                    <FirstPageIcon style={{width: `50px`, height: `50px`}} />
-                </IconButton>
+                    container
+                    xl={3}
+                    justify="center">
+                    <IconButton onClick={() => setIndex(0)} >
+                        <FirstPageIcon style={{ width: `50px`, height: `50px` }} />
+                    </IconButton>
                 </Grid>
-                <Grid 
+                <Grid
                     item
-                    xl={3}>
-                <IconButton >
-                    <NavigateBeforeIcon style={{width: `50px`, height: `50px`}} />
-                </IconButton>
+                    container
+                    xl={3}
+                    justify="center">
+                    <IconButton onClick={() => setIndex(index - 1)}>
+                        <NavigateBeforeIcon style={{ width: `50px`, height: `50px` }} />
+                    </IconButton>
                 </Grid>
-                <Grid 
+                <Grid
                     item
-                    xl={3}>
-                <IconButton >
-                    <NavigateNextIcon style={{width: `50px`, height: `50px`}} />
-                </IconButton>
+                    container
+                    xl={3}
+                    justify="center">
+                    <IconButton onClick={() => setIndex(index + 1)}>
+                        <NavigateNextIcon style={{ width: `50px`, height: `50px` }} />
+                    </IconButton>
                 </Grid>
-                <Grid 
+                <Grid
                     item
-                    xl={3}>
-                <IconButton >
-                    <LastPageIcon style={{width: `50px`, height: `50px`}} />
-                </IconButton>
+                    container
+                    xl={3}
+                    justify="center">
+                    <IconButton onClick={() => setIndex(length)}>
+                        <LastPageIcon style={{ width: `50px`, height: `50px` }} />
+                    </IconButton>
                 </Grid>
 
             </Grid>
