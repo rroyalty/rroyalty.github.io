@@ -13,8 +13,14 @@ const useStyles = makeStyles((theme: Theme) =>
             borderStyle: `solid`,
             marginTop: `6px`,
             borderColor: theme.palette.light?.main,
-
+            overflowY: `scroll` 
         },
+        img: {
+            display: `flex`,
+            justifyContent: `center`,
+            alignItems: `center`,
+            height: `240px`
+        }
     }));
 
 
@@ -38,7 +44,7 @@ const Snoo: React.FC = (): JSX.Element => {
                 xl={12}
                 className={classes.listGrid}
                 spacing={2}>
-                <div style={{ height: `240px` }}>
+                <div className={classes.img} >
                     <img src="/images/loading-buffering.gif" />
                 </div>
             </Grid>
