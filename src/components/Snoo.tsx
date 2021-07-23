@@ -106,8 +106,8 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xl={3}
                     justify="center"
-                    className={index === length ? classes.hidden : ""}>
-                    <IconButton onClick={() => setIndex(length)} >
+                    className={index === length - 1 ? classes.hidden : ""}>
+                    <IconButton onClick={() => setIndex(length - 1)} >
                         <FirstPageIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
                 </Grid>
@@ -116,7 +116,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xl={3}
                     justify="center"
-                    className={index === length ? classes.hidden : ""}>
+                    className={index === length - 1 ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(index + 1)}>
                         <NavigateBeforeIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
