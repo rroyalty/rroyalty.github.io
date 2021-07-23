@@ -20,8 +20,8 @@ const Flair: React.FC = (): JSX.Element => {
                 justify="center"
                 spacing={3}>
                     <Top5 />
-                    <Wall />
                     <Snoo />
+                    <Wall />
             </Grid>
         </>
     )
