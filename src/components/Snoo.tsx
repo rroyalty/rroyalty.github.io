@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Grid, Typography } from "@material-ui/core";
 import API from '../API/API';
-import RefreshIcon from '@material-ui/icons/Refresh';
+import FirstPageIcon from '@material-ui/icons/FirstPage';
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import LastPageIcon from '@material-ui/icons/LastPage';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
