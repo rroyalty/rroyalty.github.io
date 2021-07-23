@@ -32,7 +32,10 @@ const useStyles = makeStyles((theme: Theme) =>
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
-    API.getAllPosts().then((res) => { setAllPosts(res.data)} )
+    API.getAllPosts().then((res) => { 
+        setAllPosts(res.data)
+        setLength(allPosts.length);
+    })
 
     const [index, setIndex] = useState<number>(0)
     const [length, setLength] = useState<number>(0)
@@ -43,7 +46,6 @@ const Snoo: React.FC = (): JSX.Element => {
 
     useEffect(() => {
         API.getAllPosts().then((res) => {
-            setLength(allPosts.length);
             setTitle(allPosts[index].title);
             setText(allPosts[index].selftext);
         })
