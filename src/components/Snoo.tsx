@@ -75,7 +75,7 @@ const Snoo: React.FC = (): JSX.Element => {
             container
             md={4}
             xs={12}
-            direction="column"
+            direction="row"
             justify="center"
             alignItems="stretch"
         >
