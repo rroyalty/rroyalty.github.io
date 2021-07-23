@@ -79,7 +79,7 @@ const Snoo: React.FC = (): JSX.Element => {
             justify="center"
             alignItems="stretch"
             direction="column"
-            style={{maxWidth="395px"}}
+            style={{maxWidth: "395px"}}
         >
 
             <Grid
