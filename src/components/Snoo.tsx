@@ -77,7 +77,7 @@ const Snoo: React.FC = (): JSX.Element => {
             xs={12}
             direction="row"
             justify="center"
-            alignItems="stretch"
+            alignItems="center"
         >
 
             <Grid
