@@ -7,6 +7,11 @@ import NavbarList from './NavbarList';
 import { Link as ScrollLink } from "react-scroll";
 import { ListItem, ListItemText } from "@material-ui/core"
 
+interface IProps {
+    stateFunction: (setComponentState: string) => any
+    componentState: string
+}
+
 const useStyles = makeStyles((theme: Theme) => createStyles({
     navbarDesktop: {
         display: `flex`,
@@ -68,16 +73,21 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         [theme.breakpoints.down('md')]: {
             border: `0px`,
             borderLeftWidth: `2px`,
-            borderColor: theme.palette.dark?.main,
+            borderColor: theme.palette.light?.main,
             borderStyle: `solid`,
         },        
+    },
+    buttonBorder: {
+        borderStyle: `solid`,
+        border: `5px`,
+        borderColor: theme.palette.light?.main
     },
 }))
 
 
-const Navbar: React.FC = (): JSX.Element => {
+const Navbar: React.FC<IProps> = (props): JSX.Element => {
     const classes = useStyles();
-
+    console.log(props.componentState)
     const [state, setState] = useState({
         mobileView: false,
         drawerOpen: false
@@ -102,8 +112,6 @@ const Navbar: React.FC = (): JSX.Element => {
             setState((prevState) => ({ ...prevState, drawerOpen: false }));
 
         return (
-
-
             <AppBar className={classes.appBar} >
                 <Toolbar className={classes.navbar}>
                     <IconButton
@@ -122,15 +130,14 @@ const Navbar: React.FC = (): JSX.Element => {
                         onClose: handleDrawerClose,
                     }} style={{alignItems: "center"}}>
                     <ScrollLink smooth={true} duration={500} to="bio" className={classes.linkText}>
-                        <ListItem button style={{textAlign: "center"}}>
+                        <ListItem button style={{textAlign: "center"}} onClick={props.stateFunction("bio")} className={"bio" === props.componentState ? "" : "" }>
                             <ListItemText primary="RYAN ROYALTY" />
                         </ListItem>
                     </ScrollLink>
-                    <NavbarList classProp={classes.drawer} />
+                    <NavbarList classProp={classes.drawer} componentState={props.componentState} stateFunction={() => props.stateFunction} />
                 </Drawer>
             </AppBar>
         )
-
     }
 
     const displayDesktop = () => {
@@ -138,12 +145,12 @@ const Navbar: React.FC = (): JSX.Element => {
             <AppBar className={classes.navbar}>
                 <Toolbar className="nav-style">
                     <ScrollLink smooth={true} duration={500} to="bio" className={classes.linkText}>
-                        <ListItem button>
+                        <ListItem button onClick={props.stateFunction("bio")} className={"bio" === props.componentState ? "": "" }>
                             <ListItemText primary="RYAN ROYALTY" />
                         </ListItem>
                     </ScrollLink>
                     <section className={classes.rightAppBar}>
-                        <NavbarList classProp={classes.navbarDesktop} />
+                        <NavbarList classProp={classes.navbarDesktop} componentState={props.componentState} stateFunction={() => props.stateFunction} />
                     </section>
                 </Toolbar>
             </AppBar>

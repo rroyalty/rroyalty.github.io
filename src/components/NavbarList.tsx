@@ -2,11 +2,13 @@ import React from 'react';
 import { Link as ScrollLink } from "react-scroll";
 import MailIcon from '@material-ui/icons/Mail';
 import DescriptionIcon from '@material-ui/icons/Description';
-import { makeStyles, createStyles } from "@material-ui/core/styles";
+import { Theme, makeStyles, createStyles } from "@material-ui/core/styles";
 import { List, ListItem, ListItemText } from "@material-ui/core"
 
 interface iProps {
     classProp: any;
+    componentState: string;
+    stateFunction: (setComponentState: string) => any
 }
 
 const navLinks: { title: string, path: string }[] = [
@@ -15,7 +17,7 @@ const navLinks: { title: string, path: string }[] = [
     { title: `Flair`, path: `flair` }
 ]
 
-const useStyles = makeStyles(() => createStyles({
+const useStyles = makeStyles((theme: Theme) => createStyles({
     linkText: {
         textDecoration: `none`,
         textTransform: `uppercase`
@@ -27,18 +29,23 @@ const useStyles = makeStyles(() => createStyles({
     },
     anchorColor: {
         color: `white`
-    },
+    },        
+    buttonBorder: {
+        borderStyle: `solid`,
+        border: `5px`,
+        borderColor: theme.palette.light?.main
+    }
 }))
 
 
 const NavbarList: React.FC<iProps> = (props): JSX.Element => {
     const classes = useStyles();
-
+    console.log(props.componentState)
     return (
         <List component="nav" aria-labelledby="main navigation" className={props.classProp}>
             {navLinks.map((item, index: number) => (
                 <ScrollLink smooth={true} duration={500} to={item.path} key={index} className={classes.linkText}>
-                    <ListItem button>
+                    <ListItem button onClick={props.stateFunction(item.path)} className={item.path === props.componentState ? classes.buttonBorder : "" }>
                         <ListItemText primary={item.title} />
                     </ListItem>
                 </ScrollLink>
