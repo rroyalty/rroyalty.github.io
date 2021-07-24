@@ -40,7 +40,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 
 const NavbarList: React.FC<iProps> = (props): JSX.Element => {
     const classes = useStyles();
-    console.log(props.componentState)
     return (
         <List component="nav" aria-labelledby="main navigation" className={props.classProp}>
             {navLinks.map((item, index: number) => (

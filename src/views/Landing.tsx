@@ -39,25 +39,28 @@ const App = (props: IProps) => {
   const classes = useStyles();
 
   const checkEle = () => {
-    const windowHeight = window.innerHeight
     const bioEle  = isInViewPort(document.getElementById("bio")!);
     const technicalEle = isInViewPort(document.getElementById("technical")!);
     const portfolioEle = isInViewPort(document.getElementById("portfolio")!);
     const flairEle = isInViewPort(document.getElementById("flair")!);
-  
+
+    console.log(bioEle)
+    console.log(technicalEle)
+    console.log(portfolioEle)
+    console.log(flairEle)
 
     switch (true) {
-      case (flairEle && flairEle / windowHeight <= .35 && flairEle / windowHeight > 0):
-        props.stateFunction("flair");
+      case (bioEle < 250 && bioEle >= 0):
+        props.stateFunction("bio");
         break;
-      case (portfolioEle && portfolioEle / windowHeight <= .35 && portfolioEle / windowHeight > 0):
-        props.stateFunction("portfolio");
-        break;
-      case (technicalEle && technicalEle / windowHeight <= .35 && technicalEle / windowHeight > 0):
+      case (technicalEle < 250 && technicalEle >= 0):
         props.stateFunction("technical");
         break;
-      case (bioEle && bioEle / windowHeight <= .35 && bioEle / windowHeight > 0):
-        props.stateFunction("bio");
+      case (portfolioEle < 250 && portfolioEle >= 0):
+        props.stateFunction("portfolio");
+        break;
+      case (flairEle < 250 && flairEle >= 0):
+        props.stateFunction("flair");
         break;
     }
   }

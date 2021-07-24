@@ -87,7 +87,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 
 const Navbar: React.FC<IProps> = (props): JSX.Element => {
     const classes = useStyles();
-    console.log(props.componentState)
     const [state, setState] = useState({
         mobileView: false,
         drawerOpen: false
