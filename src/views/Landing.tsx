@@ -44,22 +44,17 @@ const App = (props: IProps) => {
     const portfolioEle = isInViewPort(document.getElementById("portfolio")!);
     const flairEle = isInViewPort(document.getElementById("flair")!);
 
-    console.log(bioEle)
-    console.log(technicalEle)
-    console.log(portfolioEle)
-    console.log(flairEle)
-
     switch (true) {
-      case (bioEle < 250 && bioEle >= 0):
+      case (bioEle < 250 && bioEle >= -100):
         props.stateFunction("bio");
         break;
-      case (technicalEle < 250 && technicalEle >= 0):
+      case (technicalEle < 250 && technicalEle >= -100):
         props.stateFunction("technical");
         break;
-      case (portfolioEle < 250 && portfolioEle >= 0):
+      case (portfolioEle < 250 && portfolioEle >= -100):
         props.stateFunction("portfolio");
         break;
-      case (flairEle < 250 && flairEle >= 0):
+      case (flairEle < 250 && flairEle >= -100):
         props.stateFunction("flair");
         break;
     }

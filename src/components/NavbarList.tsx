@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },        
     buttonBorder: {
         borderStyle: `solid`,
-        border: `5px`,
+        border: `2px`,
         borderColor: theme.palette.light?.main
     }
 }))
