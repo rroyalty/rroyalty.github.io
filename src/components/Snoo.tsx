@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme: Theme) =>
             marginTop: `6px`,
             borderColor: theme.palette.light?.main,
             overflowY: `scroll`,
-            maxWidth: `100%`
+            maxWidth: `100%`,
+            width: `100%`
         },
         img: {
             display: `flex`,
