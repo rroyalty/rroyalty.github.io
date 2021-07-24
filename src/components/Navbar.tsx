@@ -80,7 +80,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     buttonBorder: {
         borderStyle: `solid`,
         border: `2px`,
-        borderColor: theme.palette.light?.main
+        borderColor: theme.palette.light?.main,
+        backgroundColor: theme.palette.wayback?.main
     },
 }))
 
