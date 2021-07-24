@@ -37,8 +37,8 @@ const Snoo: React.FC = (): JSX.Element => {
 
     const [index, setIndex] = useState<number>(0)
     const [length, setLength] = useState<number>(0)
-    const [title, setTitle] = useState<string>();
-    const [text, setText] = useState<string>();
+    const [title, setTitle] = useState<string | null>(null);
+    const [text, setText] = useState<string | null>(null);
     // const [date, setDate] = useState<string | null>(null);
 
     useEffect(() => {
@@ -107,7 +107,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xs={3}
                     justify="center"
-                    className={index === length - 1 ? classes.hidden : ""}>
+                    className={index === length - 1 || !text ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(length - 1)} >
                         <FirstPageIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
@@ -117,7 +117,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xs={3}
                     justify="center"
-                    className={index === length - 1 ? classes.hidden : ""}>
+                    className={index === length - 1 || !text ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(index + 1)}>
                         <NavigateBeforeIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
