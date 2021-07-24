@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Dispatch, SetStateAction } from 'react';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton'
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
@@ -8,7 +8,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { ListItem, ListItemText } from "@material-ui/core"
 
 interface IProps {
-    stateFunction: (setComponentState: string) => any
+    stateFunction: Dispatch<SetStateAction<string>>
     componentState: string
 }
 
@@ -130,11 +130,11 @@ const Navbar: React.FC<IProps> = (props): JSX.Element => {
                         onClose: handleDrawerClose,
                     }} style={{alignItems: "center"}}>
                     <ScrollLink smooth={true} duration={500} to="bio" className={classes.linkText}>
-                        <ListItem button style={{textAlign: "center"}} onClick={props.stateFunction("bio")} className={"bio" === props.componentState ? "" : "" }>
+                        <ListItem button style={{textAlign: "center"}} className={"bio" === props.componentState ? classes.buttonBorder : "" }>
                             <ListItemText primary="RYAN ROYALTY" />
                         </ListItem>
                     </ScrollLink>
-                    <NavbarList classProp={classes.drawer} componentState={props.componentState} stateFunction={() => props.stateFunction} />
+                    <NavbarList classProp={classes.drawer} componentState={props.componentState} stateFunction={props.stateFunction} />
                 </Drawer>
             </AppBar>
         )
@@ -145,12 +145,12 @@ const Navbar: React.FC<IProps> = (props): JSX.Element => {
             <AppBar className={classes.navbar}>
                 <Toolbar className="nav-style">
                     <ScrollLink smooth={true} duration={500} to="bio" className={classes.linkText}>
-                        <ListItem button onClick={props.stateFunction("bio")} className={"bio" === props.componentState ? "": "" }>
+                        <ListItem button className={"bio" === props.componentState ? classes.buttonBorder : "" }>
                             <ListItemText primary="RYAN ROYALTY" />
                         </ListItem>
                     </ScrollLink>
                     <section className={classes.rightAppBar}>
-                        <NavbarList classProp={classes.navbarDesktop} componentState={props.componentState} stateFunction={() => props.stateFunction} />
+                        <NavbarList classProp={classes.navbarDesktop} componentState={props.componentState} stateFunction={props.stateFunction} />
                     </section>
                 </Toolbar>
             </AppBar>

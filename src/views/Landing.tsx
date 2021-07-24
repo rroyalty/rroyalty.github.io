@@ -4,10 +4,10 @@ import Portfolio from './Portfolio';
 import Technical from './Technical';
 import Flair from './Flair';
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import { useEffect } from "react";
+import { useEffect, Dispatch, SetStateAction } from "react";
 
 interface IProps {
-  stateFunction: (componentState: string) => void
+  stateFunction: Dispatch<SetStateAction<string>>
 }
 
 const random: number = Math.floor(Math.random() * 3)
@@ -45,19 +45,15 @@ const App = (props: IProps) => {
     const portfolioEle = isInViewPort(document.getElementById("portfolio")!);
     const flairEle = isInViewPort(document.getElementById("flair")!);
   
-    console.log(`Window Height: ${windowHeight}`)
 
     switch (true) {
       case (flairEle && flairEle / windowHeight <= .35 && flairEle / windowHeight > 0):
-        console.log(`Flair: ${flairEle / windowHeight}`)
         props.stateFunction("flair");
         break;
       case (portfolioEle && portfolioEle / windowHeight <= .35 && portfolioEle / windowHeight > 0):
-        console.log(`Portfolio: ${portfolioEle / windowHeight}`)
         props.stateFunction("portfolio");
         break;
       case (technicalEle && technicalEle / windowHeight <= .35 && technicalEle / windowHeight > 0):
-        console.log(`Technical: ${technicalEle / windowHeight}`)
         props.stateFunction("technical");
         break;
       case (bioEle && bioEle / windowHeight <= .35 && bioEle / windowHeight > 0):

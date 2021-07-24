@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {SetStateAction, Dispatch} from 'react';
 import { Link as ScrollLink } from "react-scroll";
 import MailIcon from '@material-ui/icons/Mail';
 import DescriptionIcon from '@material-ui/icons/Description';
@@ -8,7 +8,7 @@ import { List, ListItem, ListItemText } from "@material-ui/core"
 interface iProps {
     classProp: any;
     componentState: string;
-    stateFunction: (setComponentState: string) => any
+    stateFunction: Dispatch<SetStateAction<string>>
 }
 
 const navLinks: { title: string, path: string }[] = [
@@ -45,7 +45,7 @@ const NavbarList: React.FC<iProps> = (props): JSX.Element => {
         <List component="nav" aria-labelledby="main navigation" className={props.classProp}>
             {navLinks.map((item, index: number) => (
                 <ScrollLink smooth={true} duration={500} to={item.path} key={index} className={classes.linkText}>
-                    <ListItem button onClick={props.stateFunction(item.path)} className={item.path === props.componentState ? classes.buttonBorder : "" }>
+                    <ListItem button className={item.path === props.componentState ? classes.buttonBorder : "" }>
                         <ListItemText primary={item.title} />
                     </ListItem>
                 </ScrollLink>
