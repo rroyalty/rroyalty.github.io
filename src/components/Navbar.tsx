@@ -78,8 +78,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         },        
     },
     buttonBorder: {
-        textDecoration: `underline`,
-        textUnderlineOffset: `5px`
+        textDecoration: `underline!important`,
+        textUnderlineOffset: `5px!important`
     },
 }))
 
