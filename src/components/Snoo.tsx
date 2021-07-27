@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
-    
+
     const [length, setLength] = useState<number>(0)
     const [title, setTitle] = useState<string | null>(null);
     const [text, setText] = useState<string | null>(null);
@@ -130,7 +130,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xs={3}
                     justify="center"
-                    className={index === 0 ? classes.hidden : ""}>
+                    className={index === 0 || !text ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(index - 1)}>
                         <NavigateNextIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
@@ -140,7 +140,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xs={3}
                     justify="center"
-                    className={index === 0 ? classes.hidden : ""}>
+                    className={index === 0  || !text  ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(0)}>
                         <LastPageIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
