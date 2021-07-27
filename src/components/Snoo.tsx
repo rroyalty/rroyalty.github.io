@@ -7,6 +7,7 @@ import FirstPageIcon from '@material-ui/icons/FirstPage';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import LastPageIcon from '@material-ui/icons/LastPage';
+import { AxiosResponse } from 'axios';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -36,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
-    const [staticResponse, setResponse] = useState<any>()
+    const [staticResponse, setResponse] = useState<AxiosResponse>()
 
     const [length, setLength] = useState<number>(0)
     const [title, setTitle] = useState<string | null>(null);
@@ -46,16 +47,16 @@ const Snoo: React.FC = (): JSX.Element => {
     // const [date, setDate] = useState<string | null>(null);
 
     useEffect(() => {
-        API.getAllPosts().then(async (res) => {
-            setResponse(await res.data);
+        API.getAllPosts().then((res) => {
+            setResponse(res);
             setLength(res.data.length)
             setIndex(res.data.length)
         })
     }, [])
 
     useEffect(() => {
-        setTitle(staticResponse[index].title);
-        setText(staticResponse[index].selftext);
+        staticResponse ? setTitle(staticResponse.data[index].title) : setTitle("");
+        staticResponse ? setText(staticResponse.data[index].selftext) : setText("");
     }, [index])
 
     const loadingGrid = () => {
