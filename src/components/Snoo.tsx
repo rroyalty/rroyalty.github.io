@@ -52,8 +52,8 @@ const Snoo: React.FC = (): JSX.Element => {
             const length = res.data.length
             setLength(length);
             setIndex(length);
-            setTitle(res.data[length - 1].title);
-            setText(res.data[length - 1].selftext);
+            setTitle(res.data[0].title);
+            setText(res.data[0].selftext);
         }).catch((err) => {
             console.log(err)
             setLength(0);
