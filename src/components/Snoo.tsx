@@ -35,11 +35,12 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
-
-    const [index, setIndex] = useState<number>(0)
+    
     const [length, setLength] = useState<number>(0)
     const [title, setTitle] = useState<string | null>(null);
     const [text, setText] = useState<string | null>(null);
+    const [index, setIndex] = useState<number>(0)
+
     // const [date, setDate] = useState<string | null>(null);
 
     useEffect(() => {
