@@ -51,10 +51,12 @@ const Snoo: React.FC = (): JSX.Element => {
             setResponse(res);
             setLength(res.data.length);
             setIndex(res.data.length);
+            console.log(`Success Start: ${text}`)
         }).catch((err) => {
             console.log(err)
             setLength(0);
             setIndex(0);
+            console.log(`Fail Start: ${text}`)
         })
     }, [])
 
@@ -62,9 +64,11 @@ const Snoo: React.FC = (): JSX.Element => {
         if (staticResponse?.data[index] !== null && staticResponse?.data[index] !== undefined) {
             setTitle(staticResponse?.data[index].title);
             setText(staticResponse?.data[index].selftext);
+            console.log(`Success Index: ${text}`)
         } else {
             setTitle(null);
-            setText(null)
+            setText(null);
+            console.log(`Fail Index: ${text}`)
         }
     }, [index])
 
