@@ -8,7 +8,6 @@ import { Link as ScrollLink } from "react-scroll";
 import { ListItem, ListItemText } from "@material-ui/core"
 
 interface IProps {
-    stateFunction: Dispatch<SetStateAction<string>>
     componentState: string
 }
 
@@ -132,7 +131,7 @@ const Navbar: React.FC<IProps> = (props): JSX.Element => {
                             <ListItemText primary="RYAN ROYALTY" />
                         </ListItem>
                     </ScrollLink>
-                    <NavbarList classProp={classes.drawer} componentState={props.componentState} stateFunction={props.stateFunction} />
+                    <NavbarList classProp={classes.drawer} componentState={props.componentState} />
                 </Drawer>
             </AppBar>
         )
@@ -148,7 +147,7 @@ const Navbar: React.FC<IProps> = (props): JSX.Element => {
                         </ListItem>
                     </ScrollLink>
                     <section className={classes.rightAppBar}>
-                        <NavbarList classProp={classes.navbarDesktop} componentState={props.componentState} stateFunction={props.stateFunction} />
+                        <NavbarList classProp={classes.navbarDesktop} componentState={props.componentState} />
                     </section>
                 </Toolbar>
             </AppBar>

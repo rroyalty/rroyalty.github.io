@@ -8,7 +8,6 @@ import { List, ListItem, ListItemText } from "@material-ui/core"
 interface iProps {
     classProp: any;
     componentState: string;
-    stateFunction: Dispatch<SetStateAction<string>>
 }
 
 const navLinks: { title: string, path: string }[] = [

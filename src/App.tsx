@@ -7,11 +7,9 @@ const App: React.FC = (): JSX.Element => {
 
   const [currentComponent, setCurrentComponent] = useState<string>("bio")
 
-  console.log(currentComponent)
-
   return (
     <>
-      <Navbar stateFunction={setCurrentComponent} componentState={currentComponent} />
+      <Navbar componentState={currentComponent} />
       <Landing stateFunction={setCurrentComponent} />
       <Footer />
     </>
