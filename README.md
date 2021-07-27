@@ -3,6 +3,7 @@
 ## Table of Contents  
 
 [Description](#Description)   
+[Technologies](#Technologies)  
 [License](#License)  
 [Questions](#Questions)  
 
@@ -11,6 +12,15 @@
 ### Description
 
 This app is single page React app that constitutes the front end of Ryan's portfolio page. Not much to see here, the page speaks for itself.
+
+---
+<a name="Technologies"></a>
+### Technologies
+
+[React](https://reactjs.org/) 
+[Material UI](https://material-ui.com/) 
+[TypeScript](https://www.typescriptlang.org/) 
+[Axios](https://axios-http.com/)
 
 ---
 <a name="License"></a>
