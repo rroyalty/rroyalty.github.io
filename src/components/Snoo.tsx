@@ -59,8 +59,12 @@ const Snoo: React.FC = (): JSX.Element => {
     useEffect(() => {
         API.getAllPosts().then((res) => {
             setResponse(res);
-            setLength(res.data.length)
-            setIndex(res.data.length)
+            setLength(res.data.length);
+            setIndex(res.data.length);
+        }).catch((err) => {
+            console.log(err)
+            setLength(0);
+            setIndex(0);
         })
     }, [])
 
