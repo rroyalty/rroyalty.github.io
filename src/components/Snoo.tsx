@@ -55,7 +55,9 @@ const Snoo: React.FC = (): JSX.Element => {
     }, [])
 
     useEffect(() => {
+        console.log(staticResponse.data)
         if (staticResponse?.data[index] !== null) {
+
             setTitle(staticResponse?.data[index].title);
             setText(staticResponse?.data[index].selftext);
         }
