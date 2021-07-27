@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Grid, Typography, IconButton } from "@material-ui/core";
 import API from '../API/API';
@@ -36,6 +36,8 @@ const useStyles = makeStyles((theme: Theme) =>
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
+    const ref = useRef<number>(-1);
+
     const [index, setIndex] = useState<number>(0)
     const [length, setLength] = useState<number>(0)
     const [title, setTitle] = useState<string | null>(null);
@@ -49,6 +51,10 @@ const Snoo: React.FC = (): JSX.Element => {
             setLength(res.data.length)
         })
     }, [index])
+
+    useEffect(() => {
+        ref.current = index
+    }, [text])
 
     const loadingGrid = () => {
         return (
@@ -94,7 +100,7 @@ const Snoo: React.FC = (): JSX.Element => {
                 xl={12}
                 className={classes.listGrid}
                 spacing={2}>
-                {text ? loadedGrid() : loadingGrid()}
+                {ref.current === index ? loadedGrid() : loadingGrid()}
             </Grid>
             <Grid
                 item
