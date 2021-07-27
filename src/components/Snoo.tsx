@@ -36,6 +36,8 @@ const useStyles = makeStyles((theme: Theme) =>
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
+    const [staticResponse, setResponse] = useState<any>()
+
     const [length, setLength] = useState<number>(0)
     const [title, setTitle] = useState<string | null>(null);
     const [text, setText] = useState<string | null>(null);
@@ -44,12 +46,16 @@ const Snoo: React.FC = (): JSX.Element => {
     // const [date, setDate] = useState<string | null>(null);
 
     useEffect(() => {
-        setText(null)
         API.getAllPosts().then((res) => {
-            setTitle(res.data[index].title);
-            setText(res.data[index].selftext);
-            setLength(res.data.length)
+            setResponse(res.data);
         })
+    }, [])
+
+    useEffect(() => {
+        setTitle(staticResponse[index].title);
+        setText(staticResponse[index].selftext);
+        setLength(staticResponse.length)
+
     }, [index])
 
     const loadingGrid = () => {
@@ -66,7 +72,7 @@ const Snoo: React.FC = (): JSX.Element => {
                 <Typography style={{ fontWeight: `bold` }}>
                     {title}
                 </Typography>
-                <Typography style={{wordWrap: `break-word`}}>
+                <Typography style={{ wordWrap: `break-word` }}>
                     {text}
                 </Typography>
             </div>
@@ -140,7 +146,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xs={3}
                     justify="center"
-                    className={index === 0  || !text  ? classes.hidden : ""}>
+                    className={index === 0 || !text ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(0)}>
                         <LastPageIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
