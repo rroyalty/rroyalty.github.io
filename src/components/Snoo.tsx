@@ -47,16 +47,6 @@ const Snoo: React.FC = (): JSX.Element => {
     // const [date, setDate] = useState<string | null>(null);
 
     useEffect(() => {
-        if (staticResponse?.data[index] !== null && staticResponse?.data[index] !== undefined) {
-            setTitle(staticResponse?.data[index].title);
-            setText(staticResponse?.data[index].selftext);
-        } else {
-            setTitle(null);
-            setText(null)
-        }
-    }, [index])
-
-    useEffect(() => {
         API.getAllPosts().then((res) => {
             setResponse(res);
             setLength(res.data.length);
@@ -67,6 +57,16 @@ const Snoo: React.FC = (): JSX.Element => {
             setIndex(0);
         })
     }, [])
+
+    useEffect(() => {
+        if (staticResponse?.data[index] !== null && staticResponse?.data[index] !== undefined) {
+            setTitle(staticResponse?.data[index].title);
+            setText(staticResponse?.data[index].selftext);
+        } else {
+            setTitle(null);
+            setText(null)
+        }
+    }, [index])
 
     const loadingGrid = () => {
         return (
