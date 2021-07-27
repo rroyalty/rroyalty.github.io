@@ -55,8 +55,10 @@ const Snoo: React.FC = (): JSX.Element => {
     }, [])
 
     useEffect(() => {
-        staticResponse ? setTitle(staticResponse.data[index].title) : setTitle("");
-        staticResponse ? setText(staticResponse.data[index].selftext) : setText("");
+        if (staticResponse?.data[index] !== null) {
+            setTitle(staticResponse?.data[index].title);
+            setText(staticResponse?.data[index].selftext);
+        }
     }, [index])
 
     const loadingGrid = () => {
