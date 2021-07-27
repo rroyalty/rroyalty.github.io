@@ -19,10 +19,10 @@ This app is single page React app that constitutes the front end of Ryan's portf
 <a name="Technologies"></a>
 ### Technologies
 
-[React](https://reactjs.org/) 
-[Material UI](https://material-ui.com/) 
-[TypeScript](https://www.typescriptlang.org/) 
-[Axios](https://axios-http.com/)
+[React](https://reactjs.org/)  
+[Material UI](https://material-ui.com/)  
+[TypeScript](https://www.typescriptlang.org/)  
+[Axios](https://axios-http.com/)  
 
 ---
 <a name="License"></a>
