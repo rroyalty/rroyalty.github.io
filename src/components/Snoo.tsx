@@ -46,16 +46,16 @@ const Snoo: React.FC = (): JSX.Element => {
     // const [date, setDate] = useState<string | null>(null);
 
     useEffect(() => {
-        API.getAllPosts().then((res) => {
-            setResponse(res.data);
+        API.getAllPosts().then(async (res) => {
+            setResponse(await res.data);
+            setLength(res.data.length)
+            setIndex(res.data.length)
         })
     }, [])
 
     useEffect(() => {
         setTitle(staticResponse[index].title);
         setText(staticResponse[index].selftext);
-        setLength(staticResponse.length)
-
     }, [index])
 
     const loadingGrid = () => {
