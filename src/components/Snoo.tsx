@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { Grid, Typography, IconButton } from "@material-ui/core";
 import API from '../API/API';
@@ -36,8 +36,6 @@ const useStyles = makeStyles((theme: Theme) =>
 const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
-    const ref = useRef<number>(-1);
-
     const [index, setIndex] = useState<number>(0)
     const [length, setLength] = useState<number>(0)
     const [title, setTitle] = useState<string | null>(null);
@@ -45,16 +43,13 @@ const Snoo: React.FC = (): JSX.Element => {
     // const [date, setDate] = useState<string | null>(null);
 
     useEffect(() => {
+        setText(null)
         API.getAllPosts().then((res) => {
             setTitle(res.data[index].title);
             setText(res.data[index].selftext);
             setLength(res.data.length)
         })
     }, [index])
-
-    useEffect(() => {
-        ref.current = index
-    }, [text])
 
     const loadingGrid = () => {
         return (
@@ -70,7 +65,7 @@ const Snoo: React.FC = (): JSX.Element => {
                 <Typography style={{ fontWeight: `bold` }}>
                     {title}
                 </Typography>
-                <Typography style={{ wordWrap: `break-word` }}>
+                <Typography style={{wordWrap: `break-word`}}>
                     {text}
                 </Typography>
             </div>
@@ -100,7 +95,7 @@ const Snoo: React.FC = (): JSX.Element => {
                 xl={12}
                 className={classes.listGrid}
                 spacing={2}>
-                {ref.current === index || !text ? loadedGrid() : loadingGrid()}
+                {text ? loadedGrid() : loadingGrid()}
             </Grid>
             <Grid
                 item
@@ -114,7 +109,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xs={3}
                     justify="center"
-                    className={index === length - 1 || ref.current !== index || !text ? classes.hidden : ""}>
+                    className={index === length - 1 || !text ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(length - 1)} >
                         <FirstPageIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
@@ -124,7 +119,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xs={3}
                     justify="center"
-                    className={index === length - 1 || ref.current !== index || !text ? classes.hidden : ""}>
+                    className={index === length - 1 || !text ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(index + 1)}>
                         <NavigateBeforeIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
@@ -134,7 +129,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xs={3}
                     justify="center"
-                    className={index === 0 || ref.current !== index || !text ? classes.hidden : ""}>
+                    className={index === 0 ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(index - 1)}>
                         <NavigateNextIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
@@ -144,7 +139,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     container
                     xs={3}
                     justify="center"
-                    className={index === 0 || ref.current !== index || !text ? classes.hidden : ""}>
+                    className={index === 0 ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(0)}>
                         <LastPageIcon style={{ width: `50px`, height: `50px` }} />
                     </IconButton>
