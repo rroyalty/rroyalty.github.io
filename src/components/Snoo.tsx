@@ -49,10 +49,11 @@ const Snoo: React.FC = (): JSX.Element => {
     useEffect(() => {
         API.getAllPosts().then((res) => {
             setResponse(res);
-            setLength(res.data.length);
-            setIndex(res.data.length);
-            setTitle(res.data[res.data.length - 1].title);
-            setText(res.data[res.data.length - 1].selftext);
+            const length = res.data.length
+            setLength(length);
+            setIndex(length);
+            setTitle(res.data[length - 1].title);
+            setText(res.data[length - 1].selftext);
         }).catch((err) => {
             console.log(err)
             setLength(0);
