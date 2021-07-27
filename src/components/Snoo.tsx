@@ -38,7 +38,6 @@ const Snoo: React.FC = (): JSX.Element => {
     const classes = useStyles();
 
     const [staticResponse, setResponse] = useState<AxiosResponse>()
-
     const [length, setLength] = useState<number>(0)
     const [title, setTitle] = useState<string | null>(null);
     const [text, setText] = useState<string | null>(null);
