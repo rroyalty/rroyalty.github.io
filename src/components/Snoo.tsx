@@ -71,6 +71,7 @@ const Snoo: React.FC = (): JSX.Element => {
         } else {
             setTitle(null);
             setText(null);
+            setDate(null)
         }
     }, [index])
 
