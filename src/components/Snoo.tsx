@@ -53,8 +53,8 @@ const Snoo: React.FC = (): JSX.Element => {
             setIndex(0);
             setTitle(res.data[0].title);
             setText(res.data[0].selftext);
-            const date = new Date(res.data[0].created)
-            setDate(`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`);
+            const date = new Date(res.data[0].created * 1000)
+            setDate(`${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`);
         }).catch((err) => {
             console.log(err)
             setLength(0);
@@ -66,8 +66,8 @@ const Snoo: React.FC = (): JSX.Element => {
         if (staticResponse?.data[index] !== null && staticResponse?.data[index] !== undefined) {
             setTitle(staticResponse?.data[index].title);
             setText(staticResponse?.data[index].selftext);
-            const date = new Date(staticResponse?.data[index].created)
-            setDate(`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`);
+            const date = new Date(staticResponse?.data[index].created * 1000)
+            setDate(`${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`);
         } else {
             setTitle(null);
             setText(null);
