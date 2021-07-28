@@ -41,6 +41,7 @@ const Snoo: React.FC = (): JSX.Element => {
     const [length, setLength] = useState<number>(0)
     const [title, setTitle] = useState<string | null>(null);
     const [text, setText] = useState<string | null>(null);
+    const [date, setDate] = useState<string | null>(null);
     const [index, setIndex] = useState<number>(0)
 
     // const [date, setDate] = useState<string | null>(null);
@@ -52,6 +53,8 @@ const Snoo: React.FC = (): JSX.Element => {
             setIndex(0);
             setTitle(res.data[0].title);
             setText(res.data[0].selftext);
+            const date = new Date(res.data[0].created * 1000)
+            setDate(date.toUTCString());
         }).catch((err) => {
             console.log(err)
             setLength(0);
@@ -63,6 +66,8 @@ const Snoo: React.FC = (): JSX.Element => {
         if (staticResponse?.data[index] !== null && staticResponse?.data[index] !== undefined) {
             setTitle(staticResponse?.data[index].title);
             setText(staticResponse?.data[index].selftext);
+            const date = new Date(staticResponse?.data[index].created * 1000)
+            setDate(date.toUTCString());
         } else {
             setTitle(null);
             setText(null);
@@ -80,9 +85,22 @@ const Snoo: React.FC = (): JSX.Element => {
     const loadedGrid = () => {
         return (
             <div style={{ height: `240px` }}>
-                <Typography style={{ fontWeight: `bold` }}>
-                    {title}
-                </Typography>
+                <Grid
+                    container
+                    justify="space-between">
+                    <Grid
+                        item>
+                        <Typography style={{ fontWeight: `bold` }}>
+                            {title}
+                        </Typography>
+                    </Grid>
+                    <Grid
+                        item>
+                        <Typography style={{ fontWeight: `bold` }}>
+                            {date}
+                        </Typography>
+                    </Grid>
+                </Grid>
                 <Typography style={{ wordWrap: `break-word` }}>
                     {text}
                 </Typography>
@@ -99,7 +117,7 @@ const Snoo: React.FC = (): JSX.Element => {
             justify="center"
             alignItems="center"
             direction="column"
-            style={{marginBottom: "200px"}}
+            style={{ marginBottom: "200px" }}
         >
 
             <Grid
