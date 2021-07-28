@@ -99,6 +99,7 @@ const Snoo: React.FC = (): JSX.Element => {
             justify="center"
             alignItems="center"
             direction="column"
+            style={{marginBottom: "200px"}}
         >
 
             <Grid
