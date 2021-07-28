@@ -88,7 +88,8 @@ const Snoo: React.FC = (): JSX.Element => {
             <div style={{ height: `240px` }}>
                 <Grid
                     container
-                    justify="space-between">
+                    justify="space-between"
+                    style={{marginBottom: `5px`}}>
                     <Grid
                         item>
                         <Typography style={{ fontWeight: `bold` }}>
