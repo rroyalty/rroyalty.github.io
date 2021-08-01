@@ -1,11 +1,15 @@
 [   
     {
-        "alt": "Appalachian Trail Certificate",
-        "src": "/images/AT.jpg"
+        "alt": "Bootcamp Certification",
+        "src": "/images/bootcamp.jpg"
     },
     {
         "alt": "Bachelor's Degree",
         "src": "/images/BS.jpg"
+    },
+    {
+        "alt": "Appalachian Trail Certificate",
+        "src": "/images/AT.jpg"
     },
     {
         "alt": "Nidan Certificate",
