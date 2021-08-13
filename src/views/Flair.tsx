@@ -7,6 +7,13 @@ import Snoo from '../components/Snoo';
 
 const Flair: React.FC = (): JSX.Element => {
 
+    // I once made a joke that I love ternary operators so much that I put them in my code even if I don't need them, and, well, here we are.
+    const iHeartTernaries = () => {
+        2 + 2 === 4 ? console.log("All is well.") : console.log("The clocks were striking thirteen.")
+    }; 
+
+    iHeartTernaries();
+
     return (
         <>
             <Typography align="center" variant="h2">
