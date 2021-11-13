@@ -4,31 +4,31 @@
         "list": [
             {
                 "language": "TypeScript",
-                "avatar": "/images/LogoTypescript.png"
+                "avatar": "/images/logoTypescript.png"
             },
             {
                 "language": "JavaScript",
-                "avatar": "/images/LogoJavascript.png"
+                "avatar": "/images/logoJavascript.png"
             },
             {
                 "language": "HTML5",
-                "avatar": "/images/LogoHTML.png"
+                "avatar": "/images/logoHTML.png"
             },
             {
                 "language": "CSS3",
-                "avatar": "/images/LogoCSS.png"
+                "avatar": "/images/logoCSS.png"
             },
             {
                 "language": "SQL",
-                "avatar": "/images/LogoSQL.png"
+                "avatar": "/images/logoSQL.png"
             },
             {
                 "language": "NoSQL",
-                "avatar": "/images/LogoNoSQL.png"
+                "avatar": "/images/logoNoSQL.png"
             },
             {
                 "language": "VBA",
-                "avatar": "/images/LogoVBA.png"
+                "avatar": "/images/logoVBA.png"
             },
             {
                 "language": "",
@@ -61,11 +61,11 @@
         "list": [
             {
                 "language": "React",
-                "avatar": "/images/LogoReact.png"
+                "avatar": "/images/logoReact.png"
             },
             {
                 "language": "Redux",
-                "avatar": "/images/LogoRedux.png"
+                "avatar": "/images/logoRedux.png"
             },
             {
                 "language": "Material UI",
@@ -73,11 +73,11 @@
             },
             {
                 "language": "JQuery",
-                "avatar": "/images/LogoJQuery.png"
+                "avatar": "/images/logoJQuery.png"
             },
             {
                 "language": "Auth0",
-                "avatar": "/images/LogoAuth0.png"
+                "avatar": "/images/logoAuth0.png"
             },
             {
                 "language": "Passport",
@@ -85,7 +85,7 @@
             },
             {
                 "language": "Express",
-                "avatar": "/images/LogoExpress.png"
+                "avatar": "/images/logoExpress.png"
             },
             {
                 "language": "Axios",
