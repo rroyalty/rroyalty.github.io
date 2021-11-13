@@ -4,31 +4,31 @@
         "list": [
             {
                 "language": "TypeScript",
-                "avatar": "https://cdn.iconscout.com/icon/free/png-512/typescript-1174965.png"
+                "avatar": "/images/LogoTypescript.png"
             },
             {
                 "language": "JavaScript",
-                "avatar": "https://cdn.iconscout.com/icon/free/png-512/javascript-2752148-2284965.png"
+                "avatar": "/images/LogoJavascript.png"
             },
             {
                 "language": "HTML5",
-                "avatar": "https://cdn0.iconfinder.com/data/icons/social-network-7/50/22-512.png"
+                "avatar": "/images/LogoHTML.png"
             },
             {
                 "language": "CSS3",
-                "avatar": "https://cdn2.iconfinder.com/data/icons/social-icon-3/512/social_style_3_css3-512.png"
+                "avatar": "/images/LogoCSS.png"
             },
             {
                 "language": "SQL",
-                "avatar": "https://www.clipartmax.com/png/middle/243-2432711_azure-sql-database-icon.png"
+                "avatar": "/images/LogoSQL.png"
             },
             {
                 "language": "NoSQL",
-                "avatar": "https://cdn6.aptoide.com/imgs/0/7/6/076303a788705113dc6cebc4fe59a02d_icon.png"
+                "avatar": "/images/LogoNoSQL.png"
             },
             {
                 "language": "VBA",
-                "avatar": "https://cdn3.iconfinder.com/data/icons/flat-design-spreadsheet-set-5/24/macros-vba-512.png"
+                "avatar": "/images/LogoVBA.png"
             },
             {
                 "language": "",
@@ -61,39 +61,39 @@
         "list": [
             {
                 "language": "React",
-                "avatar": "https://cdn.iconscout.com/icon/free/png-512/react-1543566-1306069.png"
+                "avatar": "/images/LogoReact.png"
             },
             {
                 "language": "Redux",
-                "avatar": "https://cdn.iconscout.com/icon/free/png-512/redux-283024.png"
+                "avatar": "/images/LogoRedux.png"
             },
             {
                 "language": "Material UI",
-                "avatar": "https://material-ui.com/static/logo.png"
+                "avatar": "/images/LogoMUI.png"
             },
             {
                 "language": "JQuery",
-                "avatar": "https://cdn.iconscout.com/icon/free/png-256/jquery-7-1175152.png"
+                "avatar": "/images/LogoJQuery.png"
             },
             {
                 "language": "Auth0",
-                "avatar": "https://miro.medium.com/max/3150/1*kofg5S-_kcyij3HL-uCnZA.png"
+                "avatar": "/images/LogoAuth0.png"
             },
             {
                 "language": "Passport",
-                "avatar": "https://leolanchas.com/wp-content/uploads/2013/07/0d184ee3-fd8d-4b94-acf4-b4e686e57375.png"
+                "avatar": "/images/LogoPassport.png"
             },
             {
                 "language": "Express",
-                "avatar": "https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png"
+                "avatar": "/images/LogoExpress.png"
             },
             {
                 "language": "Axios",
-                "avatar": "https://symbols-electrical.getvecta.com/stencil_74/148_axios-icon.351c8889a7.png"
+                "avatar": "/images/LogoAxios.png"
             },
             {
                 "language": "Sequelize",
-                "avatar": "https://cdn.iconscout.com/icon/free/png-512/sequelize-1175001.png"
+                "avatar": "/images/LogoSequelize.png"
             },
             {
                 "language": "",
@@ -118,43 +118,43 @@
         "list": [
             {
                 "language": "Git",
-                "avatar": "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+                "avatar": "/images/LogoGit.png"
             },
             {
                 "language": "Bash",
-                "avatar": "https://orion42.net/wp-content/uploads/2019/10/full_colored_dark_green42.png"
+                "avatar": "/images/LogoBash.png"
             },
             {
                 "language": "Node",
-                "avatar": "https://cdn.iconscout.com/icon/free/png-512/node-js-1-1174935.png"
+                "avatar": "/images/LogoNode.png"
             },
             {
                 "language": "VSCode",
-                "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png"
+                "avatar": "/images/LogoVSCode.png"
             },
             {
                 "language": "GitHub",
-                "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png"
+                "avatar": "/images/LogoGitHub.png"
             },
             {
                 "language": "Heroku",
-                "avatar": "https://image.flaticon.com/icons/png/512/873/873120.png"
+                "avatar": "/images/LogoHeroku.png"
             },
             {
                 "language": "Firebase",
-                "avatar": "https://img.icons8.com/color/452/firebase.png"
+                "avatar": "/images/LogoFirebase.png"
             },
             {
                 "language": "MySQL",
-                "avatar": "https://cdn.iconscout.com/icon/free/png-512/mysql-19-1174939.png"
+                "avatar": "/images/LogoMySQL.png"
             },
             {
                 "language": "MongoDB",
-                "avatar": "https://img.icons8.com/color/452/mongodb.png"
+                "avatar": "/images/LogoMongoDB.png"
             },
             {
                 "language": "FileMaker",
-                "avatar": "https://s3.amazonaws.com/hbase-files/FM13-icon-green-blue.png"
+                "avatar": "/images/LogoFileMaker.png"
             },
             {
                 "language": "",
