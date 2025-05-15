@@ -23,8 +23,12 @@
                 "avatar": "/images/logoSQL.png"
             },
             {
-                "language": "NoSQL",
-                "avatar": "/images/logoNoSQL.png"
+                "language": "PL/SQL",
+                "avatar": "/images/logoPLSQL.png"
+            },
+            {
+                "language": "Java",
+                "avatar": "/images/logoJava.png"
             },
             {
                 "language": "VBA",
@@ -37,35 +41,19 @@
             {
                 "language": "",
                 "avatar": ""
-            },
-            {
-                "language": "",
-                "avatar": ""
-            },
-            {
-                "language": "",
-                "avatar": ""
-            },
-            {
-                "language": "",
-                "avatar": ""
-            },
-            {
-                "language": "",
-                "avatar": ""
             }
         ]
     },
     {
-        "title": "Frameworks/Libraries",
+        "title": "Frameworks/Packages",
         "list": [
             {
                 "language": "React",
                 "avatar": "/images/logoReact.png"
             },
             {
-                "language": "Redux",
-                "avatar": "/images/logoRedux.png"
+                "language": "Next.js",
+                "avatar": "/images/logoNext.png"
             },
             {
                 "language": "Material UI",
@@ -76,24 +64,12 @@
                 "avatar": "/images/logoJQuery.png"
             },
             {
-                "language": "Auth0",
-                "avatar": "/images/logoAuth0.png"
-            },
-            {
-                "language": "Passport",
-                "avatar": "/images/LogoPassport.png"
-            },
-            {
                 "language": "Express",
                 "avatar": "/images/logoExpress.png"
             },
             {
                 "language": "Axios",
                 "avatar": "/images/LogoAxios.png"
-            },
-            {
-                "language": "Sequelize",
-                "avatar": "/images/LogoSequelize.png"
             },
             {
                 "language": "",
@@ -137,40 +113,24 @@
                 "avatar": "/images/LogoGitHub.png"
             },
             {
-                "language": "Heroku",
-                "avatar": "/images/LogoHeroku.png"
+                "language": "AWS",
+                "avatar": "/images/LogoAws.png"
             },
             {
                 "language": "Firebase",
                 "avatar": "/images/LogoFirebase.png"
             },
             {
-                "language": "MySQL",
-                "avatar": "/images/LogoMySQL.png"
+                "language": "Cursor",
+                "avatar": "/images/LogoCursor.png"
             },
             {
-                "language": "MongoDB",
-                "avatar": "/images/LogoMongoDB.png"
+                "language": "Copilot",
+                "avatar": "/images/LogoCopilot.png"
             },
             {
                 "language": "FileMaker",
                 "avatar": "/images/LogoFileMaker.png"
-            },
-            {
-                "language": "",
-                "avatar": ""
-            },
-            {
-                "language": "",
-                "avatar": ""
-            },
-            {
-                "language": "",
-                "avatar": ""
-            },
-            {
-                "language": "",
-                "avatar": ""
             }
         ]
     }

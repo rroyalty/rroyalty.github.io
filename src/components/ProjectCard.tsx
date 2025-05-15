@@ -11,6 +11,7 @@ interface IProps {
     github: string,
     imgSrc: string,
     tech: Array<string>
+    expired: boolean
   },
   index: number
 }
@@ -31,6 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: `stretch`
     },
     media: {
+      position: 'relative',
       justifyContent: 'center',
       textAlign: 'center',
     },
@@ -53,7 +55,7 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
       item
       container
       alignItems="stretch"
-      justify="space-around"
+      justifyContent="space-around"
       direction="column"
       lg={6} 
       sm={12}
@@ -67,7 +69,7 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
             component="img"
             height="143"
             className={classes.media}
-            image={props.props.imgSrc}
+            image={props.props.expired ? "/images/expiredStamp.png" : props.props.imgSrc}
             title={props.props.name}
           />
           <Typography variant="h3" component="h3" style={{margin: `5px`}}>
@@ -79,8 +81,6 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
           <Typography variant="subtitle2" component="p" style={{paddingLeft: `10px`, paddingRight: `10px`}}>
             {props.props.tech.join(', ')}
           </Typography>
-
-
         </CardContent>
         <CardActions className={classes.justify}>
           <a href={props.props.github} target="_blank" rel="noreferrer">
@@ -90,15 +90,14 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
               </Button>
             </CardActionArea>
           </a>
-          <a href={props.props.domain} target="_blank" rel="noreferrer">
+          {!props.props.expired && <a href={props.props.domain} target="_blank" rel="noreferrer">
             <CardActionArea>
               <Button>
                 Deployment
               </Button>
             </CardActionArea>
-          </a>
+          </a>}
         </CardActions>
-
       </Card>
     </Grid>
   );

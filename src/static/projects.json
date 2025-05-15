@@ -5,7 +5,8 @@
         "domain": "https://bandwi-d-th.herokuapp.com/",
         "github": "https://github.com/rroyalty/bandwidth",
         "imgSrc": "/images/bandwidth.jpg",
-        "tech": ["TypeScript", "React", "Material UI", "Node", "Sequelize", "Express", "Auth0", "Axios"]
+        "tech": ["TypeScript", "React", "Material UI", "Node", "Sequelize", "Express", "Auth0", "Axios"],
+        "expired": true
     },
     {   
         "name": "Easy Recipeazy",             
@@ -13,7 +14,8 @@
         "domain": "https://tonipow3ll.github.io/drinks-and-dinner/",
         "github": "https://github.com/tonipow3ll/drinks-and-dinner",
         "imgSrc": "https://raw.githubusercontent.com/tonipow3ll/drinks-and-dinner/main/images/mealdrink.png",
-        "tech": ["JavaScript", "JQuery", "Bulma"]
+        "tech": ["JavaScript", "JQuery", "Bulma"],
+        "expired": false
     },
     {   
         "name": "Stretch N' Strengthen",             
@@ -21,7 +23,8 @@
         "domain": "http://stretch-n-strengthen.herokuapp.com/",
         "github": "https://github.com/crrmarchese/stretch-n-strengthen",
         "imgSrc": "https://raw.githubusercontent.com/crrmarchese/stretch-n-strengthen/main/public/assets/images/stretch-n-strengthen.jpg",
-        "tech": ["JavaScript", "Node", "Express", "Sequelize", "BCrypt", "Passport", "Axios", "Handlebars"]
+        "tech": ["JavaScript", "Node", "Express", "Sequelize", "BCrypt", "Passport", "Axios", "Handlebars"],
+        "expired": true
     },
     {   
         "name": "Pop Culture Trivia",             
@@ -29,14 +32,7 @@
         "domain": "https://rroyalty.github.io/code-quiz/",
         "github": "https://github.com/rroyalty/code-quiz/",
         "imgSrc": "https://raw.githubusercontent.com/rroyalty/code-quiz/main/assets/images/codeQuizQuestionsScreen.jpg",
-        "tech": ["JavaScript", "JQuery", "Bootstrap"]
-    },
-    {   
-        "name": "Weather Dashboard",             
-        "description": "Check your local weather!", 
-        "domain": "https://rroyalty.github.io/weather-dashboard/",
-        "github": "https://github.com/rroyalty/weather-dashboard/",
-        "imgSrc": "https://raw.githubusercontent.com/rroyalty/weather-dashboard/main/assets/images/examples/weather-screenshot.jpg",
-        "tech": ["JavaScript", "JQuery", "Luxon", "Bootstrap"]
+        "tech": ["JavaScript", "JQuery", "Bootstrap"],
+        "expired": false
     }
 ]

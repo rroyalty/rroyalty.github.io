@@ -10,7 +10,8 @@ interface IItem {
         domain: string,
         github: string,
         imgSrc: string,
-        tech: Array<string>
+        tech: Array<string>,
+        expired: boolean,
 }
 
 const useStyles = makeStyles((theme: Theme) =>

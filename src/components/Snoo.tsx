@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
             display: `flex`,
             justifyContent: `center`,
             alignItems: `center`,
-            height: `240px`
+            height: `240px`,
         },
         hidden: {
             visibility: `hidden`
@@ -78,7 +78,7 @@ const Snoo: React.FC = (): JSX.Element => {
     const loadingGrid = () => {
         return (
             <div className={classes.img} >
-                <img src="/images/loading-buffering.gif" />
+                <img style={{ height: `240px` }} src="/images/expiredStamp.png" />
             </div>
         )
     }

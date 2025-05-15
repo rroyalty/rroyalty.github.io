@@ -56,10 +56,6 @@ const NavbarList: React.FC<iProps> = (props): JSX.Element => {
                 <img alt="Linked In" className={classes.iconLinks} src="/images/LinkedIn.png" />
             </a>
             <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-            <a className={classes.iconLinks} href="https://www.reddit.com/user/rroyaltywebdev" target="_blank" rel="noreferrer">
-                <img alt="Reddit" className={classes.iconLinks} src="https://image.flaticon.com/icons/png/512/1384/1384019.png" />
-            </a>
-            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
             <a className={classes.anchorColor} href="mailto: rroyalty@gmail.com">
                 <MailIcon className={classes.iconLinks} />
             </a>

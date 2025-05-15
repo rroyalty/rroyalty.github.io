@@ -24,7 +24,7 @@ const Flair: React.FC = (): JSX.Element => {
                 container
                 direction="row"
                 alignItems="flex-start"
-                justify="center"
+                justifyContent="center"
                 spacing={3}>
                     <Top5 />
                     <Wall />
