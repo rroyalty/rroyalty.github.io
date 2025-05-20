@@ -66,7 +66,7 @@ const SkillList: React.FC<IProps> = (props): JSX.Element => {
             md={4}
             xs={12}
             direction="column"
-            justify="flex-start"
+            justifyContent="flex-start"
             className={classes.grid}>
             <Grid
                 item>
@@ -78,7 +78,7 @@ const SkillList: React.FC<IProps> = (props): JSX.Element => {
                 item
                 container
                 direction="row"
-                justify="flex-start"
+                justifyContent="flex-start"
                 alignItems="flex-start"
                 className={classes.root}
                 spacing={2}>

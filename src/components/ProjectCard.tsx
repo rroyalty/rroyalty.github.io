@@ -11,7 +11,7 @@ interface IProps {
     github: string,
     imgSrc: string,
     tech: Array<string>
-    expired: boolean
+    deploymentState: string
   },
   index: number
 }
@@ -69,7 +69,7 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
             component="img"
             height="143"
             className={classes.media}
-            image={props.props.expired ? "/images/expiredStamp.png" : props.props.imgSrc}
+            image={props.props.deploymentState === "expired" ? "/images/expiredStamp.png" : props.props.deploymentState === "wip" ? "/images/wip.png" : props.props.imgSrc}
             title={props.props.name}
           />
           <Typography variant="h3" component="h3" style={{margin: `5px`}}>
@@ -90,7 +90,7 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
               </Button>
             </CardActionArea>
           </a>
-          {!props.props.expired && <a href={props.props.domain} target="_blank" rel="noreferrer">
+          {props.props.deploymentState !== "live" && <a href={props.props.domain} target="_blank" rel="noreferrer">
             <CardActionArea>
               <Button>
                 Deployment

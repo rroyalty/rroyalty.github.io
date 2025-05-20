@@ -45,7 +45,7 @@ const Footer: React.FC = (): JSX.Element => {
                 <Grid
                     container
                     direction="row"
-                    justify="space-evenly"
+                    justifyContent="space-evenly"
                     alignItems="flex-start"
                     spacing={1}
                 >

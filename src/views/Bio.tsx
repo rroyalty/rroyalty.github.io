@@ -75,7 +75,7 @@ const Bio: React.FC = (): JSX.Element => {
                     item
                     container
                     direction="row"
-                    justify="center"
+                    justifyContent="center"
                     alignItems="center"
                     spacing={4}
 
@@ -115,7 +115,7 @@ const Bio: React.FC = (): JSX.Element => {
             <Grid
                 container
                 direction="column"
-                justify="center"
+                justifyContent="center"
                 alignItems="center"
                 spacing={4}
                 className={classes.topPadding}

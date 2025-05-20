@@ -49,7 +49,7 @@ const Top5: React.FC = (): JSX.Element => {
             md={4}
             xs={12}
             direction="column"
-            justify="center"
+            justifyContent="center"
             alignItems="stretch"
              >
 
@@ -99,7 +99,7 @@ const Top5: React.FC = (): JSX.Element => {
                 item
                 container 
                 xl={12}
-                justify="center" >
+                justifyContent="center" >
                 <IconButton onClick={() => setState(randomTop5)}>
                     <RefreshIcon style={{width: `50px`, height: `50px`}} />
                 </IconButton>

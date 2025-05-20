@@ -6,7 +6,7 @@
         "github": "https://github.com/rroyalty/bandwidth",
         "imgSrc": "/images/bandwidth.jpg",
         "tech": ["TypeScript", "React", "Material UI", "Node", "Sequelize", "Express", "Auth0", "Axios"],
-        "expired": true
+        "deploymentState": "expired"
     },
     {   
         "name": "Easy Recipeazy",             
@@ -15,7 +15,7 @@
         "github": "https://github.com/tonipow3ll/drinks-and-dinner",
         "imgSrc": "https://raw.githubusercontent.com/tonipow3ll/drinks-and-dinner/main/images/mealdrink.png",
         "tech": ["JavaScript", "JQuery", "Bulma"],
-        "expired": false
+        "deploymentState": "live"
     },
     {   
         "name": "Stretch N' Strengthen",             
@@ -24,7 +24,7 @@
         "github": "https://github.com/crrmarchese/stretch-n-strengthen",
         "imgSrc": "https://raw.githubusercontent.com/crrmarchese/stretch-n-strengthen/main/public/assets/images/stretch-n-strengthen.jpg",
         "tech": ["JavaScript", "Node", "Express", "Sequelize", "BCrypt", "Passport", "Axios", "Handlebars"],
-        "expired": true
+        "deploymentState": "expired"
     },
     {   
         "name": "Pop Culture Trivia",             
@@ -33,6 +33,15 @@
         "github": "https://github.com/rroyalty/code-quiz/",
         "imgSrc": "https://raw.githubusercontent.com/rroyalty/code-quiz/main/assets/images/codeQuizQuestionsScreen.jpg",
         "tech": ["JavaScript", "JQuery", "Bootstrap"],
-        "expired": false
+        "deploymentState": "live"
+    },
+    {
+        "name": "Walrus League",             
+        "description": "A football survivor league app", 
+        "domain": "https://rroyalty.github.io/code-quiz/",
+        "github": "https://github.com/rroyalty/WalrusLeague",
+        "imgSrc": "public/images/appImage.png",
+        "tech": ["JavaScript", "JQuery", "Bootstrap"],
+        "deploymentState": "wip"
     }
 ]

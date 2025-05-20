@@ -44,7 +44,7 @@ const Wall: React.FC = (): JSX.Element => {
             md={4}
             xs={12}
             direction="column"
-            justify="center"
+            justifyContent="center"
             alignItems="stretch" >
 
             <Grid

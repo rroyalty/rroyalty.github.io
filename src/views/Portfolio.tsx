@@ -5,13 +5,13 @@ import { Grid, Typography } from '@material-ui/core';
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
 interface IItem {
-        name: string,        
-        description: string, 
-        domain: string,
-        github: string,
-        imgSrc: string,
-        tech: Array<string>,
-        expired: boolean,
+    name: string,        
+    description: string, 
+    domain: string,
+    github: string,
+    imgSrc: string,
+    tech: Array<string>,
+    deploymentState: string
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -37,7 +37,7 @@ const Portfolio: React.FC = (): JSX.Element => {
             <Grid
                 container
                 direction="row"
-                justify="center"
+                justifyContent="center"
                 alignItems="stretch"
                 spacing={4}
             >    

@@ -88,7 +88,7 @@ const Snoo: React.FC = (): JSX.Element => {
             <div style={{ height: `240px` }}>
                 <Grid
                     container
-                    justify="space-between"
+                    justifyContent="space-between"
                     style={{marginBottom: `5px`}}>
                     <Grid
                         item>
@@ -116,7 +116,7 @@ const Snoo: React.FC = (): JSX.Element => {
             container
             md={4}
             xs={12}
-            justify="center"
+            justifyContent="center"
             alignItems="center"
             direction="column"
             style={{ marginBottom: "200px" }}
@@ -140,14 +140,14 @@ const Snoo: React.FC = (): JSX.Element => {
                 item
                 container
                 xl={12}
-                justify="center"
+                justifyContent="center"
                 alignItems="center"
                 direction="row">
                 <Grid
                     item
                     container
                     xs={3}
-                    justify="center"
+                    justifyContent="center"
                     className={index === length - 1 || !text ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(length - 1)} >
                         <FirstPageIcon style={{ width: `50px`, height: `50px` }} />
@@ -157,7 +157,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     item
                     container
                     xs={3}
-                    justify="center"
+                    justifyContent="center"
                     className={index === length - 1 || !text ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(index + 1)}>
                         <NavigateBeforeIcon style={{ width: `50px`, height: `50px` }} />
@@ -167,7 +167,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     item
                     container
                     xs={3}
-                    justify="center"
+                    justifyContent="center"
                     className={index === 0 || !text ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(index - 1)}>
                         <NavigateNextIcon style={{ width: `50px`, height: `50px` }} />
@@ -177,7 +177,7 @@ const Snoo: React.FC = (): JSX.Element => {
                     item
                     container
                     xs={3}
-                    justify="center"
+                    justifyContent="center"
                     className={index === 0 || !text ? classes.hidden : ""}>
                     <IconButton onClick={() => setIndex(0)}>
                         <LastPageIcon style={{ width: `50px`, height: `50px` }} />
