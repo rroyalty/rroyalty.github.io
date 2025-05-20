@@ -59,7 +59,12 @@ const Wall: React.FC = (): JSX.Element => {
                 item
                 xl={12}
                 spacing={2}>
-                    <Carousel animation={"slide"} interval={5000} navButtonsAlwaysInvisible={true}>
+                    <Carousel animation={"slide"} interval={5000} navButtonsAlwaysInvisible={true} indicatorIconButtonProps={{
+                        style: {
+                            height: '50px',
+                            width: '50px' 
+                        }
+                    }} >
                         {wall.map((item: IPictureItem, index: number) =>
                             <Box className={classes.box} key={index}>
                                 <Zoom>
