@@ -90,7 +90,7 @@ const ProjectCard: React.FC<IProps> = (props): JSX.Element => {
               </Button>
             </CardActionArea>
           </a>
-          {props.props.deploymentState !== "live" && <a href={props.props.domain} target="_blank" rel="noreferrer">
+          {props.props.deploymentState === "live" && <a href={props.props.domain} target="_blank" rel="noreferrer">
             <CardActionArea>
               <Button>
                 Deployment

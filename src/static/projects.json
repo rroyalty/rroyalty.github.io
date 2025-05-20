@@ -41,7 +41,7 @@
         "domain": "https://rroyalty.github.io/code-quiz/",
         "github": "https://github.com/rroyalty/WalrusLeague",
         "imgSrc": "public/images/appImage.png",
-        "tech": ["JavaScript", "JQuery", "Bootstrap"],
+        "tech": ["Next.js","Next-Auth", "React", "MaterialUI", "Node", "AWS"],
         "deploymentState": "wip"
     }
 ]
